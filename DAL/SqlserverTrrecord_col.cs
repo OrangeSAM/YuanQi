@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using models;
+using Models;
 using IDAL;
 using System.Data;
 using System.Data.SqlClient;

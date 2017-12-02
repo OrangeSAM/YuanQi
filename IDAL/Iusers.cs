@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using models;
+using Models;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -13,7 +13,7 @@ namespace IDAL
         int Insert(users us);
         SqlDataReader Login(string name, string pwd);
         SqlDataReader Selectusername(string user_name);
-        DataTable GetUsers(models.users user);
+        DataTable GetUsers(Models.users user);
         int Update(users us);
     }
 

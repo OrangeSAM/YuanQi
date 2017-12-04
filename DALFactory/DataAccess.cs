@@ -130,62 +130,62 @@ namespace DALFactory
         }
         public static Iriderarticle_col Createriderarticle_col()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "riderarticle_col";
             return (Iriderarticle_col)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Irider_article Createrider_article()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "rider_article";
             return (Irider_article)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Irider_article_comt Createrider_article_comt()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "rider_article_comt";
             return (Irider_article_comt)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Irider_article_reply Createrider_article_reply()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "riderarticle_reply";
             return (Irider_article_reply)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Istore Createstore()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "store";
             return (Istore)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Istore_comt Createstore_comt()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "store_comt";
             return (Istore_comt)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Itravel_comt_reply Createtravel_comt_reply()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "travel_comt_reply";
             return (Itravel_comt_reply)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Itravel_record Createtravel_record()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "travel_record";
             return (Itravel_record)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Itravel_record_comt Createtravel_record_comt()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "travel_record_comt";
             return (Itravel_record_comt)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Itrrecord Createtrrecord()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "trrecord";
             return (Itrrecord)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Itrrecord_col Createtrrecord_col()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "trrecord_col";
             return (Itrrecord_col)Assembly.Load(AssemblyName).CreateInstance(className);
         }
         public static Iusers Createusers()
         {
-            string className = AssemblyName + "." + db + "news_comt";
+            string className = AssemblyName + "." + db + "users";
             return (Iusers)Assembly.Load(AssemblyName).CreateInstance(className);
         }
     }

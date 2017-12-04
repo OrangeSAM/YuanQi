@@ -10,7 +10,7 @@ using IDAL;
 namespace DAL
 {
     public class SqlserverDayphoto : Idayphoto
-    {
+    {  
         public int DeleteDayphoto(int photo_id)
         {
             SqlParameter[] sp = { new SqlParameter("@photo_id", photo_id) };
@@ -86,6 +86,7 @@ namespace DAL
                     }
                 }
             }
+            return null;//debug here
         }
         public DataTable SelectDayphoto(int photo_id)
         {

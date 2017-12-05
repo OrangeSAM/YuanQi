@@ -96,6 +96,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\StyleSheet2.css" />
+    <Content Include="img\album\1 %281%29.jpg" />
+    <Content Include="img\album\1 %2810%29.jpg" />
+    <Content Include="img\album\1 %2811%29.jpg" />
+    <Content Include="img\album\1 %2812%29.jpg" />
+    <Content Include="img\album\1 %2813%29.jpg" />
+    <Content Include="img\album\1 %2814%29.jpg" />
+    <Content Include="img\album\1 %2816%29.jpg" />
+    <Content Include="img\album\1 %2817%29.jpg" />
+    <Content Include="img\album\1 %282%29.jpg" />
+    <Content Include="img\album_photo\2 %281%29.jpeg" />
+    <Content Include="img\album_photo\2 %281%29.jpg" />
+    <Content Include="img\album_photo\2 %282%29.jpeg" />
+    <Content Include="img\album_photo\2 %282%29.jpg" />
+    <Content Include="img\album_photo\2 %283%29.jpeg" />
+    <Content Include="img\album_photo\2 %283%29.jpg" />
+    <Content Include="img\album_photo\2 %284%29.jpg" />
+    <Content Include="img\album_photo\2 %285%29.jpg" />
+    <Content Include="img\dayphoto\1 %283%29.jpg" />
+    <Content Include="img\dayphoto\1 %284%29.jpg" />
+    <Content Include="img\dayphoto\1 %285%29.jpg" />
+    <Content Include="img\dayphoto\1 %286%29.jpg" />
+    <Content Include="img\dayphoto\1 %287%29.jpg" />
+    <Content Include="img\dayphoto\1 %288%29.jpg" />
+    <Content Include="img\dayphoto\1 %289%29.jpg" />
+    <Content Include="img\dayphoto\1.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\用户.png" />
     <Content Include="js\jquery-1.9.0.min.js" />

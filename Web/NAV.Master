@@ -1,0 +1,206 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NAV.master.cs" Inherits="Web.NAV" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ <style>
+ *{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+   
+}
+#imglogo{
+    width:10%;
+    height:100%;
+    float:left;
+    margin-top:7px;
+    margin-left:30px;
+    margin-right:100px;
+}
+#nav{
+    width: 100%;
+    height: 70px;
+    background: black;
+    margin: 0 auto;
+}
+/*下拉列表颜色*/
+#nav ul{
+    background:black;
+    /*overflow:hidden;
+    display:inline-block;*/
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:22px;
+}
+#nav ul li{
+    float:left;
+    display:block;
+    height: 70px;
+    line-height: 70px; 
+    padding: 0 20px; 
+    position: relative;
+}
+/*当鼠标放置第二层下拉列表时，第一层li的颜色*/
+#nav ul li:hover{
+    background: crimson;
+}
+#nav ul li ul li{
+    float: none;
+}
+/*关键一：将二级菜单设置为display：none;*/
+#nav ul li ul{
+    position: absolute;
+    top:70px;left: 0; 
+    display: none;
+}
+#nav ul li ul li:hover{
+    background: crimson;
+}
+/*关键二：在划过二级菜单从属的一级菜单时，设置为display:block;*/
+#nav ul li:hover ul{
+    display: block;
+}
+#inputse{
+    margin-left:100px;
+    /*margin-bottom:200px;*/
+}
+#imgse{
+    width:25px;
+    height:25px;
+}
+#imguser{
+    width:25px;
+    height:25px;
+    margin-top:20px;
+    margin-left:30px;
+}
+      #imguser{
+            width:25px;
+            height:25px;
+            margin-right:100px;
+           
+        }
+
+
+footer{
+    background-color:rgb(51,51,51);
+    /*width:100%;
+    height:90px;*/
+}
+footer p{
+    padding:30px;
+    color:white;
+    text-align:center;
+}
+a{
+    color:white;
+}
+#user{
+            padding-right:5%;
+        }
+.icon-triangle {
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            border-top: 2px solid #dddccc;
+            border-left: 2px solid #dddccc;
+            transform: rotate(45deg);
+            background-color: #fff;
+            position: absolute;
+            top: -10px;
+            left: 37%;
+        }
+
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+      
+    </div>
+           <img src="Img/logo.png" id="imglogo"/> 
+        <div id="nav">      
+             <ul>
+                <li><a href="#">骑行租车</a></li>
+                  <li>
+                    <a href="#">骑行赛事</a>
+                    <ul>
+                        <li><a href="#">赛事新闻</a></li>
+                        <li><a href="#">赛事预告</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">骑行论坛</a>
+                        <ul>
+                            <li><a href="#">讨论贴</a></li>
+                            <li><a href="#">骑行游记</a></li>
+                            <li><a href="#">骑行相册</a></li>
+                        </ul>
+                </li>
+               
+               
+               <%-- <li>
+                    <a href="#">骑行知识</a>
+                    <ul>
+                        <li><a href="#">经验技巧</a></li>
+                        <li><a href="#">新手知识</a></li>
+                    </ul>
+                </li>--%>
+                <li>
+                    <a href="#">骑行资讯</a>
+                    <ul>
+                        <li><a href="#">骑行活动</a></li>
+                        <li><a href="#">每日一图</a></li>
+                        <li><a href="#">骑行者</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="user-sign" style="float:right;">
+                <a href="#" id="user"><img src="Img/用户.png" id="imguser"/></a>
+                <div class="sign-box" style="overflow:hidden;opacity:0;">
+                    <ul>
+                        <li style="float:none;"><a href="Sign.aspx" runat="server" id="SignInLb">个人中心</a></li>
+                        <li style="float:none;"><a href="Sign.aspx" runat="server" id="SignUpLb">资料修改</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="login" style="float:right;margin-top:30px">
+               
+                  <a href="#">登录/</a><a href="#">注册</a>
+                
+            </div>
+        </div>
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <footer>
+        <p>copyright @sam</p>
+    </footer>
+    </form>
+     <script>
+        var showMenu = function ($) {
+            var userSign = $.document.getElementsByClassName('user-sign')[0];
+            var signBox = $.document.getElementsByClassName('sign-box')[0];
+
+            userSign.onmouseover = function () {
+                signBox.style.visibility = "visible";
+                signBox.style.opacity = '1';
+            }
+
+            userSign.onmouseout = function () {
+                signBox.style.opacity = '0';
+                signBox.style.visibility = "hidden";
+            }
+        };
+
+        showMenu(window);
+    </script>
+</body>
+</html>
+

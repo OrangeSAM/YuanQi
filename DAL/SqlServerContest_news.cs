@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class SqlServerContest_new : Icontest_news
+    public class SqlServerContest_news : Icontest_news
     {
         public int InsertNews(contest_news news)
         {

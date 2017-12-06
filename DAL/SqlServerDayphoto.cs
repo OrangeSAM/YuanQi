@@ -99,5 +99,11 @@ namespace DAL
             return DBHelper.GetFillData(sql, sp);
             
         }
+        public DataTable Selecttopphoto(int top)
+        {
+            string sql = "select top " + top + " * from dayphoto order by ul_time desc";
+            return DBHelper.GetFillData(sql);
+        }
+
     }
 }

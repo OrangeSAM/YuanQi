@@ -18,5 +18,6 @@ namespace DAL
             SqlParameter[] sp = { new SqlParameter("@album_col_id", album_col_id) };
             return DBHelper.GetExcuteNonQuery(sql, sp);
         }
+       
     }
 }

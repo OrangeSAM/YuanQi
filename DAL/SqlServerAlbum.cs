@@ -38,6 +38,10 @@ namespace DAL
            };
             return DBHelper.GetExcuteNonQuery(sql, sp);
         }
-       
+        public DataTable SelectAll()
+        {
+            string sql = "select * from album  order by create_time desc";
+            return DBHelper.GetFillData(sql);
+        }
     }
 }

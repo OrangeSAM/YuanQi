@@ -1,0 +1,126 @@
+﻿body {
+}
+
+
+#container1 {
+    /*margin-top :30px;*/
+    width: 100%;
+    height :2000px;
+    background-color: #2c2a2a;
+}
+/*轮播样式*/
+#container {
+    margin-top:30px;
+    float: left;
+    margin-left:30px;   
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.sections, .section {
+    height: 100%;
+}
+
+#container, .sections {
+    position: relative;
+}
+
+#top {
+    width: 100%;
+    height: 400px;
+}
+
+#dayphoto {
+    float: left;
+    width: 60%;
+}
+
+#news {
+    margin-top: -88px;
+    margin-right:30px;
+    height: 400px;
+    float: right;
+    width: 40%;
+    background-color: black;
+}
+.nav-title span {
+    float: left;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 20px;
+    color: white ;
+    font-weight:700;
+}
+.nav-title a span{
+    float:right;
+    padding-top:15px;
+    padding-right:5px;
+}
+
+
+
+.title {
+    float: left;
+    margin-top:20px;
+    padding-left:20px;
+}
+#travel {
+    margin-left: 30px;
+    margin-top: 30px;
+    float: left;
+    width: 50%;
+    height: auto;
+}
+#center-right{
+    float:right;
+}
+#album{
+    width:95%;
+}
+.travel_de {
+    color:white;
+    /*margin-top:20px;*/
+    width: 100%;
+    height: 200px;
+    /*background-color:coral;*/
+    background-color:black;
+    /*border-bottom:1px double #ffd800;*/
+    border-bottom: 1px double #ffffff;
+}
+.travel_cover {
+    width: 30%;
+    height: 85%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 10px;
+    display: inline-block;
+}
+.travel_content {
+   
+    width: 60%;
+    height: 82%;
+    margin-top: 2%;
+    margin-left: 3%;
+    display: inline-block;
+    vertical-align: top;
+}
+#contest {
+    margin-top:30px;
+    margin-right :30px;
+    height: 600px;
+    float: right;
+    width: 508px;
+    background-color: black;
+    color:white;
+    
+}
+#center {
+    width: 100%;
+    height: 600px;
+}
+
+
+

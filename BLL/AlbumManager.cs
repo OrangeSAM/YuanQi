@@ -21,6 +21,10 @@ namespace BLL
         {
             return ialbum.UpdateAlbum(album);
         }
+        public static DataTable SelectAll()
+        {
+            return ialbum.SelectAll();
+        }
 
     }
 }

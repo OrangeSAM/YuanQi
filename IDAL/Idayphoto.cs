@@ -15,5 +15,6 @@ namespace IDAL
         DataTable SelectAll();
         DataTable SelectDayphoto(int photo_id);
         DataTable SelectDay(string type,string year,string month);
+        DataTable Selecttopphoto(int top);
     }
 }

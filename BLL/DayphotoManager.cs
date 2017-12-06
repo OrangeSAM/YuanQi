@@ -32,5 +32,10 @@ namespace BLL
         {
             return idayphoto.SelectDayphoto(photo_id);
         }
+        public static DataTable Selecttopphoto(int top)
+        {
+            return idayphoto.Selecttopphoto(top);
+        }
+
     }
 }

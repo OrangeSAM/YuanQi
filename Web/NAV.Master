@@ -172,16 +172,16 @@ a{
             </div>
             <div class="login" style="float:right;margin-top:30px">
                
-                  <a href="#">登录/</a><a href="#">注册</a>
+                <a href="login1.aspx">登录</a>/<a href="login1.aspx">注册</a>
                 
             </div>
         </div>
           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-        <footer>
+<%--    <footer>
         <p>copyright @sam</p>
-    </footer>
+    </footer>--%>
     </form>
      <script>
         var showMenu = function ($) {

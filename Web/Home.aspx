@@ -6,19 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div id="container1">
-    <%--<div id="top" style ="width: 50%;
-			height: 300px;
-			overflow: hidden;">--%>
-        <%--每日一图
-       <div id="dayphoto" style ="" >
-           <asp:Repeater ID="Repeater1" runat="server">
-               <ItemTemplate>
-                   <img src="<%#Eval("path")%>"  />
-               </ItemTemplate>
-           </asp:Repeater>
-       </div>
-         
-     </div>--%>
+    <%--每日一图--%>
          <div id ="top">
          <div id="container">
         <div class="sections">
@@ -35,7 +23,7 @@
               <div id="news"> 
           <div class="nav-title" style ="background-color :crimson;height :50px;">
                <span >最新资讯</span>
-              <a href="#"><span <%--style="float:right;margin-right:20px;"--%>>More>></span></a>
+              <a href="#"><span>More>></span></a>
               <br /><br />
               
            </div>
@@ -136,19 +124,6 @@
          <br />
     <%--相册--%>
     <div id="album">
-       <%--<asp:ListView ID="LVAlbum" runat ="server" GroupItemCount ="3">
-           <LayoutTemplate>
-        <div>
-            <asp:PlaceHolder ID="groupPlaceholder" runat="server" />
-        </div>
-                <asp:DataPager ID="DataPager1" runat="server" PageSize="6">
-                             </asp:DataPager>
-    </LayoutTemplate>
-           <GroupTemplate>
-        <div>
-            <asp:PlaceHolder runat="server" ID="itemPlaceholder" />                    
-       </div>
-    </GroupTemplate>--%>
         <asp:DataList ID="DataList1" runat="server" RepeatColumns="3"  RepeatDirection="Horizontal">
            <ItemTemplate >
         

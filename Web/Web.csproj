@@ -95,16 +95,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\bootstrap\font\glyphicons-halflings-regular.svg" />
-    <Content Include="css\bootstrap\js\bootstrap.js" />
-    <Content Include="css\bootstrap\js\bootstrap.min.js" />
-    <Content Include="css\bootstrap\css\bootstrap-theme.css" />
-    <Content Include="css\bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="css\bootstrap\css\bootstrap.css" />
-    <Content Include="css\bootstrap\css\bootstrap.min.css" />
-    <Content Include="css\bootstrap\js\npm.js" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="css\Home.css" />
+    <Content Include="css\nav.css" />
+    <Content Include="css\styles.css" />
     <Content Include="css\StyleSheet2.css" />
+    <Content Include="css\testimonial.css" />
     <Content Include="img\album\1 %281%29.jpg" />
     <Content Include="img\album\1 %2810%29.jpg" />
     <Content Include="img\album\1 %2811%29.jpg" />
@@ -132,6 +130,7 @@
     <Content Include="img\dayphoto\1.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\用户.png" />
+    <Content Include="Index.aspx" />
     <Content Include="js\jquery-1.9.0.min.js" />
     <Content Include="js\login.js" />
     <Content Include="login1.aspx" />
@@ -141,14 +140,8 @@
     </Content>
     <Content Include="NAV.Master" />
     <Content Include="Home.aspx" />
-    <Content Include="css\bootstrap\css\bootstrap-theme.css.map" />
-    <Content Include="css\bootstrap\css\bootstrap-theme.min.css.map" />
-    <Content Include="css\bootstrap\css\bootstrap.css.map" />
-    <Content Include="css\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="css\bootstrap\font\glyphicons-halflings-regular.eot" />
-    <Content Include="css\bootstrap\font\glyphicons-halflings-regular.ttf" />
-    <Content Include="css\bootstrap\font\glyphicons-halflings-regular.woff" />
-    <Content Include="css\bootstrap\font\glyphicons-halflings-regular.woff2" />
+    <Content Include="Site1.Master" />
+    <Content Include="WebForm2.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -169,6 +162,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login1.aspx.cs">
       <DependentUpon>login1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -190,6 +190,20 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

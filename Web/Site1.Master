@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Web.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header container">
+      <div class="visible-xs visible-sm col-xs-12 col-sm-12 text-center sm-logo">
+        <a rel="home" href="index.html">
+          <img src="img/logo.png" width="200" alt="logo"/>
+        </a>
+      </div>
+  	</div>
+        <div class="navbar" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="#"><a href="index.html">骑行租车</a></li>
+					<li><a href="#">赛事预告</a></li>
+					<li><a href="#">赛事新闻</a></li>
+					<li><a href="#">骑行论坛</a></li>
+          <li class= "hidden-xs hidden-sm">
+            <a rel="home" href="index.html"><img class="logo" src="img/logo.png" width="200" alt="logo"/></a>
+          </li>
+					<li><a href="#">骑行游记</a></li>
+					<li><a href="#">骑行相册</a></li>
+					<li><a href="#">骑行活动</a></li>
+                    <li>
+                        <img src="img/用户.png"  width="40" height="40"/></li>
+                    <li><a href="#">登录|注册</a></li>
+				</ul>
+			</div>
+		</div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+              <footer id="footer"> 
+        <div class="footer-content container">
+          <div class="footer-adress text-center col-xs-12 col-sm-4 col-md-4">
+                <%--<h4>Great love for humanity</h4>
+                <ul class="footer-menus">
+                  <li>Home /</li>
+                  <li>About </li><br />
+                  <li>Service /</li>
+                  <li>Gallery /</li>
+                  <li>Contact</li>
+                </ul>--%>
+            </div>
+            <div class="footer-second col-xs-12 col-sm-4 col-md-4">
+              <div class="social-block text-center">
+                <div class="social-share">
+                  <i class="fa fa-2x fa-facebook"></i>
+                  <i class="fa fa-2x  fa-twitter"></i>
+                  <i class="fa fa-2x  fa-google-plus"></i>
+                  <i class="fa fa-2x  fa-instagram"></i>
+                </div>
+              </div>
+               <p class="text-center footer-text1">123 456 789</p>
+                <p class="text-center footer-text">yuanqi@163.com<br />Copyright @3522-1<br />All Rights Reserved</p></div>
+                <p class="text-center footer-text1"></p>
+                <p class="text-center footer-text"></p></div>
+                 
+            <div class="footer-third col-xs-12 col-sm-4 col-md-4">
+           
+        </div>
+        <div class="move-top-page">
+      </div>
+    </footer>
+       
+   
+    </form>
+</body>
+</html>

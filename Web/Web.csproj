@@ -129,6 +129,15 @@
     <Content Include="img\dayphoto\1 %289%29.jpg" />
     <Content Include="img\dayphoto\1.jpg" />
     <Content Include="img\logo.png" />
+    <Content Include="img\trrecord_cover\3 %281%29.jpeg" />
+    <Content Include="img\trrecord_cover\3 %281%29.jpg" />
+    <Content Include="img\trrecord_cover\3 %282%29.jpeg" />
+    <Content Include="img\trrecord_cover\3 %282%29.jpg" />
+    <Content Include="img\trrecord_cover\3 %283%29.jpg" />
+    <Content Include="img\trrecord_cover\3 %284%29.jpg" />
+    <Content Include="img\trrecord_cover\3 %285%29.jpg" />
+    <Content Include="img\trrecord_cover\3 %286%29.jpg" />
+    <Content Include="img\trrecord_cover\3 %287%29.jpg" />
     <Content Include="img\用户.png" />
     <Content Include="Index.aspx" />
     <Content Include="js\jquery-1.9.0.min.js" />

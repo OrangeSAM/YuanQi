@@ -117,6 +117,10 @@ a{
             left: 37%;
         }
 
+        .auto-style1 {
+         width: 268px;
+     }
+
         </style>
 </head>
 <body>
@@ -161,6 +165,11 @@ a{
                     </ul>
                 </li>
             </ul>
+            <div class ="music">
+               <%-- <audio src="music/Relient%20K%20-%20Can't%20Complain.mp3" style ="width:100px;height :55px;float :left;margin-top :5px;margin-left :15px; " controls ="controls"  /> --%>
+                <embed src="music/Relient%20K%20-%20Can't%20Complain.mp3" width ="0" height ="0" style ="float :left " />
+                
+            </div>
             <div class="user-sign" style="float:right;">
                 <a href="#" id="user"><img src="Img/用户.png" id="imguser"/></a>
                 <div class="sign-box" style="overflow:hidden;opacity:0;">

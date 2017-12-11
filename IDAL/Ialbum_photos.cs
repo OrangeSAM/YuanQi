@@ -13,5 +13,6 @@ namespace IDAL
         int DeleteAlm_Photo(int photos_id);
         DataTable SelectAll();
         DataTable SelectTop6();
+        DataTable SelectAlbumId(int AlbumID);
     }
 }

@@ -30,6 +30,11 @@ namespace BLL
         {
             return itravel_record.SelectAll();
         }
+        public static DataTable SelectTop(int top)
+        {
+            return itravel_record.SelectTop(top);
+        }
+
         public static int UpdateLike(int trreccord_id)
         {
             return itravel_record.UpdateLike(trreccord_id);

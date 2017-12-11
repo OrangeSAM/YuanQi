@@ -66,7 +66,7 @@ namespace Web
                 SqlDataReader dr = UsersManager.Login(name, pwd);
                 if (dr.Read())
                 {
-                    Session["user_name"] = dr[0].ToString();
+                    Session["user_name"] = dr[1].ToString();
                     if (inlineCheckbox1.Checked)
                     {
                         Response.Cookies["users"]["user_name"] = HttpUtility.UrlEncode(u.Text.Trim());
@@ -75,7 +75,7 @@ namespace Web
                     }
                     
                     Label1.Text = "欢迎登录远骑网！";
-                    
+                    Response.Redirect("Index.aspx");
                    
                 }
                 else

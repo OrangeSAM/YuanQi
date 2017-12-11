@@ -37,5 +37,14 @@ namespace DAL
             string sql = "select * top 6  from album_photos";
             return DBHelper.GetFillData(sql);
         }
+        public DataTable SelectAlbumId(int AlbumID)
+        {
+            string sql = "select * from album_photos a,album  b where a.album_id=b.album_id and a.album_id=@album_id";
+            SqlParameter[] sp = 
+            {
+                new SqlParameter("@album_id",AlbumID),
+            };
+            return DBHelper.GetFillData(sql, sp);
+        }
     }
 }

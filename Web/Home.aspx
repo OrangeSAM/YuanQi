@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NAV.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Web.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
   
-    
+   
     <link href="css/Home.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -140,7 +140,7 @@
 </div>
 
 
-    <script src="scripts/jquery-1.10.2.min.js"></script><script src="scripts/bootstrap.min.js"></script><script src="scripts/script.js"></script><script src="scripts/pageSwitch.min.js"></script><script src="scripts/jquery.pwstabs-1.2.1.js"></script><script src="scripts/jQuery-face-cursor.js"></script><script src="scripts/pgwslider.min.js"></script>    <script>                //轮播动画        $("#container").PageSwitch({
+<script src="scripts/jquery-1.10.2.min.js"></script><script src="scripts/bootstrap.min.js"></script><script src="scripts/script.js"></script><script src="scripts/pageSwitch.min.js"></script><script src="scripts/jquery.pwstabs-1.2.1.js"></script><script src="scripts/jQuery-face-cursor.js"></script><script src="scripts/pgwslider.min.js"></script>    <script>                //轮播动画        $("#container").PageSwitch({
             direction: 'horizontal',
             easing: 'ease-in',
             duration: 1000,

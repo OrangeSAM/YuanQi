@@ -43,5 +43,16 @@ namespace DAL
             string sql = "select * from album  order by create_time desc";
             return DBHelper.GetFillData(sql);
         }
+        public DataTable SelectAlbumCover(int album_id)
+        {
+            string sql = "select * from album where album_id=@album_id order by create_time desc";
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("@album_id",album_id),
+            };
+            return DBHelper.GetFillData(sql,sp);
+
+
+        }
     }
 }

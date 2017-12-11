@@ -96,10 +96,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\contest.css" />
+    <Content Include="css\ContestNews.css" />
     <Content Include="css\demo.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\Home.css" />
     <Content Include="css\nav.css" />
+    <Content Include="css\photo.css" />
     <Content Include="css\styles.css" />
     <Content Include="css\StyleSheet2.css" />
     <Content Include="css\testimonial.css" />
@@ -139,7 +142,6 @@
     <Content Include="img\trrecord_cover\3 %286%29.jpg" />
     <Content Include="img\trrecord_cover\3 %287%29.jpg" />
     <Content Include="img\用户.png" />
-    <Content Include="Index.aspx" />
     <Content Include="js\jquery-1.9.0.min.js" />
     <Content Include="js\login.js" />
     <Content Include="login1.aspx" />
@@ -148,10 +150,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="NAV.Master" />
-    <Content Include="Home.aspx" />
-    <Content Include="Site1.Master" />
-    <Content Include="WebForm2.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Album.aspx" />
+    <Content Include="Nav.Master" />
+    <Content Include="ContestNews.aspx" />
+    <Content Include="Contest.aspx" />
+    <Content Include="Album_photos.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -172,13 +176,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="login1.aspx.cs">
       <DependentUpon>login1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -186,34 +183,48 @@
     <Compile Include="login1.aspx.designer.cs">
       <DependentUpon>login1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NAV.Master.cs">
-      <DependentUpon>NAV.Master</DependentUpon>
+    <Compile Include="Nav.Master.cs">
+      <DependentUpon>Nav.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NAV.Master.designer.cs">
-      <DependentUpon>NAV.Master</DependentUpon>
+    <Compile Include="Nav.Master.designer.cs">
+      <DependentUpon>Nav.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Album.aspx.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Album.aspx.designer.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="ContestNews.aspx.cs">
+      <DependentUpon>ContestNews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="ContestNews.aspx.designer.cs">
+      <DependentUpon>ContestNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contest.aspx.cs">
+      <DependentUpon>Contest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contest.aspx.designer.cs">
+      <DependentUpon>Contest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Album_photos.aspx.cs">
+      <DependentUpon>Album_photos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Album_photos.aspx.designer.cs">
+      <DependentUpon>Album_photos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

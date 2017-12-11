@@ -48,6 +48,7 @@ namespace DAL
             string sql = "select a.*,b.user_name from travel_record a,users b where a.user_id=b.user_id order by pub_time desc";
             return DBHelper.GetFillData(sql);
         }
+      
 
         public int UpdateLike(int trreccord_id)
         {
@@ -61,6 +62,12 @@ namespace DAL
             string sql = "update travel_record set Dislike=Dislike+1 where trreccord_id=@trreccord_id";
             SqlParameter[] para = { new SqlParameter("@trreccord_id", trreccord_id) };
             return DBHelper.GetExcuteNonQuery(sql, para);
+        }
+
+        public DataTable SelectTop(int top)
+        {
+            string sql = "select top " + top + " * from travel_record order by comt_count desc";
+            return DBHelper.GetFillData(sql);
         }
     }
 }

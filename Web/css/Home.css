@@ -2,19 +2,14 @@
 }
 
 
-#container1 {
-    /*margin-top :30px;*/
-    width: 100%;
-    height :2000px;
-    background-color: #2c2a2a;
-}
+
 /*轮播样式*/
 #container {
     margin-top:30px;
     float: left;
     margin-left:30px;   
-    width: 50%;
-    height: 400px;
+    width: 96%;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -25,31 +20,108 @@
 #container, .sections {
     position: relative;
 }
+/*游记*/
+#exTab2 h3 {
+    color: rgb(51, 122, 183);
+    padding: 5px 15px;
+}
+.nav-tabs > li.active > a {
+    color: white;
+    cursor: default;
+    background-color: #6CA8D1;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+    .nav-tabs > li.active > a:focus {
+        background-color: transparent;
+        border: 2px solid #6CA8D1;
+        color: #6CA8D1;
+    }
+
+    .nav-tabs > li.active > a:hover {
+        color: #6CA8D1;
+    }
+
+#exTab1 .tab-content {
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+.nav-tabs > li > a, .nav-tabs > li.active > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+        background: rgb(108, 168, 209);
+        padding: 11px;
+        width: 240px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 19px;
+        margin-bottom: 4px;
+    }
+
+button.button-info {
+    padding: 6px;
+    color: rgb(26, 104, 121);
+    background: transparent;
+    border-radius: 1px;
+    margin-right: 11px;
+    float: left;
+    border: 2px solid rgb(108, 168, 209);
+}
+.blog-event {
+    margin: 40px 0 85px;
+}
+
+.featured-img {
+    float: left;
+    padding-right: 25px;
+}
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+    border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 0 0;
+}
+
+#exTab3 .tab-content {
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+}
+
 
 #top {
     width: 100%;
     height: 400px;
 }
 
-#dayphoto {
-    float: left;
-    width: 60%;
-}
 
-#news {
+
+/*#news {
     margin-top: -88px;
     margin-right:30px;
     height: 400px;
     float: right;
     width: 40%;
-    background-color: black;
-}
+   
+}*/
 .nav-title span {
-    float: left;
-    padding-top: 15px;
-    padding-left: 20px;
+    /*float: left;*/
+    /*padding-top: 15px;
+    padding-left: 20px;*/
     font-size: 20px;
-    color: white ;
+    
     font-weight:700;
 }
 .nav-title a span{
@@ -60,11 +132,11 @@
 
 
 
-.title {
+/*.title {
     float: left;
     margin-top:20px;
     padding-left:20px;
-}
+}*/
 #travel {
     margin-left: 30px;
     margin-top: 30px;
@@ -84,7 +156,7 @@
     width: 100%;
     height: 200px;
     /*background-color:coral;*/
-    background-color:black;
+   
     /*border-bottom:1px double #ffd800;*/
     border-bottom: 1px double #ffffff;
 }
@@ -109,18 +181,171 @@
 }
 #contest {
     margin-top:30px;
-    margin-right :30px;
+    /*margin-right :30px;
     height: 600px;
     float: right;
     width: 508px;
     background-color: black;
-    color:white;
+    color:white;*/
     
 }
 #center {
-    width: 100%;
-    height: 600px;
+   margin-top:50px;
 }
 
 
 
+
+/*相册*/
+@media (max-width: 480px) {
+    .bx-wrapper .testimonials-carousel-thumbnail img {
+        padding-right: 15px;
+    }
+}
+
+.avatar-team-member {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 1em;
+}
+
+    .avatar-team-member img {
+        width: 200px;
+        height: auto;
+    }
+
+#team {
+    border-bottom: none;
+}
+
+    #team .team .team-members {
+        margin: 30px auto 0;
+    }
+
+.team-members .member {
+    margin: 15px auto;
+    cursor: default;
+    overflow: hidden;
+}
+
+    .team-members .member .member-inner {
+        position: relative;
+    }
+
+    .team-members .member a.team-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+    }
+ .team-members .member a.team-image img {
+            width: 100%;
+        }
+
+.inner-details .member-details {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    padding: 15px;
+    bottom: 100%;
+    margin: 0;
+    z-index: 3;
+    opacity: 0.9;
+    background: #68ABBB;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+    .inner-details .member-details .member-details-inner {
+        position: relative;
+        top: 50%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+/* Team Names, Descriptions */
+
+.team-members .member-details .member-name {
+    color: white;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 30px;
+}
+
+.team-members .member-details .member-position {
+    color: #8BC3A3;
+    font-size: 13px;
+}
+
+.team-members .member-details .member-description {
+    color: #fff;
+    font-size: 13px;
+}
+
+/* Team Socials */
+
+.member .member-details .member-details-inner .socials {
+    margin: 10px auto 0;
+}
+
+    .member .member-details .member-details-inner .socials a {
+        display: inline-block;
+        color: white;
+        font-size: 1.2em;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0,0,0,0.25);
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        border-radius: 50%;
+    }
+
+.list-unstyled li a i.fa {
+    font-size: 22px;
+    background: rgb(43, 112, 158);
+    /*padding: 8px;*/
+    color: white;
+    /*width: 35px;*/
+}
+
+/* Team Rollover */
+
+.team-members .member:hover .member-details {
+    bottom: 0;
+}
+
+.member .member-details .member-details-inner .socials a:hover {
+    background: rgba(0,0,0,1);
+    border-radius: 50%;
+}
+
+@media (max-width:991px) {
+    .bx-wrapper .bx-controls-direction a {
+        position: static !important;
+        background: #68ABBB;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+    }
+}
+/*骑行相册*/ 
+.panel {
+    background: none;
+    
+}
+
+.panel-body {
+    padding: 15px;
+    background: white;
+    
+}

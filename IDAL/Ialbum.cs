@@ -15,5 +15,6 @@ namespace IDAL
         //int UpdateLike(int AlmId);
         //int UpdateDislike(int AlmId);
         DataTable SelectAll();
+        DataTable SelectAlbumCover(int album_id);
     }
 }

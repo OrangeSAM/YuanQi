@@ -30,5 +30,9 @@ namespace BLL
         {
             return ialbum_photo.SelectTop6();
         }
+        public static DataTable SelectAlbumId(int AlbumID)
+        {
+            return ialbum_photo.SelectAlbumId(AlbumID);
+        }
     }
 }

@@ -25,6 +25,10 @@ namespace BLL
         {
             return ialbum.SelectAll();
         }
+        public static DataTable SelectAlbumCover(int album_id)
+        {
+            return ialbum.SelectAlbumCover(album_id);
+        }
 
     }
 }

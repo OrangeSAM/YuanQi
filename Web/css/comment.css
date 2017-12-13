@@ -1,0 +1,143 @@
+﻿body { 
+}
+/*发表评论*/
+.inner-com{
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+}
+.fa-envelope-o,.fa-phone,.fa-fax,.fa-map-marker{
+	padding-right: 13px;
+}
+.contact-text{
+    margin:45px auto;
+  }
+
+
+
+ /*Input Styles*/ 
+
+  .form {
+	width: 100%;
+	padding: 15px;
+	background: transparent;
+	border: 1px solid rgba(104, 171, 187, 1);
+	margin-bottom: 25px;
+	color: #68ABBB !important;
+	font-size: 13px;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+  .form:hover{
+    border:1px solid #8BC3A3;
+  }
+
+  .form:focus{
+    color: white;
+    outline: none;
+    border:1px solid #8BC3A3;
+  }
+
+  .textarea{
+    height: 120px;
+    max-height: 120px;
+    max-width: 100%;
+  }
+
+/* Generic Button Styles */
+
+  /*.button{
+    padding:8px 12px;
+    background:#0A5175;
+    display: block;
+    width:120px;
+    margin:10px 0 0px 0;
+    border-radius:3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align:center;
+    font-size:0.8em;
+    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  }
+
+  .button:hover{
+    background:#8BC3A3;
+    color:white;
+  }
+  .contact-form-full{
+  	margin-bottom: 20px;
+
+  }*/
+/* Send Button Styles */
+
+  .form-btn {
+	width: 100%;
+	display: block;
+	height: auto;
+	padding: 15px;
+	color: #A9A9A9;
+	background: transparent;
+	border: 1px solid rgb(104, 171, 187);
+	border-radius: 3px;
+	outline: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin: auto;
+	box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+	-moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+	-webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+}
+
+ .form-btn:hover {
+	background: #287676;
+	color: white;
+}
+
+  .form-btn:active{
+    opacity: 0.9;
+  }
+  .reply {
+    width: 90%;
+    height: auto;
+    margin-left: 25%;
+    padding-bottom: 2px;
+}
+.reply_contents{
+    width:100%;
+    height:auto;
+    border-bottom:1px dotted #dcd9d9;
+}
+.reply_textbox{/*回复框*/
+
+   width:70%;
+   height:120px;
+   margin-left:25%;
+   margin-bottom:5px;
+   border:1px dotted #dcd9d9;
+}
+.txtReply{
+   display:inline-block;
+    margin:0 auto; 
+    width:75%;
+    height:95%;
+    resize:none;
+    margin-top:3px;
+    margin-left:2.5%;
+    border-radius:5px;
+    line-height:20px;
+}
+.btnReply{
+    margin-bottom:25px;
+    margin-left:15px;
+}
+.reply_comment{
+    margin-left:95%;
+}
+
+

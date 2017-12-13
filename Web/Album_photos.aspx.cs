@@ -13,8 +13,12 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindAlbumCover();
-            BindPhoto();
+            if (!IsPostBack)
+            {
+                BindAlbumCover();
+                BindPhoto();
+            }
+
         }
         public void BindAlbumCover()
         {
@@ -32,8 +36,8 @@ namespace Web
             DataTable dt = Album_photoManager.SelectAlbumId(id);
             if(dt!=null && dt.Rows.Count>0)
             {
-                PhotoDetile.DataSource = dt;
-                PhotoDetile.DataBind();
+               LVAlbumPhoto.DataSource = dt;
+                LVAlbumPhoto.DataBind();
             }
         }
         

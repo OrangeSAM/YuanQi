@@ -26,10 +26,10 @@ namespace DAL
             return DBHelper.GetExcuteNonQuery(sql, para);
                 
         }
-       public  DataTable SelectTravel_record(int trreccord_id)
+       public  DataTable SelectTravel_record(int trrecord_id)
         {
-            string sql = "select *,user_name,user_id from travel_record,users where travel_record.user_id=users.user_id and trreccord_id=@trreccord_id";
-            SqlParameter[] para = { new SqlParameter("@trreccord_id", trreccord_id) };
+            string sql = "select *,user_name from travel_record,users where travel_record.user_id=users.user_id and trrecord_id=@trrecord_id";
+            SqlParameter[] para = { new SqlParameter("@trrecord_id", trrecord_id) };
             return DBHelper.GetFillData(sql, para);
         }
         public DataTable SelectUserTravel_record(int user_id)
@@ -45,7 +45,7 @@ namespace DAL
         }
        public  DataTable SelectAll()
         {
-            string sql = "select a.*,b.user_name from travel_record a,users b where a.user_id=b.user_id order by pub_time desc";
+            string sql = "select a.*,b.user_name,b.user_photo from travel_record a,users b where a.user_id=b.user_id order by pub_time desc";
             return DBHelper.GetFillData(sql);
         }
       
@@ -66,7 +66,7 @@ namespace DAL
 
         public DataTable SelectTop(int top)
         {
-            string sql = "select top " + top + " * from travel_record order by comt_count desc";
+            string sql = "select top " + top + " * from travel_record,users where travel_record.user_id=users.user_id order by col_count desc";
             return DBHelper.GetFillData(sql);
         }
     }

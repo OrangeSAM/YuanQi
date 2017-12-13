@@ -10,24 +10,33 @@
 namespace Web {
     
     
-    public partial class WebForm1 {
+    public partial class WebForm6 {
         
         /// <summary>
-        /// LVAlbum1 控件。
+        /// LVTravel1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView LVAlbum1;
+        protected global::System.Web.UI.WebControls.ListView LVTravel1;
         
         /// <summary>
-        /// albumpager 控件。
+        /// LVTravel 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataPager albumpager;
+        protected global::System.Web.UI.WebControls.ListView LVTravel;
+        
+        /// <summary>
+        /// travelpager 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataPager travelpager;
     }
 }

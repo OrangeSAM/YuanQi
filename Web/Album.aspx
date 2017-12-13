@@ -5,7 +5,7 @@
     <link href="css/demo.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/Home.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+<%--    <link href="css/styles.css" rel="stylesheet" />--%>
     
     
 </asp:Content>
@@ -14,16 +14,27 @@
       <div class="header-text">Album<span>相册</span></div>
       
   </div>
-    <asp:DataList ID="DataList1" runat="server"  RepeatColumns="3">
+
+    <asp:ListView ID="LVAlbum1" runat="server">
+        <LayoutTemplate>
+            <div>
+               <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
+            </div>
+        </LayoutTemplate>
+  <%--  <GroupTemplate>
+         <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
+</GroupTemplate>--%>
+
+        
         <ItemTemplate>
-   <section id="blog-isotope" class="subpage bg-white">
-         <div class="overlay-light">
-             <div  class="container" style="margin-right:-830px;margin-left:40px;">
-                 <div class="posts">
-                      <div class="post item col-md-4 col-xs-10col-sm-4 ">
+   <%--<section id="blog-isotope" class="subpage bg-white" style="display:inline-block;">--%>
+        <%-- <div class="overlay-light">--%>
+             <%--<div  class="container"--%> <%--style="margin-right:-830px;margin-left:40px;" >--%>
+                 <div class="posts" style="width:80%;margin-left:150px;">
+                      <div class="post item col-md-3 col-xs-10 col-sm-3 ">
                           <div class="panel">
                                   <div class="panel-header">
-                                      <a href="Album_photos.aspx?id=<%#Eval("album_id") %>"><img src="<%#Eval("photo") %>" class="img-responsive"  alt="image"/></a>
+                                      <a href="Album_photos.aspx?id=<%#Eval("album_id") %>"><img src="<%#Eval("photo") %>" class="img-responsive"   alt="image"/></a>
                                       </div>
                               <div class="panel-body">
                                    <h3 class="post-title"><a href="#"><%#Eval("album_name") %></a></h3>
@@ -40,20 +51,21 @@
                                   </div>
                             </div>
                     </div>
-                    
                       </div>
                
-                 </div>
-             </div>
+                <%-- </div>--%>
+        <%--     </div>--%>
          
-        </section>
-           
-            </ItemTemplate>
-        </asp:DataList>
-
-      <!-- pager -->
-                  <ul class="col-md-12 pager wow animated fadeIn">
-                    <li class="previous"><a href="#">&larr; Older</a></li>
-                    <li class="next"><a href="#">Newer &rarr;</a></li>
-                  </ul><!-- /end pager -->
+      <%--  </section>--%>           
+            </ItemTemplate>  
+        </asp:ListView>
+    <div style="width:100%;">
+                     <asp:DataPager ID="albumpager" runat="server"  PagedControlID="LVAlbum1"  PageSize="8" OnPreRender="albumpager_PreRender">
+                         <Fields>   
+                        <asp:NextPreviousPagerField FirstPageText="首页" PreviousPageText="上一页" ButtonType="Button" ShowFirstPageButton="true" ShowNextPageButton="false"  ButtonCssClass="btn btn-primary btn-sm"/>
+                        <asp:NumericPagerField NextPreviousButtonCssClass="btn btn-primary btn-sm" NumericButtonCssClass="btn btn-primary btn-sm" ButtonCount="4" />
+                        <asp:NextPreviousPagerField NextPageText="下一页" LastPageText="末页" ShowPreviousPageButton="false" ButtonType="Button" ButtonCssClass="btn btn-primary btn-sm" ShowLastPageButton="true" />
+                    </Fields>                
+                     </asp:DataPager>
+        </div>
 </asp:Content>

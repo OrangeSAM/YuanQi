@@ -77,6 +77,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>utf8-net\net\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -95,17 +99,55 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\BLL.dll" />
+    <Content Include="bin\BLL.pdb" />
+    <Content Include="bin\DAL.dll" />
+    <Content Include="bin\DAL.pdb" />
+    <Content Include="bin\DALFactory.dll" />
+    <Content Include="bin\DALFactory.pdb" />
+    <Content Include="bin\IDAL.dll" />
+    <Content Include="bin\IDAL.pdb" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Models.dll" />
+    <Content Include="bin\Models.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\Web.dll" />
+    <Content Include="bin\Web.pdb" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\comment.css" />
     <Content Include="css\contest.css" />
     <Content Include="css\ContestNews.css" />
     <Content Include="css\demo.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\Home.css" />
+    <Content Include="css\main.css" />
     <Content Include="css\nav.css" />
     <Content Include="css\photo.css" />
     <Content Include="css\styles.css" />
     <Content Include="css\StyleSheet2.css" />
     <Content Include="css\testimonial.css" />
+    <Content Include="css\Travel.css" />
     <Content Include="img\album\1 %281%29.jpg" />
     <Content Include="img\album\1 %2810%29.jpg" />
     <Content Include="img\album\1 %2811%29.jpg" />
@@ -143,7 +185,9 @@
     <Content Include="img\trrecord_cover\3 %287%29.jpg" />
     <Content Include="img\用户.png" />
     <Content Include="js\jquery-1.9.0.min.js" />
+    <Content Include="js\jquery-2.1.1.js" />
     <Content Include="js\login.js" />
+    <Content Include="js\main.js" />
     <Content Include="login1.aspx" />
     <Content Include="music\Relient K - Can%27t Complain.mp3" />
     <Content Include="packages.config" />
@@ -156,6 +200,13 @@
     <Content Include="ContestNews.aspx" />
     <Content Include="Contest.aspx" />
     <Content Include="Album_photos.aspx" />
+    <Content Include="TravelRecord.aspx" />
+    <Content Include="TravelCommentReply.aspx" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="bin\Web.dll.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -225,6 +276,20 @@
     </Compile>
     <Compile Include="Album_photos.aspx.designer.cs">
       <DependentUpon>Album_photos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TravelRecord.aspx.cs">
+      <DependentUpon>TravelRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TravelRecord.aspx.designer.cs">
+      <DependentUpon>TravelRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TravelCommentReply.aspx.cs">
+      <DependentUpon>TravelCommentReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TravelCommentReply.aspx.designer.cs">
+      <DependentUpon>TravelCommentReply.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

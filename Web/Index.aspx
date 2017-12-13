@@ -33,7 +33,7 @@
         <div class="divider col-sm-4 col-xs-4 col-md-4">
         <div class="header-text">赛事 <span>Contest</span></div>
     </div>
-    <div id="exTab2" class="col-md-8 col-lg-7 ">
+    <div id="exTab2" class="col-md-7 col-lg-7 ">
         <ul class="nav nav-tabs">
             <li class="active">
               <a  href="#1" data-toggle="tab">最新</a>
@@ -56,7 +56,7 @@
                         <asp:Image ID="CoverLabel" runat="server" Width="250px" Height="130px" ImageUrl='<%#Eval("record_cover") %>'  />
                     </div>
                     <div class=" featured-blog">                    
-                       <h3><a href="#"><%#Eval("record_title") %></h3></a>                    
+                       <h3><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>"><%#Eval("record_title") %></h3></a>                    
                         <asp:Label ID="ContLabel" runat="server" Text='<%# Eval("record_cont") %>' />
                          <button class="button-info">Read More</button>
 
@@ -153,13 +153,11 @@
  <div class="buttom">
         <div class="divider col-sm-8 col-xs-8 col-md-8">
           <div class="header-text"><span>相册</span> Album</div> 
-
         </div>
           <div class ="divider col-sm-4 col-xs-4 col-md-4" style ="font-size: 35px;"><div class="header-text"><a href ="Album.aspx">More>></a> </div> </div>
-
- </div>
+ 
        
-     <asp:DataList ID="DataList1" runat="server" RepeatColumns="3"  RepeatDirection="Horizontal">
+     <asp:DataList ID="DataList1" runat="server" RepeatColumns="4"  RepeatDirection="Horizontal">
          <ItemTemplate>
      <section id="clients">
          <div class="inner team">
@@ -167,7 +165,7 @@
                  <div class="col-xs-12 member animated" data-animation="fadeInUp" data-animation-delay="0">
           <div class="member-inner">
               <a class="team-image">
-                  <img src="<%#Eval("photo") %>" style="width:390px;height:280px"/></a>
+                  <img src="<%#Eval("photo") %>" style="width:390px;height:280px;"/></a>
                    <div class="member-details">
               <div class="member-details-inner">
                   <%#Eval("album_name") %>
@@ -189,9 +187,17 @@
 </div>
 
 
-<script src="scripts/jquery-1.10.2.min.js"></script><script src="scripts/bootstrap.min.js"></script><script src="scripts/script.js"></script><script src="scripts/pageSwitch.min.js"></script><script src="scripts/jquery.pwstabs-1.2.1.js"></script><script src="scripts/jQuery-face-cursor.js"></script><script src="scripts/pgwslider.min.js"></script>
+<script src="scripts/jquery-1.10.2.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/pageSwitch.min.js"></script>
+<script src="scripts/jquery.pwstabs-1.2.1.js"></script>
+<script src="scripts/jQuery-face-cursor.js"></script>
+<script src="scripts/pgwslider.min.js"></script>
 
-<script>                //轮播动画        $("#container").PageSwitch({
+<script>        
+        //轮播动画
+        $("#container").PageSwitch({
             direction: 'horizontal',
             easing: 'ease-in',
             duration: 1000,
@@ -202,6 +208,7 @@
             $(document).ready(function () {
                 $('.pgwSlider').pgwSlider();
             });
-        });</script>
+        });
+</script>
     
 </asp:Content>

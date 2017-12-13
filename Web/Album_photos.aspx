@@ -41,16 +41,26 @@
       </div>
            </ItemTemplate>
       </asp:ListView>
-
+           
 
              <%--相片--%>
   <div class="main-cont main-album">
       <div class="main-cont__title" style ="margin-left :20px;margin-bottom :25px;margin-top :25px;">
           <h3>相片详情</h3>
         </div>
-      <asp:DataList ID="PhotoDetile" runat="server" RepeatColumns="5"  RepeatDirection="Horizontal">
+     <asp:ListView ID="LVAlbumPhoto" runat="server" GroupItemCount="5">
+         
+             <LayoutTemplate>
+            <div>
+               <asp:PlaceHolder ID="groupPlaceHolder" runat="server" />
+            </div>
+        </LayoutTemplate>
+    <GroupTemplate>
+         <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
+</GroupTemplate>
+         
          <ItemTemplate>
-           <ul class="main-cont__list clearfix">
+           <ul class="main-cont__list clearfix" style="display:inline-block;">
           <li class="item">
             <img src="<%#Eval("photo") %>"  style ="width:250px;height:300px;margin-left :25px;"/>
             <div class="info" style ="margin-left :50px;margin-top :15px;font-size :18px;">
@@ -60,7 +70,18 @@
           </li>
                </ul>
              </ItemTemplate>
-      </asp:DataList>
+      </asp:ListView>
+
+       <div class="pager">
+                     <asp:DataPager ID="albumpager" runat="server"  PagedControlID="LVAlbumPhoto"  PageSize="8" >
+                         <Fields>   
+                        <asp:NextPreviousPagerField FirstPageText="首页" PreviousPageText="上一页" ButtonType="Button" ShowFirstPageButton="true" ShowNextPageButton="false" ButtonCssClass="btn btn-primary btn-sm"/>
+                        <asp:NumericPagerField NextPreviousButtonCssClass="btn btn-primary btn-sm" NumericButtonCssClass="btn btn-primary btn-sm" ButtonCount="4" />
+                        <asp:NextPreviousPagerField NextPageText="下一页" LastPageText="末页" ShowPreviousPageButton="false" ButtonType="Button" ButtonCssClass="btn btn-primary btn-sm" ShowLastPageButton="true" />
+                    </Fields>                         
+                     </asp:DataPager>
+        </div>
+
       </div>
     </div>
 </div>

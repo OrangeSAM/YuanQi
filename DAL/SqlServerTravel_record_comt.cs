@@ -30,7 +30,7 @@ namespace DAL
         }
        public DataTable SelectTravel_record_comt(int trrecord_id)
         {
-            string sql = "select travel_record_comt.*,user_name from travel_record_comt,users where travel_record_comt.user_id=users.user_id and trrecord_id=@trrecord_id order by comt_time desc";
+            string sql = "select travel_record_comt.*,user_name ,user_photo from travel_record_comt,users where travel_record_comt.user_id=users.user_id and trrecord_id=@trrecord_id order by comt_time desc";
             SqlParameter[] sp = { new SqlParameter("@trrecord_id", trrecord_id) };
             return DBHelper.GetFillData(sql, sp);
 

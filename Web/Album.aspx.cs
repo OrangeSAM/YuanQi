@@ -14,16 +14,25 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack) {
             BindAlbumPhoto();
+            }
         }
         public void BindAlbumPhoto()
         {
             DataTable dt = AlbumManager.SelectAll();
             if(dt!=null && dt.Rows.Count!=0)
             {
-                DataList1.DataSource = dt;
-                DataList1.DataBind();
+                LVAlbum1.DataSource = dt;
+                LVAlbum1.DataBind();
             }
         }
+        protected void albumpager_PreRender(object sender, EventArgs e)
+        {
+
+            BindAlbumPhoto();
+
+        }
+
     }
 }

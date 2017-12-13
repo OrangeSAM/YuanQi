@@ -107,18 +107,21 @@
     height: auto;
     margin-left: 25%;
     padding-bottom: 2px;
+    margin-top:20px;
 }
 .reply_contents{
     width:100%;
     height:auto;
     border-bottom:1px dotted #dcd9d9;
 }
-.reply_textbox{/*回复框*/
+
+
+.reply_textbox{
 
    width:70%;
    height:120px;
    margin-left:25%;
-   margin-bottom:5px;
+   margin-bottom:20px;
    border:1px dotted #dcd9d9;
 }
 .txtReply{
@@ -138,6 +141,9 @@
 }
 .reply_comment{
     margin-left:95%;
+}
+.repeter{
+    margin-top:10%;
 }
 
 

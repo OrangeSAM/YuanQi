@@ -22,8 +22,8 @@
         <div class="heading-icon">
           <i class="fa fa-3x fa-heart"></i>
         </div>
-      <h1 class="main-text">Show your Love for the Humanity</h1>
-      <p class="text-center sub-text"><em class="first-line">Lorem ipsum dolor sit amet, consectetur adipisiciSng elit, sed do eiusmod tempor </em><em class="next-line"> incididunt ut labore et dolore magna aliqua.A sed do eiusmod tempor incididunt ut labore et dolore magna.</em></p>
+      <h1 class="main-text">欢迎来到远骑网</h1>
+      <p class="text-center sub-text"><em class="first-line">Welcom to the YuanQi</em></p>
     </div>
 <div id="center">
     <%--游记--%>
@@ -33,7 +33,7 @@
         <div class="divider col-sm-4 col-xs-4 col-md-4">
         <div class="header-text">赛事 <span>Contest</span></div>
     </div>
-    <div id="exTab2" class="col-md-7 col-lg-7 ">
+    <div id="exTab2" class="col-md-7 col-lg-7 " style="margin-left:50px;">
         <ul class="nav nav-tabs">
             <li class="active">
               <a  href="#1" data-toggle="tab">最新</a>
@@ -41,7 +41,7 @@
             <li><a href="#2" data-toggle="tab">最热</a>
             </li>            
         </ul>
-        <div class="tab-content ">
+        <div class="tab-content " >
           <div class="tab-pane active" id="1">
             <asp:ListView id="LVtravel" runat ="server"  ItemPlaceholderID ="itemPlaceholder"> 
                <LayoutTemplate>
@@ -57,7 +57,7 @@
                     </div>
                     <div class=" featured-blog">                    
                        <h3><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>"><%#Eval("record_title") %></h3></a>                    
-                        <asp:Label ID="ContLabel" runat="server" Text='<%# Eval("record_cont") %>' />
+                        <asp:Label ID="ContLabel" runat="server" Text='<%# Eval("record_cont").ToString().Substring(0,60) %>' />
                          <button class="button-info">Read More</button>
 
                    </div>
@@ -150,13 +150,13 @@
 </div>   
     </div>
     <%--相册--%>
- <div class="buttom">
+ 
         <div class="divider col-sm-8 col-xs-8 col-md-8">
           <div class="header-text"><span>相册</span> Album</div> 
         </div>
           <div class ="divider col-sm-4 col-xs-4 col-md-4" style ="font-size: 35px;"><div class="header-text"><a href ="Album.aspx">More>></a> </div> </div>
  
-       
+ <div class="buttom"  style="margin-left:50px;">      
      <asp:DataList ID="DataList1" runat="server" RepeatColumns="4"  RepeatDirection="Horizontal">
          <ItemTemplate>
      <section id="clients">

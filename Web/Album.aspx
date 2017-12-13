@@ -11,10 +11,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <div class="divider col-sm-12 col-xs-12 col-md-12">
-      <div class="header-text">Album<span>相册</span></div>
-      
+      <div class="header-text">Album<span>相册</span></div>      
   </div>
-
+    <div style="height:900px;">
     <asp:ListView ID="LVAlbum1" runat="server">
         <LayoutTemplate>
             <div>
@@ -59,7 +58,8 @@
       <%--  </section>--%>           
             </ItemTemplate>  
         </asp:ListView>
-    <div style="width:100%;">
+    </div>
+    <div class="pager">
                      <asp:DataPager ID="albumpager" runat="server"  PagedControlID="LVAlbum1"  PageSize="8" OnPreRender="albumpager_PreRender">
                          <Fields>   
                         <asp:NextPreviousPagerField FirstPageText="首页" PreviousPageText="上一页" ButtonType="Button" ShowFirstPageButton="true" ShowNextPageButton="false"  ButtonCssClass="btn btn-primary btn-sm"/>

@@ -14,7 +14,7 @@
                         </div>
                  </LayoutTemplate>
                  <ItemTemplate>
-                     <div class="banner clearfix">
+                     <div class="banner clearfix" style="margin-left:10%;margin-right:30px;">
                             <div class="slider" id="slider">
                                 <div class="slider-wrapper">
                                     <img src="<%#Eval("photo") %>"/> 
@@ -24,7 +24,7 @@
                             <span></span>
                         </div>
                     </div>
-          <div class="banner-info">
+          <div class="banner-info" style="float:left;">
               <div class="news body-border">
                   <ul>
                      <li class="title">相册详情</li>
@@ -44,12 +44,11 @@
            
 
              <%--相片--%>
-  <div class="main-cont main-album">
-      <div class="main-cont__title" style ="margin-left :20px;margin-bottom :25px;margin-top :25px;">
+  <div class="main-cont main-album" style="margin:10%;">
+      <div class="main-cont__title" >
           <h3>相片详情</h3>
         </div>
-     <asp:ListView ID="LVAlbumPhoto" runat="server" GroupItemCount="5">
-         
+     <asp:ListView ID="LVAlbumPhoto" runat="server" GroupItemCount="5">         
              <LayoutTemplate>
             <div>
                <asp:PlaceHolder ID="groupPlaceHolder" runat="server" />
@@ -57,15 +56,13 @@
         </LayoutTemplate>
     <GroupTemplate>
          <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
-</GroupTemplate>
-         
+</GroupTemplate>         
          <ItemTemplate>
            <ul class="main-cont__list clearfix" style="display:inline-block;">
           <li class="item">
             <img src="<%#Eval("photo") %>"  style ="width:250px;height:300px;margin-left :25px;"/>
             <div class="info" style ="margin-left :50px;margin-top :15px;font-size :18px;">
-              <p>收藏数：<%#Eval("col_count") %> &nbsp;&nbsp;·&nbsp;&nbsp; 点赞数：<%#Eval("like_count") %></p>
-           
+              <p>收藏数：<%#Eval("col_count") %> &nbsp;&nbsp;·&nbsp;&nbsp; 点赞数：<%#Eval("like_count") %></p>           
             </div>
           </li>
                </ul>

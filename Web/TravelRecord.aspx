@@ -23,8 +23,8 @@
             <ItemTemplate>
                 <article class="mini-post">
                     <header>
-                        <h3><a href="TravelRecord.aspx?id=<%#Eval("trrecord_id") %>"><%#Eval("record_title") %></a></h3>
-                        <time class="published"><%#Eval("pub_time") %></time>
+                        <h3><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>"><%#Eval("record_title") %></a></h3>
+                        <time class="published"><%# string.Format("{0:yyyy-MM-dd}",Eval("pub_time")) %></time>
                         <a href="#" class="author"><img src="<%#Eval("user_photo") %>" /></a>
                     </header>
                     <a href="#"><img src="<%#Eval("record_cover") %>" class="image featured"/></a>
@@ -46,7 +46,7 @@
                             <h2><%#Eval("record_title") %></h2>
                         </div>
                         <div class="meta">
-                            <time class="published"><%#Eval("pub_time") %></time>
+                            <time class="published"><%# string.Format("{0:yyyy-MM-dd}",Eval("pub_time"))%></time>
                             <a href="#" class="author"><span class="name"><%#Eval("record_author") %></span><img src="<%#Eval("user_photo") %>" /></a>
                         </div>
                     </header>
@@ -57,7 +57,7 @@
                             
                         </ul>
                         <ul class="stats">
-                            <li><a href="TravelRecord.aspx?id=<%#Eval("trrecord_id") %>" class="button-main big">continue reding</a></li>
+                            <li><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>" class="button-main big">continue reding</a></li>
                             <li style="float:right;"><a href="#" class="icon-bar fa-heart"><%#Eval("col_count") %></a></li>
                             <li style="float:right;"><a href="#" class="icon-bar fa-comment"><%#Eval("comt_count") %></a></li>
                             <li style="float:right;"><a href="#" class="icon-bar fa-heart-o"><%#Eval("like_count") %></a></li>

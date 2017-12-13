@@ -49,7 +49,7 @@
                     <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
                 </LayoutTemplate>
                 <ItemTemplate>
-                    <section class="testimonial">
+                    <%--<section class="testimonial">--%>
                        <div class="col-md-7 testimonial-blog">
                             <div id="wrapper">                             
                     <div class="testimonials-slider" style="margin-left:150px;">
@@ -57,7 +57,7 @@
                          <img src="<%#Eval("user_photo") %>" width="120"/>
                      </div>
                      <div "testimonials-carousel-context">
-                         <div class="testimonials-name"><%#Eval("user_name") %>&nbsp;&nbsp;<span><%#Eval("comt_time") %></span></div>
+                         <div class="testimonials-name"><%#Eval("user_name") %>&nbsp;&nbsp;<span><%# string.Format("{0:yyyy-MM-dd}", Eval("comt_time")) %></span></div>
                           <div class="testimonials-carousel-content">
                              <p><%#Eval("comt_cont") %></p>
                          </div>
@@ -72,25 +72,26 @@
                             <asp:Panel ID="panelreply" runat="server" Visible="false">
                              <div class="reply_textbox">
                                  <asp:HiddenField ID="HiddenFieldComID" runat="server" Value='<%#Eval("trcomt_id") %>' Visible="false" />
-                                 <asp:TextBox ID="txtreply" CssClass="txtReply" TextMode="MultiLine" runat="server"></asp:TextBox>
-                                 <asp:Button ID="btnreply" runat="server" Text="发表" OnClick="btnreply_Click" CssClass="btnReply btn btn-default btn-sm"  />
+                                 <asp:TextBox ID="txtreply" CssClass="form textarea" TextMode="MultiLine" runat="server"></asp:TextBox>
+                                 <asp:Button ID="btnreply" runat="server" Text="发表" OnClick="btnreply_Click" CssClass="form-btn semibold"  />
                              </div>
                              <div>
                                  <%--验证控件--%>
                              </div>
                          </asp:Panel>
-
+                   <div class="repeter"  style="margin-top:10%;">
                          <asp:Repeater ID="Rereplycomment" runat="server">
                              <ItemTemplate>
                                  <div class="reply">
                                      <div class="reply_contents">
-                                 <a href="#"><%#Eval("回复人") %></a>回复<a href="#"><%#Eval("被回复人") %></a>：<%#Eval("reply_cont") %><%#Eval("reply_time") %></div>
+                                 <a href="#"><%#Eval("回复人") %></a>回复<a href="#"><%#Eval("被回复人") %></a>：<%#Eval("reply_cont") %><%# string.Format("{0:yyyy-MM-dd}",Eval("reply_time")) %></div>
                                 </div>
                              </ItemTemplate>
                          </asp:Repeater>
 
                            </div>
-                    </section>
+                           </div>
+                  <%--  </section>--%>
                         
 
                 </ItemTemplate>

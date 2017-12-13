@@ -13,15 +13,15 @@ namespace DAL
     {
        public int InsertTravel_record(travel_record travel_Record)
         {
-            string sql = "insert into travel_record(user_id,record_author,record_title,record_cont,record_cover) values (@user_id,@record_author,@record_title,@record_cont,@record_cover)";
+            string sql = "insert into travel_record(user_id,record_author,record_title,record_cont,record_cover,pub_time) values (@user_id,@record_author,@record_title,@record_cont,@record_cover,@pub_time)";
             SqlParameter[] para =
             {
-                new SqlParameter("@user_id",travel_Record .user_id),
+                new SqlParameter ("@user_id",travel_Record .user_id),
                 new SqlParameter ("@record_author",travel_Record .record_author ),
                 new SqlParameter ("@record_title",travel_Record .record_title ),
                 new SqlParameter ("@record_cont",travel_Record .record_cont ),
-                new SqlParameter ("@record_cover",travel_Record .record_cover )
-
+                new SqlParameter ("@record_cover",travel_Record .record_cover ),
+                new SqlParameter ("@pub_time",travel_Record.pub_time)
             };
             return DBHelper.GetExcuteNonQuery(sql, para);
                 

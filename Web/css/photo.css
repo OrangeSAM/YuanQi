@@ -10,6 +10,7 @@
 .banner {
     position: relative;
     height: 445px;
+    margin-left:80px;
 }
 .slider {
     position: relative;
@@ -108,7 +109,7 @@
     }
 .banner-info {
     position: relative;
-    float: right;
+    float: left;
     height: 445px;
 }
 
@@ -210,6 +211,7 @@
 
 .main-album .info {
     padding-left: 12px;
+
 }
 
 .main-album .info .title {
@@ -225,4 +227,4 @@
 .main-album .info .author {
         display: inline;
         color: #888;
-    }
+}

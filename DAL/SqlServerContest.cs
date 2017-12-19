@@ -14,7 +14,7 @@ namespace DAL
     {
         public DataTable SelectAll()
         {
-            string sql = "select * from contest order by con_time ";
+            string sql = "select * from contest order by con_time desc";
             return DBHelper.GetFillData(sql);
         }
         public int InsertContest(contest contest)

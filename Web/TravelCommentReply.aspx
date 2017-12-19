@@ -13,7 +13,7 @@
                 <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
             </LayoutTemplate>
             <ItemTemplate>
-                <article class="mini-post" style="width:80%; margin-left:160px; ">
+                <article class="mini-post" style="width:80%;margin-left :10%">
                     <header>
                         <h2><%#Eval("record_title") %></h2>
                         <p><%#Eval("record_cont") %></p>
@@ -79,6 +79,7 @@
                                  <%--验证控件--%>
                              </div>
                          </asp:Panel>
+                          
                    <div class="repeter"  style="margin-top:10%;">
                          <asp:Repeater ID="Rereplycomment" runat="server">
                              <ItemTemplate>

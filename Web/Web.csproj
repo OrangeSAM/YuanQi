@@ -134,6 +134,11 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="bin\Web.dll" />
     <Content Include="bin\Web.pdb" />
+    <Content Include="css\Activity.css" />
+    <Content Include="css\act_detail\Art_detail.css" />
+    <Content Include="css\act_detail\bootstrap.min.css" />
+    <Content Include="css\act_detail\font-awesome.css" />
+    <Content Include="css\act_detail\templatemo-style.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\comment.css" />
     <Content Include="css\contest.css" />
@@ -184,6 +189,15 @@
     <Content Include="img\trrecord_cover\3 %286%29.jpg" />
     <Content Include="img\trrecord_cover\3 %287%29.jpg" />
     <Content Include="img\用户.png" />
+    <Content Include="js\act_detail\jquery-1.10.2.min.js" />
+    <Content Include="js\act_detail\jquery-1.7.2.min.js" />
+    <Content Include="js\act_detail\jquery.min.js" />
+    <Content Include="js\act_detail\jquery.pwstabs-1.2.1.js" />
+    <Content Include="js\act_detail\main.min.js" />
+    <Content Include="js\act_detail\modernizr-2.6.2.min.js" />
+    <Content Include="js\act_detail\plugins.min.js" />
+    <Content Include="js\act_detail\script.js" />
+    <Content Include="js\act_detail\YuxiSlider.jQuery.min.js" />
     <Content Include="js\jquery-1.9.0.min.js" />
     <Content Include="js\jquery-2.1.1.js" />
     <Content Include="js\login.js" />
@@ -201,12 +215,16 @@
     <Content Include="Contest.aspx" />
     <Content Include="Album_photos.aspx" />
     <Content Include="pub_article.aspx" />
+    <Content Include="scripts\act_de\bootstrap.min.js" />
+    <Content Include="scripts\act_de\jquery-1.10.2.min.js" />
     <Content Include="TravelRecord.aspx" />
     <Content Include="TravelCommentReply.aspx" />
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="Activity.aspx" />
+    <Content Include="Activity_detail.aspx" />
     <None Include="bin\Web.dll.config" />
     <Content Include="utf8-net\net\config.json" />
     <Content Include="utf8-net\net\controller.ashx" />
@@ -592,6 +610,20 @@
     <Compile Include="utf8-net\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="utf8-net\net\App_Code\PathFormater.cs" />
     <Compile Include="utf8-net\net\App_Code\UploadHandler.cs" />
+    <Compile Include="Activity.aspx.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Activity.aspx.designer.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Activity_detail.aspx.cs">
+      <DependentUpon>Activity_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Activity_detail.aspx.designer.cs">
+      <DependentUpon>Activity_detail.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

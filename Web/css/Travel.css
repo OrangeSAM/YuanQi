@@ -1,15 +1,16 @@
 ﻿body {
-    width:90%;
+    /*width:90%;*/
 }
 #left{
     float:left;
     width:25%;
-    margin-left:150px;
+    margin-left:8%;
     
 }
-#right{
-    width:60%;
-    float:right;
+#right {
+    width: 55%;
+    float: right;
+    margin-right : 8%;
 }
 #main {
 

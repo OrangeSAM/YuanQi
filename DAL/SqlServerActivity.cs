@@ -35,12 +35,12 @@ namespace DAL
         
         public DataTable SelectAll()
         {
-            string sql = "select * from activity where activity_id=@activity_id";
+            string sql = "select * from activity order by pub_time desc";
             return DBHelper.GetFillData(sql);
         }
         public DataTable SelectActivity(int activity_id)
         {
-            string sql = "select *,user_name where users.user_id=activity.user_id and activity_id=@activity_id";
+            string sql = "select *,user_name from users,activity where users.user_id=activity.user_id and activity_id=@activity_id";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@activity_id",activity_id),

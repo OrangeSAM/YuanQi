@@ -1,0 +1,138 @@
+﻿@media (min-width: 1200px) {
+    .container {
+        max-width: 1080px;
+    }
+}
+body {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    font-family: "Open sans", Helvetica, Arial, sans-serif;
+    color: #666666;
+    padding: 0;
+
+}
+
+.topspace {
+    margin-top: 40px;
+}
+
+.section-title{
+   
+}
+h2,
+h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+}
+.entry-title {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px 0 25px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-size: 2.25rem;
+    letter-spacing: 1px;
+}
+
+    .section-title a,
+    .entry-title a {
+        color: #333333;
+    }
+
+    .section-title span,
+    .entry-title span {
+        display: inline-block;
+        position: relative;
+    }
+
+        .section-title span:before,
+        .entry-title span:before,
+        .section-title span:after,
+        .entry-title span:after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            top: .53em;
+            width: 400%;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+
+        .section-title span:before,
+        .entry-title span:before {
+            right: 100%;
+            margin-right: 45px;
+        }
+
+        .section-title span:after,
+        .entry-title span:after {
+            left: 100%;
+            margin-left: 45px;
+        }
+
+.entry-header .entry-meta {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: normal;
+    color: #a5a5a5;
+    margin: 0 0 15px 0;
+}
+
+    .entry-header .entry-meta a {
+        color: #a5a5a5;
+    }
+
+.entry-content {
+    margin: 0 0 60px 0;
+}
+
+    .entry-content h2 {
+        line-height: 1.2;
+        font-size: 30px;
+        font-size: 1.875rem;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+.meta-nav,
+.more-link {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #666666;
+    text-decoration: none;
+}
+
+    .meta-nav:hover,
+    .more-link:hover {
+        color: #333333;
+        text-decoration: underline;
+    }
+
+.more-link {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+/* Section - Featured */
+.featured {
+    font-size: 13px;
+    font-size: 0.8125rem;
+}
+
+    .featured h3 {
+        font-weight: bold;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        line-height: 1.4em;
+        vertical-align: middle;
+        margin: 0 0 25px 0;
+    }

@@ -33,7 +33,7 @@ namespace DAL
 
         public DataTable SelectAll()
         {
-            string sql = "select disscussion.*,user_name from discussion,users where discusson.user_id=users.user_id order by pub_time";
+            string sql = "select discussion.*,user_name,user_photo from discussion,users where discussion.user_id=users.user_id order by pub_time";
             return DBHelper.GetFillData(sql);
         }
 

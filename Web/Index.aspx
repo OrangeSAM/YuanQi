@@ -57,7 +57,7 @@
                     </div>
                     <div class=" featured-blog">                    
                        <h3><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>"><%#Eval("record_title") %></h3></a>                    
-                        <asp:Label ID="ContLabel" runat="server" Text='<%# Eval("record_cont").ToString().Substring(0,60) %>' />
+                        <asp:Label ID="ContLabel" runat="server" Text='<%# Eval("record_cont")%>' />
                          <button class="button-info">Read More</button>
 
                    </div>

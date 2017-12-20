@@ -53,5 +53,10 @@ namespace Web
                 ReLikeDiscussion.DataBind();
             }
         }
+
+        protected void discussion_PreRender(object sender, EventArgs e)
+        {
+            BindDiscussion();
+        }
     }
 }

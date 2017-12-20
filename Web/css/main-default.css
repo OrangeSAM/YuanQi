@@ -5250,7 +5250,9 @@ body .b-slider--thumb-visible .tp-bullets {
 
 .b-blog-listing__block {
   border: 1px solid #e0e0e0;
-  margin-bottom: 20px; }
+  margin-bottom: 20px; 
+  background-color :white ;
+}
 
 .b-blog-listing__block-top {
   margin-bottom: 24px; }

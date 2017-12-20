@@ -10,69 +10,69 @@
 namespace Web {
     
     
-    public partial class WebForm8 {
+    public partial class navi {
         
         /// <summary>
-        /// ScriptManager1 控件。
+        /// head 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// LVDiscussion 控件。
+        /// form1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView LVDiscussion;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// updatecomment 控件。
+        /// PanelUser 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updatecomment;
+        protected global::System.Web.UI.WebControls.Panel PanelUser;
         
         /// <summary>
-        /// txtComments 控件。
+        /// lblUser 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComments;
+        protected global::System.Web.UI.WebControls.Label lblUser;
         
         /// <summary>
-        /// btnComments 控件。
+        /// loginout 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnComments;
+        protected global::System.Web.UI.WebControls.LinkButton loginout;
         
         /// <summary>
-        /// updatereply 控件。
+        /// PanelLogin 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updatereply;
+        protected global::System.Web.UI.WebControls.Panel PanelLogin;
         
         /// <summary>
-        /// LVDisReply 控件。
+        /// ContentPlaceHolder1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView LVDisReply;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
     }
 }

@@ -11,12 +11,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   <div class="container">    
       <div class="row">
-          <asp:ListView ID="LVDiscussion" runat="server">
+         
+                   <div class="col-md-9 ">
+                        <asp:ListView ID="LVDiscussion" runat="server">
               <LayoutTemplate>
                   <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
               </LayoutTemplate>
               <ItemTemplate>
-                   <div class="col-md-9 ">
                        <div class="b-blog-listing__block">
                         <div class="b-infoblock-with-icon b-blog-listing__infoblock">
                             <a href="#" class="b-infoblock-with-icon__icon f-infoblock-with-icon__icon fade-in-animate hidden-xs">
@@ -38,10 +39,11 @@
                                 </div>
                             </div>
                         </div> 
-                       </div>                         
-                  </div>
-             </ItemTemplate>
+                       </div>        
+                               </ItemTemplate>
       </asp:ListView>
+                  </div>
+
           <div class="col-md-3">
                <div class="row">
                      <div class="col-md-12">
@@ -52,7 +54,7 @@
                     </div>
                </div>
               <div class="row b-col-default-indent">
-                  <div class="col-md-12">
+                  <div class="col-md-12" style="background-color:white ;">
                       <div class="b-categories-filter">
                           <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">blog categories</h4>
                           <%--绑定最热--%>
@@ -68,7 +70,7 @@
                          </asp:Repeater>
                       </div>
                   </div>
-                  <div class="col-md-12">
+                  <div class="col-md-12"style="background-color:white ;">
                     <div class="b-categories-filter">
                         <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">blog categories</h4>
                     </div>
@@ -90,7 +92,7 @@
                             </ItemTemplate>
                         </asp:Repeater>                      
                   </div> 
-                   <div class="col-md-12">
+                   <div class="col-md-12"style="background-color:white ;">
         <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">tags cloud</h4>
         <div>
     <a class="f-tag b-tag" href="#">Dress</a>
@@ -110,7 +112,21 @@
 
               </div>
           </div>
+          <div class="pager">
+      <asp:DataPager runat ="server" ID ="datapager" PageSize ="3" PagedControlID="LVDiscussion" OnPreRender ="discussion_PreRender" >
+           <Fields>
+           
+                        <asp:NextPreviousPagerField FirstPageText="首页" PreviousPageText="上一页" ButtonType="Button" ShowFirstPageButton="true" ShowNextPageButton="false"  ButtonCssClass="btn btn-primary btn-sm"/>
+                        <asp:NumericPagerField NextPreviousButtonCssClass="btn btn-primary btn-sm" NumericButtonCssClass="btn btn-primary btn-sm" ButtonCount="4" />
+                        <asp:NextPreviousPagerField NextPageText="下一页" LastPageText="末页" ShowPreviousPageButton="false" ButtonType="Button" ButtonCssClass="btn btn-primary btn-sm" ShowLastPageButton="true" />
+                   
+          </Fields>
+      </asp:DataPager>
+            </div> 
+
       </div>
+     
+
   </div>
 
 <%--<script>--%>

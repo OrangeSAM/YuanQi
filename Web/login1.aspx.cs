@@ -67,6 +67,7 @@ namespace Web
                 if (dr.Read())
                 {
                     Session["user_name"] = dr[1].ToString();
+                    Session["user_id"] = dr[0].ToString();
                     if (inlineCheckbox1.Checked)
                     {
                         Response.Cookies["users"]["user_name"] = HttpUtility.UrlEncode(u.Text.Trim());
@@ -75,8 +76,11 @@ namespace Web
                     }
                     
                     Label1.Text = "欢迎登录远骑网！";
-                    Response.Redirect("Index.aspx");
-                   
+                    //Response.Redirect("Index.aspx");
+                    Biz.LoginOk = true;  //登录成功设为True.
+                    Biz.Account = "user_id";  //记录登录成功的帐号
+                    Response.Redirect(Biz.TargetPath);  //转向目标页面
+
                 }
                 else
                 {

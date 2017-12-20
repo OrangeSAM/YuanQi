@@ -99,6 +99,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Activity.aspx" />
+    <Content Include="Activity_detail.aspx" />
     <Content Include="bin\BLL.dll" />
     <Content Include="bin\BLL.pdb" />
     <Content Include="bin\DAL.dll" />
@@ -517,6 +519,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity.aspx.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Activity.aspx.designer.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Activity_detail.aspx.cs">
+      <DependentUpon>Activity_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Activity_detail.aspx.designer.cs">
+      <DependentUpon>Activity_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Biz.cs" />
     <Compile Include="login1.aspx.cs">
       <DependentUpon>login1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

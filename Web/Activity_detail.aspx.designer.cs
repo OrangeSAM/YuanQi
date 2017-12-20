@@ -10,24 +10,33 @@
 namespace Web {
     
     
-    public partial class WebForm4 {
+    public partial class Activity_detail {
         
         /// <summary>
-        /// LVContest 控件。
+        /// ScriptManager1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView LVContest;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// datapager 控件。
+        /// updatejoin 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataPager datapager;
+        protected global::System.Web.UI.UpdatePanel updatejoin;
+        
+        /// <summary>
+        /// LVact_de 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView LVact_de;
     }
 }

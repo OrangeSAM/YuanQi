@@ -1,18 +1,24 @@
-﻿body{
-
+﻿body {
+    /*width:90%;*/
 }
 #left{
     float:left;
     width:25%;
-    margin-left:150px;
+    margin-left:8%;
     
 }
-#right{
-    float:right;
-    width:55%;    
-    margin-right:150px;
+#right {
+    width: 55%;
+    float: right;
+    margin-right : 8%;
 }
+#main {
 
+		flex-grow: 1;
+		-ms-flex: 1;
+		width: 60%;
+        float:right;
+}
 .mini-post {
 		display: -moz-flex;
 		display: -webkit-flex;

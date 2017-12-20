@@ -14,9 +14,11 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+          if(!IsPostBack)
+          { 
             BindNews();
             BindNewsID();
+          }
         }
         public void BindNews()
         {
@@ -38,5 +40,9 @@ namespace Web
             }
         }
 
+        protected void news_PreRender(object sender, EventArgs e)
+        {
+            BindNews();
+        }
     }
 }

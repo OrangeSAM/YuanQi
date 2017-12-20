@@ -19,7 +19,7 @@
                             <div id="itemPlaceholder" runat="server">
                             </div>
                         </div>
-                        <asp:DataPager runat ="server" ID ="datapager" PageSize ="6"></asp:DataPager>
+                      
                     </LayoutTemplate>
                     <ItemTemplate>
 
@@ -29,6 +29,17 @@
                         </ul>
                     </ItemTemplate>
                 </asp:ListView>
+                <div class="pager">
+      <asp:DataPager runat ="server" ID ="datapager" PageSize ="5" PagedControlID="ElseNewsListView" OnPreRender="news_PreRender">
+           <Fields>
+           
+                        <asp:NextPreviousPagerField FirstPageText="首页" PreviousPageText="上一页" ButtonType="Button" ShowFirstPageButton="true" ShowNextPageButton="false"  ButtonCssClass="btn btn-primary btn-sm"/>
+                        <asp:NumericPagerField NextPreviousButtonCssClass="btn btn-primary btn-sm" NumericButtonCssClass="btn btn-primary btn-sm" ButtonCount="4" />
+                        <asp:NextPreviousPagerField NextPageText="下一页" LastPageText="末页" ShowPreviousPageButton="false" ButtonType="Button" ButtonCssClass="btn btn-primary btn-sm" ShowLastPageButton="true" />
+                   
+          </Fields>
+      </asp:DataPager>
+            </div> 
             </div>
            </div>  
         <%--右侧新闻内容--%>

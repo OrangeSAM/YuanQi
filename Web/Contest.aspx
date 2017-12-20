@@ -6,6 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <%--    <link href="css/main.css" rel="stylesheet" />--%>
     <link href="css/contest.css" rel="stylesheet" />
+     <div class="divider col-sm-12 col-xs-12 col-md-12">
+      <div class="header-text">Contest<span>赛事</span></div>      
+  </div><br /><br /><br /><br /><br />
     <asp:ListView ID ="LVContest" runat ="server" >
     <LayoutTemplate >
         <div id="itemPlaceholderContainer" runat="server">
@@ -28,9 +31,9 @@
    	<%--<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>--%>
     <p style="font-size:20px;"><%#Eval("con_intro") %></p>
    
-      <ul class="actions">
+      <%--<ul class="actions">
 	     <li><a href="#" class="button big">Continue Reading</a></li>
-      </ul>
+      </ul>--%>
      
 
   </article>

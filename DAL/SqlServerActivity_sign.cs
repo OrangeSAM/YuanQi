@@ -14,12 +14,14 @@ namespace DAL
     {
         public int InsertActSign(activity_sign ActSign)
         {
-            string sql = "insert into activity_sign(user_id,activity_id,sign_time) values(@user_id,@activity_id,@sign_time)";
+            string sql = "insert into activity_sign(user_id,activity_id,sign_time,user_name,user_phone) values(@user_id,@activity_id,@sign_time,@user_name,@user_phone)";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@user_id",ActSign.user_id),
                 new SqlParameter("@activity_id",ActSign.activity_id),
                 new SqlParameter("@sign_time",ActSign.sign_time),
+                new SqlParameter ("@user_name",ActSign .user_name ),
+                new SqlParameter ("@user_phone",ActSign .user_phone )
             };
             return DBHelper.GetExcuteNonQuery(sql, sp);
         }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nav.Master" AutoEventWireup="true" CodeBehind="Activity_detail.aspx.cs" Inherits="Web.WebForm9" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nav.Master" AutoEventWireup="true" CodeBehind="Activity_detail.aspx.cs" Inherits="Web.Activity_detail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
        <link href="css/comment.css" rel="stylesheet" />
@@ -6,6 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <%-- <link href="css/act_detail/Art_detail.css" rel="stylesheet" />--%>
     <link href="css/contest.css" rel="stylesheet" />
+     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel ID ="updatejoin" runat ="server" >
+        <ContentTemplate>
     <asp:ListView ID ="LVact_de" runat ="server" >
                 <LayoutTemplate > 
                     <div id="itemPlaceholderContainer" runat="server">
@@ -32,9 +35,11 @@
       </ul>
        <asp:Panel ID="joinpanel" runat ="server" Visible ="false"  >
            <div class ="jointxtbox">
-               用户名：<asp:TextBox ID="txtname" CssClass="form txtbox " runat="server"></asp:TextBox><br />
-               联系电话：<asp:TextBox ID ="txtphone" CssClass ="form txtbox " runat ="server" ></asp:TextBox><br />
-               <%--<asp:Button ID="btnjoin" runat="server" Text="报名" OnClick="btnjoin_Click" CssClass="form-btn semibold"  />    --%>           
+               <asp:HiddenField ID="HiddenFieldComID" runat="server" Value='<%#Eval("activity_id") %>' Visible="false" />
+               <div class="joinname" style="text-align :center "> 用户名：<asp:TextBox ID="txtname" CssClass="form txtbox " runat="server"></asp:TextBox></div><br />
+               <div class ="joinphone" style ="text-align :center "> 联系电话：<asp:TextBox ID ="txtphone" CssClass ="form txtbox " runat ="server" ></asp:TextBox></div><br />
+               <asp:Button ID="btnjoin" runat="server" Text="报名"  CssClass="form-btn"  OnClick ="Btnjoin_click" /> <br />
+            
            </div>
        </asp:Panel>
      
@@ -43,4 +48,6 @@
 
                 </ItemTemplate>
                 </asp:ListView>
+            </ContentTemplate> 
+        </asp:UpdatePanel>
 </asp:Content>

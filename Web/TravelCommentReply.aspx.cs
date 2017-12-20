@@ -20,6 +20,7 @@ namespace Web
                 visibleflag = true;
                 BindTravel();
                 BindTravelComment();
+                Biz.TargetPath = Request.RawUrl;
             }
         }
         public void BindTravel()
@@ -133,4 +134,4 @@ namespace Web
     }
 
  
-    }
+}

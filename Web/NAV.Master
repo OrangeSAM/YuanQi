@@ -33,7 +33,7 @@
           </li>
 					<li><a href="TravelRecord.aspx">骑行游记</a></li>
 					<li><a href="Album.aspx">骑行相册</a></li>
-					<li><a href="#">骑行活动</a></li>
+					<li><a href="Activity.aspx">骑行活动</a></li>
                     <li>
                         <img src="img/用户.png"  width="40" height="40"/></li>
                     <li>

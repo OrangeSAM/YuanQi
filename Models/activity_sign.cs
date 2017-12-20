@@ -12,5 +12,7 @@ namespace Models
         public int user_id { get; set; }
         public int activity_id { get; set; }
         public DateTime sign_time { get; set; }
+        public string user_name { get; set; }
+        public string user_phone { get; set; }
     }
 }

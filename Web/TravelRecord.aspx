@@ -1,12 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nav.Master" AutoEventWireup="true" CodeBehind="TravelRecord.aspx.cs" Inherits="Web.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+<%--    <link href="css/bootstrap.min.css" rel="stylesheet" />--%>
     <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="css/Travel.css" rel="stylesheet" />
-   <%-- <link href="css/main.css" rel="stylesheet" />--%>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <link href="css/Travel.css" rel="stylesheet" />
     <div id="left">
         <section id="intro">
 			<a href="#" class="logo">
@@ -23,7 +22,7 @@
             <ItemTemplate>
                 <article class="mini-post">
                     <header>
-                        <h3><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>"><%#Eval("record_title") %></a></h3>
+                        <h3><a href="#"><%#Eval("record_title") %></a></h3>
                         <time class="published"><%# string.Format("{0:yyyy-MM-dd}",Eval("pub_time")) %></time>
                         <a href="#" class="author"><img src="<%#Eval("user_photo") %>" /></a>
                     </header>
@@ -38,7 +37,7 @@
             <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
         </LayoutTemplate>
         <ItemTemplate>
-            <div class="main">
+<%--            <div class="main">--%>
                 <%--游记详情--%>
                 <article class="post">
                     <header>
@@ -52,19 +51,14 @@
                     </header>
                     <img src="<%#Eval("record_cover") %>" class="image featured"/>
                     <p><%#Eval("record_cont") %></p>
-                   <%-- <footer>--%>
-                        <ul class="actions">
-                            
-                        </ul>
                         <ul class="stats">
                             <li><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>" class="button-main big">continue reding</a></li>
                             <li style="float:right;"><a href="#" class="icon-bar fa-heart"><%#Eval("col_count") %></a></li>
                             <li style="float:right;"><a href="#" class="icon-bar fa-comment"><%#Eval("comt_count") %></a></li>
                             <li style="float:right;"><a href="#" class="icon-bar fa-heart-o"><%#Eval("like_count") %></a></li>
                         </ul>
-                   <%-- </footer>--%>
                 </article>
-            </div>
+  <%--          </div>--%>
         </ItemTemplate>
     </asp:ListView>
          <div class="pager">

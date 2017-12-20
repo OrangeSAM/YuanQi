@@ -1,5 +1,5 @@
-﻿body {
-    width:90%;
+﻿body{
+
 }
 #left{
     float:left;
@@ -8,16 +8,11 @@
     
 }
 #right{
-    width:60%;
     float:right;
+    width:55%;    
+    margin-right:150px;
 }
-#main {
 
-		flex-grow: 1;
-		-ms-flex: 1;
-		width: 60%;
-        float:right;
-}
 .mini-post {
 		display: -moz-flex;
 		display: -webkit-flex;

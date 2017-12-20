@@ -13,7 +13,7 @@
                 <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
             </LayoutTemplate>
             <ItemTemplate>
-                <article class="mini-post" style="width:80%; margin-left:160px; ">
+                <div class="mini-post" style="width:80%; margin-left:160px; ">
                     <header>
                         <h2><%#Eval("record_title") %></h2>
                         <p><%#Eval("record_cont") %></p>
@@ -21,7 +21,7 @@
                         <a href="#" class="author" ><img src="<%#Eval("user_photo") %>" /></a>
                     </header>
                     <a href="#"><img src="<%#Eval("record_cover") %>" class="image featured" style="height:400px;"/></a>
-                </article>
+                </div>
             </ItemTemplate>
         </asp:ListView>
 
@@ -65,6 +65,7 @@
                         </div>
                          <div class="reply_comment">
                          <asp:LinkButton ID="lbtnReply" runat="server"  OnClick="lbtnReply_Click">回复</asp:LinkButton>
+          
                          </div>
                          
                     

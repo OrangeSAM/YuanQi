@@ -141,6 +141,7 @@
     <Content Include="css\demo.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\Home.css" />
+    <Content Include="css\main-default.css" />
     <Content Include="css\main.css" />
     <Content Include="css\nav.css" />
     <Content Include="css\photo.css" />
@@ -201,12 +202,15 @@
     <Content Include="Contest.aspx" />
     <Content Include="Album_photos.aspx" />
     <Content Include="pub_article.aspx" />
+    <Content Include="scripts\discussion\color-themes.js" />
     <Content Include="TravelRecord.aspx" />
     <Content Include="TravelCommentReply.aspx" />
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="Discussion.aspx" />
+    <Content Include="WebForm8.aspx" />
     <None Include="bin\Web.dll.config" />
     <Content Include="utf8-net\net\config.json" />
     <Content Include="utf8-net\net\controller.ashx" />
@@ -592,6 +596,20 @@
     <Compile Include="utf8-net\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="utf8-net\net\App_Code\PathFormater.cs" />
     <Compile Include="utf8-net\net\App_Code\UploadHandler.cs" />
+    <Compile Include="Discussion.aspx.cs">
+      <DependentUpon>Discussion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Discussion.aspx.designer.cs">
+      <DependentUpon>Discussion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm8.aspx.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm8.aspx.designer.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

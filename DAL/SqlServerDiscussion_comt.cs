@@ -38,13 +38,13 @@ namespace DAL
 
         public DataTable SelectAll()
         {
-            string sql = "select a.*,b.user_name,c.dis_title from discussion_comt a,users b,discussion c where a.user_id=b.user_id and a.user_id=c.user_id";
+            string sql = "select a.*,b.user_name,b.user_photo,c.dis_title from discussion_comt a,users b,discussion c where a.user_id=b.user_id and a.user_id=c.user_id";
             return DBHelper.GetFillData(sql);
         }
 
         public DataTable SelectDiscussion_comt(int discussion_id)
         {
-            string sql = "select discussion_comt.*,user_name from discussion_comt,users where discussion_comt.user_id=users.user_id and discussion_id=@discussion_id order by comt_time desc";
+            string sql = "select discussion_comt.*,user_name,user_photo from discussion_comt,users where discussion_comt.user_id=users.user_id and discussion_id=@discussion_id order by comt_time desc";
             SqlParameter[] sp =
             {
                 new SqlParameter("@discussion_id",discussion_id),

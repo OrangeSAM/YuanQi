@@ -4,68 +4,88 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Models;
-using BLL;
 using System.Data;
+using BLL;
+using Models;
 
 namespace Web
 {
-    public partial class WebForm7 : System.Web.UI.Page
+    public partial class WebForm9 : System.Web.UI.Page
     {
         static bool visibleflag;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
                 visibleflag = true;
-                BindTravel();
-                BindTravelComment();
+                BindDiscussion();
+                BindDisComment();
                 Biz.TargetPath = Request.RawUrl;
             }
         }
-        public void BindTravel()
+        public void BindDiscussion()
         {
-            int trrecord_id = int.Parse(Request.QueryString["id"]);
-            DataTable dt = Travel_recordManager.SelectTravel_record(trrecord_id);
-            if (dt != null && dt.Rows.Count > 0)
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            DataTable dt = DiscussionManager.SelectDiscussion(id);
+            if (dt!=null && dt.Rows .Count > 0)
             {
-                LVTravel1.DataSource = dt;
-                LVTravel1.DataBind();
-            }
-        }
-        public void BindTravelComment()
-        {
-            int trrecord_id= int.Parse(Request.QueryString["id"]);
-            DataTable dt = Travel_record_comtManager.SelectTravel_record_comt(trrecord_id);
-            if(dt!=null && dt.Rows.Count > 0)
-            {
-                LVReply.DataSource = dt;
-                LVReply.DataBind();
+                LVdis_de.DataSource = dt;
+                LVdis_de.DataBind();
             }
         }
 
+        protected void LVreply_ItemDataBound(object sender, ListViewItemEventArgs e)
+        {
+            if (e.Item .ItemType == ListViewItemType.DataItem)
+            {
+                HiddenField hiddencomtid = e.Item.FindControl("HiddenFieldComID") as HiddenField;
+                int discomt_id = int.Parse(hiddencomtid.Value);
+                Repeater re = e.Item.FindControl("Rereplycomment") as Repeater;
+                DataTable dt = Discussion_replyManager.SelectDiscussion_re(discomt_id);
+                if(dt!=null && dt.Rows .Count > 0)
+                {
+                    re.DataSource = dt;
+                    re.DataBind();
+                }
+            }
+
+        }
+        public void BindDisComment()
+        {
+            int id = int.Parse(Request.QueryString["id"]);
+            DataTable dt = Discussion_comtManager.SelectDiscussion_comt(id);
+            if(dt!=null&& dt.Rows .Count > 0)
+            {
+                LVreply.DataSource = dt;
+                LVreply.DataBind();
+
+            }
+        }
         protected void btnComments_Click(object sender, EventArgs e)
         {
-            if(Session["user_name"]!=null)
+            if (Session ["user_name"]!=null)
             {
-                if(Page.IsValid)
+                if(Page .IsValid)
                 {
-                    travel_record_comt comt = new travel_record_comt();//新建查询对象
+                    discussion_comt comt = new discussion_comt ();
                     comt.user_id = int.Parse(Session["user_id"].ToString());
-                    comt.trrecord_id = int.Parse(Request.QueryString["id"]);
+                    comt.discussion_id = int.Parse(Request.QueryString["id"]);
                     comt.comt_cont = txtComments.Text;
                     comt.comt_time = DateTime.Now;
-                    int result = Travel_record_comtManager.InsertTravel_record_comt(comt);
-                    if(result>=1)
+                    int result = Discussion_comtManager.InsertDiscussion_comt(comt);
+                    if (result>=1)
                     {
-                        ScriptManager.RegisterClientScriptBlock(updatecomment, this.GetType(), "click", "alert('评论成功！')",true);
-                        BindTravelComment();
+                        ScriptManager.RegisterClientScriptBlock(updatecomment, this.GetType(), "click", "alert('评论成功')",true );
+                        BindDisComment();
                         txtComments.Text = "";
                     }
                     else
                     {
                         ScriptManager.RegisterClientScriptBlock(updatecomment, this.GetType(), "click", "alert('评论失败！')", true);
                     }
+
+
                 }
             }
             else
@@ -74,7 +94,6 @@ namespace Web
                 ScriptManager.RegisterStartupScript(updatecomment, updatecomment.GetType(), "updateScript", "window.location.href='login1.aspx'", true);
             }
         }
-
         protected void lbtnReply_Click(object sender, EventArgs e)
         {
             LinkButton bt = (LinkButton)sender;
@@ -82,25 +101,24 @@ namespace Web
             Panelreply.Visible = true;
             visibleflag = !visibleflag;
         }
-
         protected void btnreply_Click(object sender, EventArgs e)
         {
-            if (Session["user_name"] != null)
+            if (Session ["user_name"]!=null)
             {
-                if (Page.IsValid)
+                if (Page.IsValid )
                 {
                     Button btn = (Button)sender;
                     string a = ((TextBox)btn.Parent.FindControl("txtreply")).Text.Trim();
-                    travel_comt_reply reply = new travel_comt_reply();
-                    reply.trcomt_id = Int32.Parse((btn.Parent.FindControl("HiddenFieldComID") as HiddenField).Value);
+                    discussion_reply reply = new discussion_reply();
+                    reply.discomt_id = Int32.Parse((btn.Parent.FindControl("HiddenFieldComID") as HiddenField).Value);
                     reply.user_id = int.Parse(Session["user_id"].ToString());
                     reply.reply_cont = ((TextBox)btn.Parent.FindControl("txtreply")).Text.Trim();
                     reply.reply_time = DateTime.Now;
-                    int result = Travel_comt_replyManager.InsertTravel_re(reply);
-                    if (result >= 1)
+                    int result = Discussion_replyManager.Insert(reply);
+                    if (result>=1)
                     {
                         ScriptManager.RegisterClientScriptBlock(updatereply, this.GetType(), "click", "alert('回复成功！')", true);
-                        BindTravelComment();
+                        BindDisComment();
                         txtComments.Text = "";
                     }
                     else
@@ -115,23 +133,7 @@ namespace Web
                 ScriptManager.RegisterStartupScript(updatereply, updatereply.GetType(), "updateScript", "window.location.href='login1.aspx'", true);
             }
         }
+        
 
-        protected void LVReply_ItemDataBound(object sender, ListViewItemEventArgs e)//绑定数据后触发的事件
-        {
-            if(e.Item.ItemType==ListViewItemType.DataItem)
-            {
-                HiddenField hiddencomid = e.Item.FindControl("HiddenFieldComID") as HiddenField;
-                int trcomt_id = int.Parse(hiddencomid.Value);
-                Repeater rpt = e.Item.FindControl("Rereplycomment") as Repeater;
-                DataTable dt = Travel_comt_replyManager.SelectTravelReply_comt(trcomt_id);
-                if(dt!=null && dt.Rows.Count > 0)
-                {
-                    rpt.DataSource = dt;
-                    rpt.DataBind();
-                }
-            }
-        }
     }
-
- 
 }

@@ -13,12 +13,14 @@ namespace DAL
     {
        public  int InsertTravel_record_comt(travel_record_comt travel_Record_Comt)
         {
-            string sql = "insert into travel_record_comt values(@user_id,@trrecord_id,@comt_cont,@comt_time)";
+            string sql = "insert into travel_record_comt(user_id,trrecord_id,comt_cont,comt_time) values(@user_id,@trrecord_id,@comt_cont,@comt_time)";
             SqlParameter[] sp =
             {
                 new SqlParameter ("@user_id",travel_Record_Comt .user_id ),
                 new SqlParameter("@trrecord_id",travel_Record_Comt .trrecord_id),
                 new SqlParameter("@comt_cont",travel_Record_Comt .comt_cont),
+                //new SqlParameter("@like_count",travel_Record_Comt.like_count),
+                //new SqlParameter("@comt_count",travel_Record_Comt.comt_count),
                 new SqlParameter("@comt_time",travel_Record_Comt .comt_time)
             };
             return DBHelper.GetExcuteNonQuery(sql, sp);

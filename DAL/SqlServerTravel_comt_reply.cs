@@ -21,7 +21,7 @@ namespace DAL
 
         public int InsertTravel_re(travel_comt_reply travel_Comt_Reply)
         {
-            string sql = "insert into travel_comt_reply values(@trcomt_id,@user_id,@reply_cont,@reply_time)";
+            string sql = "insert into travel_comt_reply(trcomt_id,user_id,reply_cont,reply_time) values(@trcomt_id,@user_id,@reply_cont,@reply_time)";
             SqlParameter[] sp =
             {
                 new SqlParameter ("@trcomt_id",travel_Comt_Reply .trcomt_id ),

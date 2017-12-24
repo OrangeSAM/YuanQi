@@ -35,7 +35,7 @@
                                     <%#Eval("dis_cont") %>
                                 </div>
                                 <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text">
-                                    <a href="#" class="f-more f-primary-b">Read more</a>
+                                    <a href="Discussion_detail.aspx?id=<%#Eval("discussion_id") %>"class="f-more f-primary-b">Read more</a>
                                 </div>
                             </div>
                         </div> 

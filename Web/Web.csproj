@@ -212,6 +212,7 @@
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="Discussion.aspx" />
+    <Content Include="Discussion_detail.aspx" />
     <None Include="bin\Web.dll.config" />
     <Content Include="utf8-net\net\config.json" />
     <Content Include="utf8-net\net\controller.ashx" />
@@ -618,6 +619,13 @@
     </Compile>
     <Compile Include="Discussion.aspx.designer.cs">
       <DependentUpon>Discussion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Discussion_detail.aspx.cs">
+      <DependentUpon>Discussion_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Discussion_detail.aspx.designer.cs">
+      <DependentUpon>Discussion_detail.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

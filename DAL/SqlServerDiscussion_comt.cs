@@ -24,13 +24,13 @@ namespace DAL
 
         public int InsertDiscussion_comt(discussion_comt discussion_comt)
         {
-            string sql = "insert into discussion(user_id,discussion_id,comt_cont,comt_time)values(@user_id,@discussion_id,@comt_cont,@comt_time)";
+            string sql = "insert into discussion_comt(comt_time,user_id,comt_cont,discussion_id) values(@comt_time,@user_id,@comt_cont,@discussion_id)";
             SqlParameter[] sp =
             {
-                new SqlParameter("@user_id",discussion_comt.user_id),
-                new SqlParameter("@discussion_id",discussion_comt.discussion_id),
-                new SqlParameter("@comt_cont",discussion_comt.comt_cont),
                 new SqlParameter("@comt_time",discussion_comt.comt_time),
+                new SqlParameter("@user_id",discussion_comt.user_id),
+                new SqlParameter("@comt_cont",discussion_comt.comt_cont),
+                new SqlParameter("@discussion_id",discussion_comt.discussion_id),
 
             };
             return DBHelper.GetExcuteNonQuery(sql, sp);

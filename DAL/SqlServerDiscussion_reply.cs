@@ -40,11 +40,11 @@ namespace DAL
             string sql = "select discussion_reply.*,a.user_name as 回复者,b.user_name as 被回复者 from discussion_reply c,users a,users b,discussion_comt d where a.user_id=c.user_id and b.user_id=d.user_id and c.discomt_id=d.discomt_id";
             return DBHelper.GetFillData(sql);
         }
-
+     
         public DataTable SelectDiscussion_re(int discomt_id)
         {
-            string sql = "select discussion_reply.*,a.user_name as 回复者,b.user_name as 被回复者 from discussion_reply c,users a,users b,discussion_comt d where a.user_id=c.user_id and b.user_id=d.user_id and c.discomt_id=d.discomt_id and d.discomt_id=@discomt_id";
-            SqlParameter[] sp = { new SqlParameter("@discomt_id", discomt_id), };
+            string sql = "select discussion_reply.*,a.user_name as 回复人,b.user_name as 被回复人 from users a,users b,discussion_reply,discussion_comt where a.user_id=discussion_reply.user_id and b.user_id=discussion_comt.user_id and discussion_reply.discomt_id=discussion_comt.discomt_id and discussion_comt.discomt_id=@discomt_id";
+            SqlParameter[] sp = { new SqlParameter("@discomt_id", discomt_id)};
             return DBHelper.GetFillData(sql,sp);
         }
 

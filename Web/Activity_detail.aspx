@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nav.Master" AutoEventWireup="true" CodeBehind="Activity_detail.aspx.cs" Inherits="Web.Activity_detail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
        <link href="css/comment.css" rel="stylesheet" />
 </asp:Content>
@@ -42,12 +44,29 @@
             
            </div>
        </asp:Panel>
-     
-
+       
+       <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style ="height :50px;width :150px;margin-left :20px;">
+        查看报名名单
+       </button>
   </article>
-
                 </ItemTemplate>
                 </asp:ListView>
-            </ContentTemplate> 
+
+<div class="collapse" id="collapseExample">
+  <div class="well">
+    <asp:ListView ID ="LVlist" runat ="server"  >
+        <LayoutTemplate >
+            <div id="itemPlaceholderContainer" runat="server">
+                            <div id="itemPlaceholder" runat="server">
+                            </div>
+                        </div>
+        </LayoutTemplate>
+        <ItemTemplate >
+            <%#Eval ("user_name") %>
+        </ItemTemplate>
+    </asp:ListView>
+  </div>
+</div>
+           </ContentTemplate> 
         </asp:UpdatePanel>
 </asp:Content>

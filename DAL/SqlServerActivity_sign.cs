@@ -29,5 +29,14 @@ namespace DAL
         //{
         //    string sql="select "
         //}
+        public DataTable SelectAct_sign(int activity_id)
+        {
+            string sql = "select user_name from activity_sign where activity_id=@activity_id";
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("@activity_id",activity_id ),
+            };
+            return DBHelper.GetFillData (sql, sp);
+        }
     }
 }

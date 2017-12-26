@@ -5,8 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Data.SqlClient;
 using BLL;
 using Models;
+using DAL;
 
 namespace Web
 {
@@ -19,6 +21,7 @@ namespace Web
             {
                 visibleflag = true;
                 BindAct_de();
+                BindAct_sign();
                 Biz.TargetPath = Request.RawUrl;
             }
 
@@ -46,11 +49,27 @@ namespace Web
         protected void Btnjoin_click(object sender,EventArgs e)
         {
             if (Session["user_name"] != null)
-            { 
-               if (Page.IsValid)
+            {
+                Button btn = (Button)sender;
+                string sql = "select user_name from activity_sign where activity_id=@activity_id";
+                SqlParameter[] para = new SqlParameter[]
                 {
-               
-                    Button btn = (Button)sender;
+                    new SqlParameter ("@activity_id",Int32.Parse((btn.Parent.FindControl("HiddenFieldComID") as HiddenField).Value)),
+                    
+                };
+                SqlDataReader dr = DBHelper.GetDataReader(sql, para);
+                if (dr.Read())
+                {                  
+                    ScriptManager.RegisterClientScriptBlock(updatejoin, this.GetType(), "click", "alert('用户已报名！')", true);
+                }
+                else
+                {
+
+                
+                 if (Page.IsValid)
+                 {
+
+                    
                     string a = ((TextBox)btn.Parent.FindControl("txtname")).Text.Trim();
                     string b = ((TextBox)btn.Parent.FindControl("txtphone")).Text.Trim();
                     activity_sign us = new activity_sign();
@@ -70,7 +89,8 @@ namespace Web
                    {
                     ScriptManager.RegisterClientScriptBlock(updatejoin, this.GetType(), "click", "alert('报名失败！')", true);
                    }
-               }
+                 }
+                }
             }
             else
             {
@@ -78,5 +98,17 @@ namespace Web
                 ScriptManager.RegisterStartupScript(updatejoin, updatejoin.GetType(), "updateScript", "window.location.href='login1.aspx'", true);
             }
         }
+        public void BindAct_sign()
+        {
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            DataTable dt = Activity_signManager.SelectAct_sign(id);
+            if (dt!=null && dt.Rows .Count > 0)
+            {
+                LVlist.DataSource = dt;
+                LVlist.DataBind();
+            }
+        }
+
+
     }
 }

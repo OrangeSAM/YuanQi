@@ -17,6 +17,11 @@ namespace BLL
         {
             return iactivity_sign.InsertActSign(ActSign);
         }
+        public static DataTable SelectAct_sign(int activity_id)
+        {
+            return iactivity_sign.SelectAct_sign(activity_id);
+        }
+
 
     }
 }

@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using BLL;
 using Models;
+using DAL;
 
 namespace Web
 {
@@ -26,10 +27,24 @@ namespace Web
         }
         protected void reg_Click(object sender, EventArgs e)
         {
-            if (IsValid)
+            string sql = "select * from users where user_name=@user_name";
+            SqlParameter[] para = new SqlParameter[]
             {
-                try
+                new SqlParameter("@user_name",user.Text.Trim())
+            };
+            SqlDataReader dr = DBHelper.GetDataReader(sql, para);
+            if (dr.Read())
+            {
+                ClientScript.RegisterStartupScript(typeof(Object), "alert", "<script>alert('用户名已被注册！');</script>");
+            }
+            else
+            {
+
+            
+               if (IsValid)
                 {
+                 try
+                 { 
                     users us = new users();
                     us.user_name = user.Text;
                     us.user_pwd = passwd.Text;
@@ -42,13 +57,14 @@ namespace Web
                         lblrg.Text = "用户注册成功！";
                     }
 
-                }
-                catch (Exception ex)
-                {
+                 }
+                 catch (Exception ex)
+                 {
                     
                     lblrg.Text = "用户注册失败，错误原因：" + ex.Message;
-                }
+                 }
 
+               }
             }
         }
 

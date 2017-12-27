@@ -16,6 +16,7 @@ namespace IDAL
         DataTable SelectID(int ID);
         int InsertGoods(goods  goods);
         DataTable SelectStoreID(string ID);
+        DataTable SelectHotgoods();
         //DataTable SelectShoppingCart(string UserName);
         //int InsertShoppingCart(MallItemCart MallItemCart);
         //int DeleteShoppingCart(int ShoppingCartID);

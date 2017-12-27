@@ -43,6 +43,10 @@ namespace BLL
         {
             return igoods.SelectStoreID(ID);
         }
+        public static  DataTable SelectHotgoods()
+        {
+            return igoods.SelectHotgoods();
+        }
         //public static DataTable SelectShoppingCart(string UserName)
         //{
         //    return igoods.SelectShoppingCart(UserName);

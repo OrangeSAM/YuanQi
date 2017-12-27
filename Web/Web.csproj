@@ -147,6 +147,7 @@
     <Content Include="css\main.css" />
     <Content Include="css\nav.css" />
     <Content Include="css\photo.css" />
+    <Content Include="css\Rent_style.css" />
     <Content Include="css\styles.css" />
     <Content Include="css\StyleSheet2.css" />
     <Content Include="css\testimonial.css" />
@@ -176,7 +177,16 @@
     <Content Include="img\dayphoto\1 %288%29.jpg" />
     <Content Include="img\dayphoto\1 %289%29.jpg" />
     <Content Include="img\dayphoto\1.jpg" />
+    <Content Include="img\goods\1 %281%29.jpg" />
+    <Content Include="img\goods\1 %282%29.jpg" />
+    <Content Include="img\goods\1 %283%29.jpg" />
+    <Content Include="img\goods\1 %284%29.jpg" />
+    <Content Include="img\goods\1 %285%29.jpg" />
     <Content Include="img\logo.png" />
+    <Content Include="img\travel_rent\12.png" />
+    <Content Include="img\travel_rent\arrow.png" />
+    <Content Include="img\travel_rent\banner.jpg" />
+    <Content Include="img\travel_rent\img-sprite.png" />
     <Content Include="img\trrecord_cover\3 %281%29.jpeg" />
     <Content Include="img\trrecord_cover\3 %281%29.jpg" />
     <Content Include="img\trrecord_cover\3 %282%29.jpeg" />
@@ -189,6 +199,8 @@
     <Content Include="img\用户.png" />
     <Content Include="js\jquery-1.9.0.min.js" />
     <Content Include="js\jquery-2.1.1.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.wmuSlider.js" />
     <Content Include="js\login.js" />
     <Content Include="js\main.js" />
     <Content Include="login1.aspx" />
@@ -213,6 +225,7 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="Discussion.aspx" />
     <Content Include="Discussion_detail.aspx" />
+    <Content Include="TravelRent.aspx" />
     <None Include="bin\Web.dll.config" />
     <Content Include="utf8-net\net\config.json" />
     <Content Include="utf8-net\net\controller.ashx" />
@@ -626,6 +639,13 @@
     </Compile>
     <Compile Include="Discussion_detail.aspx.designer.cs">
       <DependentUpon>Discussion_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TravelRent.aspx.cs">
+      <DependentUpon>TravelRent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TravelRent.aspx.designer.cs">
+      <DependentUpon>TravelRent.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

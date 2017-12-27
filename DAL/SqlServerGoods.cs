@@ -101,5 +101,14 @@ namespace DAL
             string sql = "select * from goods,store where goods.store_id=store.store_id and store_id like '" + @ID + "'";
             return DBHelper.GetFillData(sql);
         }
+        public DataTable SelectHotgoods()
+        {
+            string sql = "select * from goods order by stock asc";
+            //SqlParameter[] sp =
+            //{
+            //    new SqlParameter("@stock",stock)
+            //};
+            return DBHelper.GetFillData (sql);
+        }
     }
 }

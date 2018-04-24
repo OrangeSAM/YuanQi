@@ -10,7 +10,25 @@
 namespace Web {
     
     
-    public partial class WebForm12 {
+    public partial class WebForm16 {
+        
+        /// <summary>
+        /// scriptmanager 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager scriptmanager;
+        
+        /// <summary>
+        /// updatediscussion 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updatediscussion;
         
         /// <summary>
         /// LVDiscussion 控件。
@@ -22,30 +40,48 @@ namespace Web {
         protected global::System.Web.UI.WebControls.ListView LVDiscussion;
         
         /// <summary>
-        /// ReHotDiscussion 控件。
+        /// LVDispager 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater ReHotDiscussion;
+        protected global::System.Web.UI.WebControls.DataPager LVDispager;
         
         /// <summary>
-        /// ReLikeDiscussion 控件。
+        /// title 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater ReLikeDiscussion;
+        protected global::System.Web.UI.WebControls.TextBox title;
         
         /// <summary>
-        /// datapager 控件。
+        /// myEditor 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataPager datapager;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea myEditor;
+        
+        /// <summary>
+        /// Button1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// ReUsers 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater ReUsers;
     }
 }

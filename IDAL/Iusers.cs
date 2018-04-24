@@ -15,6 +15,7 @@ namespace IDAL
         SqlDataReader Selectusername(string user_name);
         DataTable GetUsers(Models.users user);
         int Update(users us);
+        DataTable getsingleuser(string user_id);
     }
 
 }

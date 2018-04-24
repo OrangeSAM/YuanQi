@@ -58,6 +58,7 @@
     <Compile Include="SqlServerDiscussion_comt.cs" />
     <Compile Include="SqlServerDiscussion_reply.cs" />
     <Compile Include="SqlServerGoods.cs" />
+    <Compile Include="SqlServerIndent.cs" />
     <Compile Include="SqlServerRider_article.cs" />
     <Compile Include="SqlServerStore.cs" />
     <Compile Include="SqlServerStore_comt.cs" />

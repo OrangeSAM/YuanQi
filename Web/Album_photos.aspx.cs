@@ -17,6 +17,7 @@ namespace Web
             {
                 BindAlbumCover();
                 BindPhoto();
+                Biz.TargetPath = Request.RawUrl;
             }
 
         }

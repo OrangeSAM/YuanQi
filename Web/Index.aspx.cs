@@ -14,21 +14,25 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindDayPhoto();
-            BindTravel_record();
-            BindNews();
-            BindContest();
-            BindAlbum();
-        }
-        public void BindDayPhoto()
-        {
-            DataTable dt = DayphotoManager.Selecttopphoto(4);
-            if (dt != null && dt.Rows.Count != 0)
+            if (!IsPostBack)
             {
-                Repeater1.DataSource = dt;
-                Repeater1.DataBind();
-            }
+                Bindcity();
+                //BindDayPhoto();
+                BindTravel_record();
+                BindNews();
+                BindContest();
+            };
+            Biz.TargetPath = Request.RawUrl;
         }
+        //public void BindDayPhoto()
+        //{
+        //    DataTable dt = DayphotoManager.Selecttopphoto(4);
+        //    if (dt != null && dt.Rows.Count != 0)
+        //    {
+        //        Repeater1.DataSource = dt;
+        //        Repeater1.DataBind();
+        //    }
+        //}
         public void BindTravel_record()
         {
             DataTable dt = Travel_recordManager.SelectAll();
@@ -38,15 +42,7 @@ namespace Web
                 LVtravel.DataBind();
             }
         }
-        public void BindHotTravel_record()
-        {
-            DataTable dt = Travel_recordManager.SelectTop(3);
-            if (dt != null && dt.Rows.Count != 0)
-            {
-                LVHotTravel.DataSource = dt;
-                LVHotTravel.DataBind();
-            }
-        }
+        
         public void BindNews()
         {
             DataTable dt = Contest_newsManager.SelectAll();
@@ -65,15 +61,6 @@ namespace Web
                 LVContest.DataBind();
             }
         }
-        public void BindAlbum()
-        {
-            DataTable dt = AlbumManager.SelectAll();
-            if (dt != null && dt.Rows.Count != 0)
-            {
-                DataList1.DataSource = dt;
-                DataList1.DataBind();
-            }
-        }
         public void BindNewsID()
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
@@ -84,6 +71,42 @@ namespace Web
                 ListView1.DataBind();
             }
         }
-        
+        public void Bindcity()
+        {
+            DataTable dt = StoreManager.SelectAll();
+            if (dt != null && dt.Rows.Count != 0)
+            {
+                DropDowncity.DataSource = dt;
+                DropDowncity.DataValueField = "store_id";
+                DropDowncity.DataTextField = "city";
+                DropDowncity.DataBind();
+                DropDowncity1.DataSource = dt;
+                DropDowncity1.DataValueField = "store_id";
+                DropDowncity1.DataTextField = "city";
+                DropDowncity1.DataBind();
+            }
+        }
+        public void hire(object sender,EventArgs e)
+        {
+            if (Session["user_id"] ==null)
+            {
+                Response.Write("<script>alert('请先登录网站')</script>");
+            }
+            else
+            {
+                if (datebegin.Value=="" || dateend.Value == "")
+                {
+                    Response.Write("<script>alert('请输入开始结束日期')</script>");
+                }
+                else
+                {
+                    Session["datebegin"] = datebegin.Value;
+                    Session["dateend"] = dateend.Value;
+                    string st = DropDowncity1.SelectedValue;
+                    Response.Redirect("stores.aspx?id=" + st);
+                }
+            }
+            
+        }
     }
 }

@@ -17,5 +17,9 @@ namespace BLL
         {
             return ialbum_col.UpdateClickNum(album_col_id);
         }
+        public static DataTable getusercol(string user_id)
+        {
+            return ialbum_col.getuser_col(user_id);
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace DAL
         }
         public DataTable SelectAll()
         {
-            string sql = "select * from album  order by create_time desc";
+            string sql = "select *,col_num from album,album_col where album.album_id=album_col.album_id order by create_time desc";
             return DBHelper.GetFillData(sql);
         }
         public DataTable SelectAlbumCover(int album_id)
@@ -51,8 +51,16 @@ namespace DAL
                 new SqlParameter("@album_id",album_id),
             };
             return DBHelper.GetFillData(sql,sp);
-
-
         }
+        public DataTable Selectusers(int user_id)
+        {
+            string sql = "select * from album,users  where album.creater_id=users.user_id and creater_id=@user_id";
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("@user_id",user_id)
+            };
+            return DBHelper.GetFillData(sql, sp);
+        }
+
     }
 }

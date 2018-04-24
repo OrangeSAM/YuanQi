@@ -20,12 +20,12 @@ namespace DAL
 
         public int InsertDiscussion(discussion discussion)
         {
-            string sql = "insert into discussion(dis_title,dis_cont,user_id,pub_time)values(@dis_title,@dis_cont,@user_id,@pub_time)";
+            string sql = "insert into discussion(user_id,dis_cont,dis_title,pub_time) values(@user_id,@dis_cont,@dis_title,@pub_time)";
             SqlParameter[] sp =
             {
-                new SqlParameter("@dis_title",discussion.dis_title),
+                new SqlParameter("@user_id",discussion.user_id),       
                 new SqlParameter("@dis_cont",discussion.dis_cont),
-                new SqlParameter("@user_id",discussion.user_id),
+                new SqlParameter("@dis_title",discussion.dis_title),
                 new SqlParameter("@pub_time",discussion.pub_time),
             };
             return DBHelper.GetExcuteNonQuery(sql, sp);
@@ -33,7 +33,7 @@ namespace DAL
 
         public DataTable SelectAll()
         {
-            string sql = "select discussion.*,user_name,user_photo from discussion,users where discussion.user_id=users.user_id order by pub_time";
+            string sql = "select discussion.*,user_name,user_photo from discussion,users where discussion.user_id=users.user_id order by pub_time desc";
             return DBHelper.GetFillData(sql);
         }
 
@@ -46,5 +46,11 @@ namespace DAL
             };
             return DBHelper.GetFillData(sql, sp);
         }
+
+        public DataTable SelectPubNum()//查询用户发帖数量
+        {
+            string sql = "select count(*) pub_num,user_name,user_photo from discussion,users where users.user_id=discussion.user_id group by discussion.user_id, user_name, user_photo order by pub_num desc";
+            return DBHelper.GetFillData(sql);
+        }              
     }
 }

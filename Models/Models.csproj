@@ -73,7 +73,7 @@
     <Compile Include="travel_comt_reply.cs" />
     <Compile Include="travel_record.cs" />
     <Compile Include="travel_record_comt.cs" />
-    <Compile Include="trrecord.cs" />
+    <Compile Include="shoppingcart.cs" />
     <Compile Include="trrecord_col.cs" />
     <Compile Include="users.cs" />
   </ItemGroup>

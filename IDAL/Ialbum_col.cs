@@ -15,5 +15,6 @@ namespace IDAL
         //DataTable SelectColDate(DateTime date);
         //DataTable SelectPhotos_id(int pho_id);
         int UpdateClickNum(int album_col_id);
+        DataTable getuser_col(string user_id);
     }
 }

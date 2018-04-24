@@ -1,119 +1,110 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nav.Master" AutoEventWireup="true" CodeBehind="Discussion.aspx.cs" Inherits="Web.WebForm12" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nav.Master" AutoEventWireup="true" CodeBehind="Discussion.aspx.cs" Inherits="Web.WebForm16" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link type="text/css" rel='stylesheet' href="js/fancybox/jquery.fancybox.css"/>
-    <link href="css/main-default.css" rel="stylesheet" />
-    <link type="text/css" rel='stylesheet' href="fonts/fonts.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'/>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'/>
+    <script type="text/javascript" src="utf8-net/ueditor.config.js"></script>
+    <script type="text/javascript" src="utf8-net/ueditor.all.js"></script>
+    <script type="text/javascript" charset="utf-8" src="utf8-net/lang/zh-cn/zh-cn.js"></script>
+    <style>
+     
+    .nav-back{
+        background-color:white;
+        margin-top:30px;
+    }
+    .nav-con{
+        padding:5px;
+        padding-left:20px;
+    }
+    .nav-content{
+        padding-top:10px;
+    }
+    .nav-back-left{
+        background:white;
+        padding-left:18px;
+
+    }
+    .nav-back-left hr{
+        margin-bottom:8px;
+        margin-top:8px;
+    }
+    .nav-title{
+        background:white;
+        padding:2px 0px 2px 10px;
+        margin-top:30px;
+    }
+    .nav-pub{
+        margin-top:20px;
+    }
+    .nav-title-pub{
+        background:#354b5e;color:white;
+        padding:2px 0px 2px 10px;
+        margin-top:30px;
+    }
+
+    </style>
+     <script>
+        function setShowLength(obj, maxlength, id) {
+            var rem = maxlength - obj.value.length;
+            var wid = id;
+            if (rem < 0) {
+                rem = 0;
+            }
+            document.getElementById(wid).innerHTML = "还可以输入" + rem + "字数";
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div class="container">    
-      <div class="row">
-         
-                   <div class="col-md-9 ">
-                        <asp:ListView ID="LVDiscussion" runat="server">
-              <LayoutTemplate>
-                  <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
-              </LayoutTemplate>
-              <ItemTemplate>
-                       <div class="b-blog-listing__block">
-                        <div class="b-infoblock-with-icon b-blog-listing__infoblock">
-                            <a href="#" class="b-infoblock-with-icon__icon f-infoblock-with-icon__icon fade-in-animate hidden-xs">
-                                <i class="fa fa-pencil"></i>
-                            </a>
-                            <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
-                                <a href="#" class="f-infoblock-with-icon__info_title b-infoblock-with-icon__info_title f-primary-l b-title-b-hr f-title-b-hr">
-                                    <%#Eval("dis_title") %>
-                                </a>
-                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text f-primary-b b-blog-listing__pretitle">
-                                    By <a href="#" class="f-more"><%#Eval("user_name") %></a> Posted <a href="#" class="f-more"><%#Eval("pub_time") %></a>
-                                    <a href="#" class="f-more b-blog-listing__additional-text f-primary"><i class="fa fa-comment"></i><%#Eval("comt_count") %> Comments</a>
+ 
+
+    <div class="container">
+   <div class="jumbotron" style="background:#354b5e;color:white;" >
+        <h1>骑行论坛</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-9">
+          <asp:ScriptManager ID="scriptmanager" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel ID="updatediscussion" runat="server">
+                <ContentTemplate>
+                    <asp:Listview ID="LVDiscussion" runat="server">
+                        <LayoutTemplate >
+                            <div id="itemPlaceholderContainer" runat="server">
+          <div id="itemPlaceholder" runat="server">
+          </div></div> 
+                        </LayoutTemplate>
+                   <ItemTemplate>
+                       <div class="nav-back">
+                          <div class="nav-con">
+                              <div class="media">
+                                  <div class="media-left" style="padding-top:23px;">
+                                   <a href="#">
+                                    <img class="media-object img-circle" src='<%#Eval("user_photo") %>' alt="" style="width:70px;height:70px;">
+                                  </a>
+                                 </div>
+                               <div class="media-body">
+                                   <div class="nav-tile">
+                                     <h3><%#Eval("dis_title") %></h3>
+                                   </div>
+                                   <hr />
+                                  <div class="nav-writer">
+                                    By <a href="#" class="text-info"><%#Eval("user_name") %></a> Posted <a href="#" class="text-info"><%#Eval("pub_time","{0:yyyy-MM-dd}") %></a>
+                                    <a href="#" class="text-info"><i class="fa fa-comment"></i><%#Eval("comt_count") %> Comments</a>
+                                  </div>
+                               <div class="nav-content">
+                                    <p><%#Eval("dis_cont") %></p>
                                 </div>
-                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text c-primary b-blog-listing__text">
-                                    <%#Eval("dis_cont") %>
-                                </div>
-                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text">
+                                <div class="nav-button">
                                     <a href="Discussion_detail.aspx?id=<%#Eval("discussion_id") %>"class="f-more f-primary-b">Read more</a>
                                 </div>
-                            </div>
-                        </div> 
-                       </div>        
-                               </ItemTemplate>
-      </asp:ListView>
-                  </div>
-
-          <div class="col-md-3">
-               <div class="row">
-                     <div class="col-md-12">
-                        <div class="b-form-row b-input-search">
-                            <input class="form-control" type="text" placeholder="Enter your keywords"/>
-                            <span class="b-btn b-btn-search f-btn-search fa fa-search fa-2x"></span>
-                        </div>
+                              </div>
+                         </div>
+                       </div>
                     </div>
-               </div>
-              <div class="row b-col-default-indent">
-                  <div class="col-md-12" style="background-color:white ;">
-                      <div class="b-categories-filter">
-                          <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">blog categories</h4>
-                          <%--绑定最热--%>
-                          <asp:Repeater ID="ReHotDiscussion" runat="server">
-                              <ItemTemplate>
-                        <ul>
-                            <li>
-                          <a class="f-categories-filter_name" href="#"><i class="fa fa-plus"></i> <%#Eval("dis_title") %></a>
-                          <span class="b-categories-filter_count f-categories-filter_count"><%#Eval("comt_count") %> </span>
-                                </li>
-                        </ul>
-                                  </ItemTemplate>
-                         </asp:Repeater>
-                      </div>
-                  </div>
-                  <div class="col-md-12"style="background-color:white ;">
-                    <div class="b-categories-filter">
-                        <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">blog categories</h4>
-                    </div>
-                    <asp:Repeater ID="ReLikeDiscussion" runat="server">
-                        <ItemTemplate>
-                      <div class="b-blog-short-post--popular col-md-12  col-xs-12 f-primary-b">
-                            <div class="b-blog-short-post__item_img">
-                               <a href="#"><%#Eval("user_photo") %></a>
-                            </div>
-                            <div class="b-remaining">
-                             <div class="b-blog-short-post__item_text f-blog-short-post__item_text">
-                               <a href="#"><%#Eval("dis_title") %></a>
-                             </div>
-                            <div class="b-blog-short-post__item_date f-blog-short-post__item_date f-primary-it">
-                             <%#Eval("pub_time") %>
-                             </div>
-                    </div>
-                  </div>
-                            </ItemTemplate>
-                        </asp:Repeater>                      
-                  </div> 
-                   <div class="col-md-12"style="background-color:white ;">
-        <h4 class="f-primary-b b-h4-special f-h4-special--gray f-h4-special">tags cloud</h4>
-        <div>
-    <a class="f-tag b-tag" href="#">Dress</a>
-    <a class="f-tag b-tag" href="#">Mini</a>
-    <a class="f-tag b-tag" href="#">Skate animal</a>
-    <a class="f-tag b-tag" href="#">Lorem ipsum</a>
-    <a class="f-tag b-tag" href="#">literature</a>
-    <a class="f-tag b-tag" href="#">Baroque</a>
-    <a class="f-tag b-tag" href="#">Dress</a>
-    <a class="f-tag b-tag" href="#">Mini</a>
-    <a class="f-tag b-tag" href="#">Skate animal</a>
-    <a class="f-tag b-tag" href="#">Lorem ipsum</a>
-    <a class="f-tag b-tag" href="#">literature</a>
-    <a class="f-tag b-tag" href="#">Baroque</a>
-</div>
-    </div>
-
-              </div>
-          </div>
-          <div class="pager">
-      <asp:DataPager runat ="server" ID ="datapager" PageSize ="3" PagedControlID="LVDiscussion" OnPreRender ="discussion_PreRender" >
+                   </ItemTemplate>
+               </asp:Listview>
+                     <div class="pager">
+      <asp:DataPager runat ="server" ID ="LVDispager" PageSize ="6" PagedControlID="LVDiscussion" OnPreRender="LVDispager_PreRender">
            <Fields>
            
                         <asp:NextPreviousPagerField FirstPageText="首页" PreviousPageText="上一页" ButtonType="Button" ShowFirstPageButton="true" ShowNextPageButton="false"  ButtonCssClass="btn btn-primary btn-sm"/>
@@ -123,17 +114,75 @@
           </Fields>
       </asp:DataPager>
             </div> 
+                </ContentTemplate>
+            </asp:UpdatePanel>
 
-      </div>
-     
+            <%--<div class="nav-title"><h2>帖子</h2></div>--%>
+               
+            <div class="nav-title-pub"><h2>发帖</h2></div>
+            <div class="row nav-pub">
+               <div class="col-md-1">
+                   <p class="text-left">标题</p>
+               </div>
+                <div class="col-md-11">									
+                       <asp:TextBox ID="title" runat="server" maxlength="15" onkeyup="javascript:setShowLength(this, 15, 'cost_tpl_title_length');" CssClass="form-control" placeholder="请输入游记标题"></asp:TextBox>
+                    </div>
+               <div class="col-md-3">
+                    <span class="red" id="cost_tpl_title_length">还可以输入15字数</span>
+				</div>
+                </div>
+            <div class="row">
+                <div class="col-md-1">
+                   <p class="text-left">内容</p>
+               </div>
+                <div class="col-md-11">									
+                  <textarea id="myEditor" name="myEditor" runat="server" onblur="setUeditor()"></textarea>
+                
+                </div>
+            </div>
+            <div class="row col-md-offset-11 " style="margin-top:5px;">
+                <asp:Button ID="Button1" runat="server" Text="发表" CssClass="btn btn-primary" OnClick="Button1_Click"/>
+            </div>
+            <hr/>
 
-  </div>
 
-<%--<script>--%>
-    <script src="scripts/jquery-1.10.2.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/discussion/color-themes.js"></script>
-    <script src="js/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="js/fancybox/jquery.mousewheel.pack.js"></script>
-    <script src="js/fancybox/jquery.fancybox.custom.js"></script>
+            
+        </div>
+        <div class="col-md-3">
+         <div class="row">
+            <div class="nav-title"><h2>发帖达人</h2></div>
+            <div class="nav-back-left">
+                <hr />
+                <asp:Repeater ID="ReUsers" runat="server">
+                    <ItemTemplate>
+                        <div class="row">
+                            <div class="col-md-3"><img src="<%#Eval("user_photo") %>" class="img-circle" style="width:41px;border-radius:50%;padding-top:10px" /></div>
+                            <div class="col-md-9">
+                                <div class="nav-name"><%#Eval("user_name") %></div><br />
+                                <div class="nav-num"><span>发帖数：</span><%#Eval("pub_num") %></div>
+                            </div>
+                        </div>
+                        <hr />
+                    </ItemTemplate>
+                </asp:Repeater>
+               
+            </div>
+        </div>
+       </div>
+    </div>
+</div>
+
+    <%--富文本编辑器--%>
+       <script id="myEditors" type="text/plain"></script>                
+            <script type="text/javascript">
+                var editor = new baidu.editor.ui.Editor();
+                editor.options.toolbars = [['undo', 'Redo', 'bold', 'fontfamily', 'fontsize', 'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify', 'emotion', 'spechars', 'simpleupload', 'test']];
+                editor.render("<%=myEditor.ClientID%>");                                     
+           </script>
+        <script type="text/javascript">
+                    function setUeditor() {
+                        var myEditor = document.getElementById("myEditor");
+                        myEditor.value = editor.getContent();//把得到的值给textarea
+                    }
+        </script>
 </asp:Content>

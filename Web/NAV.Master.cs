@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Models;
 
 namespace Web
 {
@@ -11,19 +12,10 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["user_id"] != null)
             {
-                if (Session["user_name"] != null)
-                {
-                    PanelUser.Visible = true;
-                    PanelLogin.Visible = false;
-                    lblUser.Text = Session["user_name"].ToString();
-                }
-                else
-                {
-                    PanelLogin.Visible = true;
-                    PanelUser.Visible = false;
-                }
+                touxiang.ImageUrl = Session["user_photo"].ToString();
+                TX.HRef = "javascript:void(0)";
             }
         }
         protected void loginout_click(object sender, EventArgs e)

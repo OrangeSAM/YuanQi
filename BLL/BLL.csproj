@@ -55,6 +55,7 @@
     <Compile Include="Discussion_comtManager.cs" />
     <Compile Include="Discussion_replyManager.cs" />
     <Compile Include="GoodsManager.cs" />
+    <Compile Include="IndentManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rider_articleManager.cs" />
     <Compile Include="StoreManager.cs" />

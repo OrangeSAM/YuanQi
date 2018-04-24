@@ -34,5 +34,9 @@ namespace BLL
         {
             return iusers.Update(us);
         }
+        public static DataTable getsingleuser(string user_id)
+        {
+            return iusers.getsingleuser(user_id);
+        }
     }
 }

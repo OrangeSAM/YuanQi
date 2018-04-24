@@ -25,13 +25,9 @@ namespace DAL
             };
             return DBHelper.GetExcuteNonQuery(sql, sp);
         }
-        //public SqlDataReader Selectusers(string user_name)
-        //{
-        //    string sql="select "
-        //}
         public DataTable SelectAct_sign(int activity_id)
         {
-            string sql = "select user_name from activity_sign where activity_id=@activity_id";
+            string sql = "select user_name from activity_sign,users where activity_id=@activity_id and users.user_id=activity_sign.user_id";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@activity_id",activity_id ),

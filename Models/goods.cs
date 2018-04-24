@@ -15,5 +15,6 @@ namespace Models
         public int store_id { get; set; }
         public string goods_intro { get; set; }
         public string stock { get; set; }
+        public string photo { get; set; }
     }
 }

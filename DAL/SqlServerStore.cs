@@ -50,10 +50,32 @@ namespace DAL
             string sql = "select * from store";
             return DBHelper.GetFillData(sql);
         }
-        public DataTable SelectStoreAddr(string store_addr)
+        public DataTable SelectStoreID(int storeID)
         {
-            string sql = "select store_addr from store where store_addr=@store_addr";
-            return DBHelper.GetFillData(sql);
+            string sql = "select store.* from store where store_id=@storeID";
+            SqlParameter[] sp =
+            {
+                new SqlParameter("@storeID",storeID),
+            };
+            return DBHelper.GetFillData(sql, sp);
+        }
+        public string SelectStoreIntro(string store_id)
+        {
+            string sql = "select store_intro from store where store_id=@store_id";
+            SqlParameter[] sp =
+            {
+                new SqlParameter ("@store_id",store_id),
+            };
+            return DBHelper.ExecuteScalar<string>(sql, sp);
+        }
+        public DataTable SelectStoreAddr(string keys)
+        {
+            string sql = "select * from store where store_addr like '%" + @keys + "%'";
+            SqlParameter[] sp =
+            {
+                new SqlParameter("@keys",keys)
+            };
+            return DBHelper.GetFillData(sql,sp);
         }
 
 

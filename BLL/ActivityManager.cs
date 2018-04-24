@@ -17,7 +17,7 @@ namespace BLL
         {
             return iactivity.InsertActivity(activity);
         }
-        public static  SqlDataReader Selectusers(string user_name)
+        public static  DataTable Selectusers(string user_name)
         {
             return iactivity.Selectusers(user_name);
         }

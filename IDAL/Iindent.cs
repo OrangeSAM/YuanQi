@@ -9,7 +9,7 @@ namespace IDAL
 {
    public  interface Iindent
     {
-        //int InsertIndent(indent indent);
+        int InsertIndent(indent indent);
         //int DeleteIndent(indent indent);
         //DataTable SelectAll();
         //DataTable SelectIndent(int indent_id);

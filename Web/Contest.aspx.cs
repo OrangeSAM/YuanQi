@@ -14,6 +14,7 @@ namespace Web
         protected void Page_Load(object sender, EventArgs e)
         {   if (!IsPostBack) { 
             BindContest();
+                Biz.TargetPath = Request.RawUrl;
             }
         }
         public void BindContest()

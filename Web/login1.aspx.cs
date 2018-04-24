@@ -73,25 +73,20 @@ namespace Web
         {
             string name = u.Text.Trim();
             string pwd = p.Text.Trim();
-
-
             try
             {
-
-
                 SqlDataReader dr = UsersManager.Login(name, pwd);
                 if (dr.Read())
                 {
                     Session["user_name"] = dr[1].ToString();
-                    Session["user_id"] = dr[0].ToString();
+                    Session["user_id"] = dr[0];
+                    Session["user_photo"] = dr[3];
                     if (inlineCheckbox1.Checked)
                     {
                         Response.Cookies["users"]["user_name"] = HttpUtility.UrlEncode(u.Text.Trim());
                         Response.Cookies["users"]["user_pwd"] = HttpUtility.UrlEncode(p.Text.Trim());
                         Response.Cookies["users"].Expires = DateTime.Now.AddDays(7);
                     }
-                    
-                    Label1.Text = "欢迎登录远骑网！";
                     //Response.Redirect("Index.aspx");
                     Biz.LoginOk = true;  //登录成功设为True.
                     Biz.Account = "user_id";  //记录登录成功的帐号
@@ -102,9 +97,6 @@ namespace Web
                 {
                     Label1.Text = "用户名或密码错误！";
                 }
-
-
-
             }
             catch (Exception ex)
             {

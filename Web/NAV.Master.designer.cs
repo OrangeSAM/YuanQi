@@ -31,40 +31,31 @@ namespace Web {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// PanelUser 控件。
+        /// TX 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelUser;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor TX;
         
         /// <summary>
-        /// lblUser 控件。
+        /// touxiang 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUser;
+        protected global::System.Web.UI.WebControls.Image touxiang;
         
         /// <summary>
-        /// loginout 控件。
+        /// SignOutBtn 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton loginout;
-        
-        /// <summary>
-        /// PanelLogin 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelLogin;
+        protected global::System.Web.UI.WebControls.LinkButton SignOutBtn;
         
         /// <summary>
         /// ContentPlaceHolder1 控件。

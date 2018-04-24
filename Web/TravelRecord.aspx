@@ -1,17 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nav.Master" AutoEventWireup="true" CodeBehind="TravelRecord.aspx.cs" Inherits="Web.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<%--    <link href="css/bootstrap.min.css" rel="stylesheet" />--%>
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <link href="css/Travel.css" rel="stylesheet" />
+    <div style="position:fixed;top:187px;left:25px;">
+        <a href="pub_article.aspx">发表游记</a>
+    </div>
     <div id="left">
         <section id="intro">
-			<a href="#" class="logo">
-                <img src="img/logo.png" /></a>
 				<header>
-					<h2>骑行游记</h2>
+					<h2>最热推荐</h2>
 						<p>Travel Record</p>
 				</header>
 		</section>
@@ -31,7 +32,10 @@
             </ItemTemplate>
         </asp:ListView>
     </div>
-    <div id="right">
+<asp:ScriptManager ID="scriptmanager" runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel ID="updateTravel" runat="server">
+        <ContentTemplate>
+                <div id="right">
     <asp:ListView ID="LVTravel" runat="server">
         <LayoutTemplate>
             <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
@@ -50,12 +54,12 @@
                         </div>
                     </header>
                     <img src="<%#Eval("record_cover") %>" class="image featured"/>
-                    <p><%#Eval("record_cont") %></p>
+                    <p><%#Eval("record_cont").ToString().Substring(0,25) + "..." %></p>
                         <ul class="stats">
                             <li><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>" class="button-main big">continue reding</a></li>
-                            <li style="float:right;"><a href="#" class="icon-bar fa-heart"><%#Eval("col_count") %></a></li>
-                            <li style="float:right;"><a href="#" class="icon-bar fa-comment"><%#Eval("comt_count") %></a></li>
-                            <li style="float:right;"><a href="#" class="icon-bar fa-heart-o"><%#Eval("like_count") %></a></li>
+                            <li style="float:right;"><a href="#" class="fa fa-star-o"><%#Eval("col_count") %></a></li>
+                            <li style="float:right;"><a href="#" class="fa fa-comment"><%#Eval("comt_count") %></a></li>
+                            <li style="float:right;"><a href="#" class="fa fa-heart-o"><%#Eval("like_count") %></a></li>
                         </ul>
                 </article>
   <%--          </div>--%>
@@ -71,4 +75,7 @@
                      </asp:DataPager>
         </div>
         </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
 </asp:Content>

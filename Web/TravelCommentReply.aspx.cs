@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using Models;
 using BLL;
 using System.Data;
+using System.Data.SqlClient;
+using DAL;
 
 namespace Web
 {
@@ -131,7 +133,81 @@ namespace Web
                 }
             }
         }
+
+        protected void btnLike_Click(object sender, EventArgs e)
+        {
+            if (Session["user_name"] != null)
+            {
+                if (ViewState["like_count"] == null)
+                {
+                    int trrecord_id = int.Parse(Request.QueryString["id"]);
+                    Travel_recordManager.UpdateLike(trrecord_id);
+                    //ScriptManager.RegisterClientScriptBlock(UpdateLike, this.GetType(), "click", "alert('点赞成功！')", true);
+                    BindTravel();
+                    ViewState["like_count"] = true;
+                }
+
+                else
+                {
+                    int trrecord_id = int.Parse(Request.QueryString["id"]);
+                    int dt = Travel_recordManager.getLikecount(trrecord_id);
+                    if (dt > 0)
+                    {
+                        Travel_recordManager.UpdateDislike(trrecord_id);
+                        //ScriptManager.RegisterClientScriptBlock(UpdateLike, this.GetType(), "click", "alert('取消点赞！')", true);
+                        BindTravel();
+                        ViewState["like_count"] = null;
+                    }
+
+
+                    //}
+
+                }
+
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(UpdateLike, this.GetType(), "click", "alert('请先登录');location='Login1.aspx'", true);
+            }
+
+        }
+
+        protected void btnCol_Click(object sender, EventArgs e)
+        {
+            if (Session["user_name"] != null)
+            {
+                trrecord_col trcol = new trrecord_col();//创建表对象
+                int id = int.Parse(Request.QueryString["id"]);
+                string sql = "select * from trrecord_col where trrecord_id=@trrecord_id and user_id=@user_id";
+                SqlParameter[] sp = { new SqlParameter("@trrecord_id", id),
+                                      new SqlParameter("@user_id",Session["user_id"]),};
+                SqlDataReader dr = DBHelper.GetDataReader(sql, sp);
+                if (dr.Read())
+                {
+                    ScriptManager.RegisterClientScriptBlock(UpdateLike, this.GetType(), "click", "alert('您已收藏过该游记！')", true);
+                }
+                else
+                {
+                    trcol.user_id = int.Parse(Session["user_id"].ToString());
+                    trcol.trrecord_id = id;
+                    trcol.col_time = DateTime.Now;
+                    int result = Trrecord_colManager.InsertTrrecord(trcol);
+                    if (result >= 1)
+                    {
+                        ScriptManager.RegisterClientScriptBlock(UpdateLike, this.GetType(), "click", "alert('收藏成功！')", true);
+                        Travel_recordManager.UpdateCol(id);
+                        BindTravel();
+                    }
+
+                }
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(UpdateLike, this.GetType(), "click", "alert('请先登录');location='Login1.aspx'", true);
+            }
+        }
+    }
     }
 
  
-}
+

@@ -13,7 +13,8 @@ namespace IDAL
         int UpdateStore(store store);
         int DeleteStore(int store_id);
         DataTable SelectAll();
-        DataTable SelectStoreAddr(string store_addr);
-
+        DataTable SelectStoreAddr(string keys);
+        DataTable SelectStoreID(int storeID);
+        string SelectStoreIntro(string store_id);
     }
 }

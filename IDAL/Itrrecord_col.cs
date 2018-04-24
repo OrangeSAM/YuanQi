@@ -9,5 +9,6 @@ namespace IDAL
    public  interface Itrrecord_col
     {
         int UpdateClickNum(int trcol_id);
+        int InsertTrrecord(trrecord_col trrecord_Col);
     }
 }

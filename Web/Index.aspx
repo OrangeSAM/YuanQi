@@ -1,214 +1,152 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Nav.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Web.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/demo.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/Home.css" rel="stylesheet" />
+    <style>
+        .hire{
+            padding:5px;
+            margin-top:15px;
+            margin-left:4px;
+            width:73%;
+        }
+        ::-webkit-datetime-edit { padding: 1px; background: url(/study/image/selection.gif); }
+        ::-webkit-datetime-edit-fields-wrapper { background-color: #eee; }
+        ::-webkit-datetime-edit-text { color: #4D90FE; padding: 0 .3em; }
+        ::-webkit-datetime-edit-year-field { color: black; }
+        ::-webkit-datetime-edit-month-field { color: black; }
+        ::-webkit-datetime-edit-day-field { color: black; }
+        ::-webkit-inner-spin-button { visibility: hidden; }
+        ::-webkit-calendar-picker-indicator {
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-shadow: inset 0 1px #fff, 0 1px #eee;
+            background-color: #eee;
+            background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
+            color: #666;
+        }
+        .blog-event:hover{
+            box-shadow:0px 0px 20px 0px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <%-- 每日一图     --%>      
-      <div id="container">
-        <div class="sections">
-          <asp:Repeater ID="Repeater1" runat="server">
-             <ItemTemplate>
-                <div class="section" id="section0">
-                   <img src="<%#Eval("path")%>" style="width:100%;height:100%" />                    
+        <%-- 轮播 --%>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="position:relative;">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img src="img/31.jpg" alt="..." style="width:100%;" />
+                    </div>
+                    <div class="item">
+                      <img src="img/21.jpg" alt="..." style="width:100%;"/>
+                    </div>
+                    <div class="item">
+                      <img src="img/22.jpg" alt="..." style="width:100%;"/>
+                    </div>
+              </div>
+        </div>
+        <%-- 租车 --%>
+        <div style="position:absolute;top:25%;left:12%;background-color:white;width:30%;padding-left:3%;opacity:0.95;">
+            <div>取车城市<asp:DropDownList ID="DropDowncity1" class="hire" runat="server" style="height:34px;"></asp:DropDownList></div>
+            <div>还车城市<asp:DropDownList ID="DropDowncity" class="hire" runat="server" style="height:34px;"></asp:DropDownList></div>
+            <div>租车日期<input type="date" class="hire" runat="server" id="datebegin" style="padding:0;"/></div>
+            <div>还车日期<input type="date" class="hire" runat="server" id="dateend" style="padding:0;"/></div>
+            <asp:Button ID="Button1" style="width:89%;height:50px;margin-top:3%;margin-bottom:3%;background-color:#d81e06;border:none;color:white;font-weight:600;font-size:1.4em;" runat="server" onclick="hire" Text="立即租车" />
+        </div>
+        <%-- 游记 --%>
+        <div class="divider col-sm-8 col-xs-8 col-md-8" style="width:55%;margin-left:5%;margin-top:2%;">
+                <div class="header-text">游记 <span>News</span></div>
+                <div class="tab-content " style="margin-bottom:20px;">
+                    <div class="tab-pane active" id="1">
+                         <asp:ListView id="LVtravel" runat ="server"  ItemPlaceholderID ="itemPlaceholder"> 
+                            <LayoutTemplate>
+                                <div>
+                                    <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
+                                </div>                
+                                <asp:DataPager ID="DataPager1" runat="server" PageSize="4"></asp:DataPager>
+                            </LayoutTemplate> 
+                            <ItemTemplate >
+                                <div class="blog-event" style="transition:all 0.5s ease-in;padding:20px;border-radius:3px;"> 
+                                    <div class =" featured-img" >
+                                        <asp:Image ID="CoverLabel" runat="server" Width="250px" Height="150px" ImageUrl='<%#Eval("record_cover") %>'  />
+                                    </div>
+                                    <div class=" featured-blog">                    
+                                        <h3><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>" style="color:rgb(51,51,51);text-decoration:none;"><%#Eval("record_title") %></h3></a>                    
+                                        <asp:Label ID="ContLabel" runat="server" Text='<%# Eval("record_cont").ToString().Substring(0,70)+ "..." %>' /><br />
+                                        <h5 style="color:#d81e06"><%#Eval ("record_author") %></h5>                                         
+                                    </div>
+                                </div>
+                            </ItemTemplate>
+                         </asp:ListView>
+                    </div>
+                 </div>
+            </div>
+        <%-- 赛事 --%>
+        <div class="divider col-sm-4 col-xs-4 col-md-4" style="width:25%;margin-left:5%;margin-top:2%;">
+                <div class="header-text">赛事 <span>Contest</span></div>
+                <%-- 赛事资讯 --%>
+                <div id="news"> 
+                    <div class="nav-title">
+                       <span >最新资讯</span>
+                       <a href="ContestNews.aspx"><span style="color:#d81e06">More>></span></a>          
+                    </div>
+                    <hr />
+                    <div class="title">
+                        <asp:ListView ID="ListView1" runat="server" ItemPlaceholderID="itemPlaceHoder">
+                            <LayoutTemplate>
+                                <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                                <table runat="server" id="itemPlaceHoder"></table>
+                                <asp:DataPager ID="DataPager1" runat="server" PageSize="10">
+                                </asp:DataPager>
+                            </LayoutTemplate>
+                            <ItemTemplate>
+                                <a href="ContestNews.aspx?id=<%#Eval("news_id") %>" style="color:#000000;text-decoration:none;"><%#Eval("news_title") %></a><br></br>
+                            </ItemTemplate>
+                        </asp:ListView>
+                    </div>
                 </div>
-            </ItemTemplate>
-         </asp:Repeater>
-        </div>
-      </div>
-    <div class="container header-start text-center">
-        <div class="heading-icon">
-          <i class="fa fa-3x fa-heart"></i>
-        </div>
-      <h1 class="main-text">欢迎来到远骑网</h1>
-      <p class="text-center sub-text"><em class="first-line">Welcom to the YuanQi</em></p>
-    </div>
-<div id="center">
-    <%--游记--%>
-    <div class="divider col-sm-8 col-xs-8 col-md-8">
-        <div class="header-text">游记 <span>News</span></div>
-        </div>
-        <div class="divider col-sm-4 col-xs-4 col-md-4">
-        <div class="header-text">赛事 <span>Contest</span></div>
-    </div>
-    <div id="exTab2" class="col-md-7 col-lg-7 " style="margin-left:50px;">
-        <ul class="nav nav-tabs">
-            <li class="active">
-              <a  href="#1" data-toggle="tab">最新</a>
-            </li>
-            <li><a href="#2" data-toggle="tab">最热</a>
-            </li>            
-        </ul>
-        <div class="tab-content " >
-          <div class="tab-pane active" id="1">
-            <asp:ListView id="LVtravel" runat ="server"  ItemPlaceholderID ="itemPlaceholder"> 
-               <LayoutTemplate>
-                    <div>
-                        <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                    </div>                
-                    <asp:DataPager ID="DataPager1" runat="server" PageSize="3"></asp:DataPager>
-               </LayoutTemplate> 
-                <ItemTemplate >
-                    <div class="blog-event"> 
-                     <div class ="  featured-img" >
-                        <asp:Image ID="CoverLabel" runat="server" Width="250px" Height="130px" ImageUrl='<%#Eval("record_cover") %>'  />
+                <%-- 赛事预告 --%>
+                <div id="contest"> 
+                    <div class="nav-title">
+                        <span >赛事预告</span>
+                        <a href="Contest.aspx"><span style="color:#d81e06">More>></span></a>
                     </div>
-                    <div class=" featured-blog">                    
-                       <h3><a href="TravelCommentReply.aspx?id=<%#Eval("trrecord_id") %>"><%#Eval("record_title") %></h3></a>                    
-                        <asp:Label ID="ContLabel" runat="server" Text='<%# Eval("record_cont")%>' />
-                         <button class="button-info">Read More</button>
-
-                   </div>
+                    <hr />
+                    <div class="title">
+                        <asp:ListView ID="LVContest" runat="server" ItemPlaceholderID="itemPlaceHoder">
+                            <LayoutTemplate>
+                                 <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder>
+                                 <table runat="server" id="itemPlaceHoder"></table>
+                                 <asp:DataPager ID="DataPager1" runat="server" PageSize="10">
+                                 </asp:DataPager>
+                            </LayoutTemplate>
+                            <ItemTemplate>
+                               <div class ="contest_time" style ="float :left ;width :37%;border-right:1px solid #ccc">
+                                  <asp:Label ID="ConTimeLabel" runat="server" Text='<%# Eval("con_time","{0:yyyy-MM-dd}") %>' /><br />
+                               </div>
+                               <div class ="contest_title" style ="float :right ;width :50%">
+                                  <a href="#"><asp:Label ID="ConTitleLabel" style="color:black;" runat="server" Text='<%# Eval("con_title") %>' /><br /></a>
+                               </div>
+                               <br /><br />                      
+                            </ItemTemplate>
+                        </asp:ListView>
                     </div>
-                </ItemTemplate>
-            </asp:ListView>
-            </div>
-             
-        <div class="tab-pane" id="2">
-            <asp:ListView ID="LVHotTravel" runat="server" ItemPlaceholderID ="itemPlaceholder">
-                <LayoutTemplate>
-                    <div>
-                    <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                    </div>
-                    <asp:DataPager ID="DataPager1" runat="server" PageSize="3"></asp:DataPager>
-                </LayoutTemplate>
-            </asp:ListView>
-            <div class="blog-event">
-                 <div class ="  featured-img" >
-                        <asp:Image ID="CoverLabel" runat="server" Width="250px" Height="130px" ImageUrl='<%#Eval("record_cover") %>'  />
-                    </div>
-                    <div class=" featured-blog">                    
-                       <h3><a  href="#"><%#Eval("record_title") %></a></h3>                    
-                        <asp:Label ID="ContLabel" runat="server" Text='<%# Eval("record_cont") %>' />
-                         <button class="button-info">Read More</button>                     
-                   </div>
-                    </div>
-            </div>
                 </div>
-            </div>
-   <%-- 资讯--%>
-    <div id="sidebar" class="col-md-3 col-lg-3 col-lg-offset-1 col-md-offset-1">
-        
-         <div id="news"> 
-          <div class="nav-title">
-               <span >最新资讯</span>
-              <a href="ContestNews.aspx"><span>More>></span></a>
-              <br /><br />              
-           </div>
-           <hr />
-           <div class="title">
-               <asp:ListView ID="ListView1" runat="server" ItemPlaceholderID="itemPlaceHoder">
-                   <LayoutTemplate>
+            </div>  
 
-                       <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
-                       <table runat="server" id="itemPlaceHoder"></table>
-                        <asp:DataPager ID="DataPager1" runat="server" PageSize="10">
-                             </asp:DataPager>
-                   </LayoutTemplate>
-                   <ItemTemplate>
-                       <a href="ContestNews.aspx?id=<%#Eval("news_id") %>"><%#Eval("news_title") %></a>
-                       <br>
-                       </br>
-                   </ItemTemplate>
-               </asp:ListView>
-           </div>
-       </div>
-        <div id="contest"> 
-          <div class="nav-title">
-               <span >赛事预告</span>
-              <a href="Contest.aspx"><span>More>></span></a>
-              <br /><br />
-         </div>
-            <hr />
-            <div class="title">
-                <asp:ListView ID="LVContest" runat="server" ItemPlaceholderID="itemPlaceHoder">
-                    <LayoutTemplate>
-                         <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder>
-                       <table runat="server" id="itemPlaceHoder"></table>
-                        <asp:DataPager ID="DataPager1" runat="server" PageSize="10">
-                             </asp:DataPager>
-                    </LayoutTemplate>
-                    <ItemTemplate>
-                        <%--<%#Eval("con_time") %>--%>
-                        
-                       <div class ="contest_time" style ="float :left ;width :50%">
-                          <asp:Label ID="ConTimeLabel" runat="server" Text='<%# Eval("con_time") %>' /><br />
-                     </div>
-                       <div class ="contest_title" style ="float :right ;width :50%">
-                         <a href="#"><asp:Label ID="ConTitleLabel" runat="server" Text='<%# Eval("con_title") %>' /><br /></a>
-                      </div>
-                      <%-- <div class ="contest_place" style ="float :right ;width :30%">
-                          <asp:Label ID="ConPlaceLabel" runat="server" Text='<%# Eval("con_place") %>' /><br />
-                      --%>
-                       <br /><br />                      
-                    </ItemTemplate>
-                    </asp:ListView>
-            </div>
-            </div>
-</div>   
-    </div>
-    <%--相册--%>
- 
-        <div class="divider col-sm-8 col-xs-8 col-md-8">
-          <div class="header-text"><span>相册</span> Album</div> 
-        </div>
-          <div class ="divider col-sm-4 col-xs-4 col-md-4" style ="font-size: 35px;"><div class="header-text"><a href ="Album.aspx">More>></a> </div> </div>
- 
- <div class="buttom"  style="margin-left:50px;">      
-     <asp:DataList ID="DataList1" runat="server" RepeatColumns="4"  RepeatDirection="Horizontal">
-         <ItemTemplate>
-     <section id="clients">
-         <div class="inner team">
-             <div class="team-members inner-details">
-                 <div class="col-xs-12 member animated" data-animation="fadeInUp" data-animation-delay="0">
-          <div class="member-inner">
-              <a class="team-image">
-                  <img src="<%#Eval("photo") %>" style="width:390px;height:280px;"/></a>
-                   <div class="member-details">
-              <div class="member-details-inner">
-                  <%#Eval("album_name") %>
-            
-              <div class="socials" >
-                  <!-- Link -->
-                  <a href ="Album_photos.aspx?id=<%#Eval("album_id") %>"><i class="fa fa-link"></i></a>
-                </div><!-- End Socials -->
-              </div> <!-- End Detail Inner -->
-            </div><!-- End Details -->
-          </div> <!-- End Member Inner -->
-        </div><!-- End Member -->
-
-</div>
-             </div>
- </section>
-             </ItemTemplate>
-         </asp:DataList>
-</div>
-
-
-<script src="scripts/jquery-1.10.2.min.js"></script>
-<script src="scripts/bootstrap.min.js"></script>
-<script src="scripts/script.js"></script>
-<script src="scripts/pageSwitch.min.js"></script>
-<script src="scripts/jquery.pwstabs-1.2.1.js"></script>
-<script src="scripts/jQuery-face-cursor.js"></script>
-<script src="scripts/pgwslider.min.js"></script>
-
-<script>        
-        //轮播动画
-        $("#container").PageSwitch({
-            direction: 'horizontal',
-            easing: 'ease-in',
-            duration: 1000,
-            autoPlay: true,
-            loop: 'false'
-        });
-        $(document).ready(function () {
-            $(document).ready(function () {
-                $('.pgwSlider').pgwSlider();
-            });
-        });
-</script>
-    
+        <script src="scripts/jquery-1.10.2.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/pageSwitch.min.js"></script>
+        <script src="scripts/jquery.pwstabs-1.2.1.js"></script>
+        <script src="scripts/jQuery-face-cursor.js"></script>
+        <script src="scripts/pgwslider.min.js"></script>
 </asp:Content>

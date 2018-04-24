@@ -8,7 +8,7 @@ namespace Models
 {
     public class travel_record
     {
-        public int trreccord_id { get; set; }
+        public int trrecord_id { get; set; }
         public int user_id { get; set; }
         public string record_author { get; set; }
         public string record_title { get; set; }

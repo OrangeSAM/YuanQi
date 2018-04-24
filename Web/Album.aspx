@@ -20,15 +20,7 @@
                <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
             </div>
         </LayoutTemplate>
-  <%--  <GroupTemplate>
-         <asp:PlaceHolder ID="itemPlaceHolder" runat="server" />
-</GroupTemplate>--%>
-
-        
         <ItemTemplate>
-   <%--<section id="blog-isotope" class="subpage bg-white" style="display:inline-block;">--%>
-        <%-- <div class="overlay-light">--%>
-             <%--<div  class="container"--%> <%--style="margin-right:-830px;margin-left:40px;" >--%>
                  <div class="posts" style="width:80%;margin-left:150px;">
                       <div class="post item col-md-3 col-xs-10 col-sm-3 ">
                           <div class="panel">
@@ -36,15 +28,15 @@
                                       <a href="Album_photos.aspx?id=<%#Eval("album_id") %>"><img src="<%#Eval("photo") %>" class="img-responsive"   alt="image"/></a>
                                       </div>
                               <div class="panel-body">
-                                   <h3 class="post-title"><a href="#"><%#Eval("album_name") %></a></h3>
+                                   <h3 class="post-title" style="height:27px;overflow:hidden;"><a href="#" ><%#Eval("album_name") %></a></h3>
                                          
                                         <p><%#Eval("album_intro") %></p>
-                                   <div class="pull-left"><a class="btn btn-black btn-xs" href="#"><span class="read-more">Read More</span></a></div>                       
+                                   <div class="pull-left"><a class="btn btn-black btn-xs" href="Album_photos.aspx?id=<%#Eval("album_id") %>"><span class="read-more">Read More</span></a></div>                       
                                   </div>
                                   <div class="panel-footer">
                                     <div class="pull-right">
                                         <a href="#"><i class="fa fa-heart"></i></a>
-                                        <small>425</small>
+                                        <small><%#Eval("col_num") %></small>
                                     </div>
                                     <div class="clearfix"></div>
                                   </div>

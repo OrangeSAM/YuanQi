@@ -73,10 +73,15 @@ namespace DAL
                 new SqlParameter("@user_phone",us.user_phone),
                 new SqlParameter("@user_addr",us.user_addr),
             };
-            return DBHelper.GetExcuteNonQuery(sql, sp);
-
-                
-                
+            return DBHelper.GetExcuteNonQuery(sql, sp);  
+        }
+        public DataTable getsingleuser(string user_id)
+        {
+            string sql = "select * from users where user_id=@user_id";
+            SqlParameter[] us ={
+                 new SqlParameter ("@user_id",user_id )
+            };
+            return DBHelper.GetFillData(sql, us);
         }
 
     }

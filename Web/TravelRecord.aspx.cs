@@ -17,6 +17,7 @@ namespace Web
             {
                 BindTravel();
                 BindTravel1();
+                Biz.TargetPath = Request.RawUrl;
             }
         }
         public void BindTravel()

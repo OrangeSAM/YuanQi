@@ -12,7 +12,7 @@ namespace IDAL
    {
         int InsertActivity(activity activity);
        
-        SqlDataReader Selectusers(string user_name);
+        DataTable Selectusers(string user_name);
         DataTable SelectActivity(int activity_id);
         DataTable SelectAll();
         //DataTable SelectActDate(DateTime date);

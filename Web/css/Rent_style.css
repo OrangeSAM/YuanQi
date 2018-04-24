@@ -85,9 +85,6 @@ ul.wmuSliderPagination{
 	width: 80%;
 	padding-top: 0.4em;
 }
- ul.popular-in{
-	padding-top: 2em;
-}
  ul.popular-in li{
 	list-style:none;
 	border-bottom:1px solid #BAB6B6;
@@ -95,7 +92,6 @@ ul.wmuSliderPagination{
  ul.popular-in li a{
 	color:#848484;
 	text-decoration:none;
-	padding:0.7em 0;
 	display:block;
 	font-size: 1.3em;
 }
@@ -104,14 +100,6 @@ ul.popular-in li:nth-child(4){
 }
  ul.popular-in li a:hover{
 	color:#aa381e;
-}
- ul.popular-in li a i{
-	width: 18px;
-	height: 18px;
-	display: inline-block;
-	background: url(../img/travel_rent/img-sprite.png) no-repeat -184px -22px;
-	vertical-align: sub;
-	margin-right: 0.5em;
 }
 .phone{
 	padding: 6em 0;
@@ -206,35 +194,19 @@ a.details{
 a.details:hover{
 	background: #aa381e;
 }
-.amet h3,.amet-in h3{
-	font-size:2em;
-	font-family: 'Lobster Two', cursive;
-	color:#aa381e;
-}
-.amet p,.amet-in p{
-	font-size:1.5em;
-	color:#2e8e26;
-}
 p.para-in{
 	font-size:1.2em;
 	color:#919191;
 }
 .egg{
-	border-radius: 14px;
-	-webkit-border-radius: 14px;
-	-o-border-radius: 14px;
-	-moz-border-radius: 14px;
-	-ms-border-radius: 14px;
+    border:1px solid white;
 	background:#fff;
 	padding: 1em;
-	margin: 1.5em 0;
+	margin: 1.5em 0;    
 }
 .egg img{
-	border-radius: 14px;
-	-webkit-border-radius: 14px;
-	-o-border-radius: 14px;
-	-moz-border-radius: 14px;
-	-ms-border-radius: 14px;
+    width:300px;
+    height:168px;
 }
 .now{
 	float:left;
@@ -269,13 +241,9 @@ p.sed span{
 .grid-food{
 	padding:0 4% 0 0;
 }
-.food-grid{
-	padding:0;
-}
 .in-cup{
 	padding:2em 0 0;
 }
-/*----*/
 p.vit{
 	float:left;
 	width:70%;
@@ -308,12 +276,6 @@ a.more{
 .browse {
 	padding: 1em 0 2.3em;
 	position: relative;
-}
-.amet {
-	padding: 0 1.5em 0 0;
-}
-.amet-in {
-	padding: 0 0 0 1.5em;
 }
 .content-sit {
 	padding: 1em 0;
@@ -414,7 +376,7 @@ a.more{
 	margin:0;
 }
 /*--single--*/
-.single-men h5{
+/*.single-men h5{
 	font-size:1.5em;
 	font-family: 'Lobster Two', cursive;
 	color:#aa381e;
@@ -424,7 +386,7 @@ a.more{
 	font-size:1.3em;
 	color:#848484;
 	line-height:1.5em;
-}
+}*/
 ul.comment-list {
 	border: 1px solid #BAB6B6;
 	padding:2em;
@@ -526,23 +488,6 @@ ul.comment-list img {
 .sub-in input[type="submit"]:hover{
 	background: #aa381e;	
 }
-.single {
-	padding: 5em 0;
-}
-/*----*/
-.store-right h6{
-	margin:0 0 0.5em;
-	font-size:1.5em;
-	color:#aa381e;
-	font-family: 'Lobster Two', cursive;
-}
-ul.store-men li{
-	list-style:none;
-	border-bottom: 1px solid #D3CFCF;
-}
-ul.store-men li.last{
-	border:none;
-}
 ul.store-men li a span{
 	height: 18px;
 	width: 18px;
@@ -562,9 +507,6 @@ ul.store-men li a {
 ul.store-men li a:hover {
 	color:#aa381e;
 	padding-left:0.2em;
-}
-.store-right {
-	padding: 0em 0 4em;
 }
 .grid-product{
 	float:right;
@@ -592,6 +534,8 @@ span.price {
 }
 .fashion {
 	float: left;
+    width:100px;
+    height:100px;
 }
 .product {
 	padding: 1em 0;

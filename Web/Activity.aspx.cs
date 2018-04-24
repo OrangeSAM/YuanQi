@@ -16,6 +16,7 @@ namespace Web
             if(!IsPostBack)
             {
                 BindActivity();
+                Biz.TargetPath = Request.RawUrl;
             }
         }
         public void BindActivity()

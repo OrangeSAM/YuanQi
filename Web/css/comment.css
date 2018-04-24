@@ -2,7 +2,7 @@
 }
 /*发表评论*/
 .inner-com{
-    width:80%;
+    width:100%;
     margin:0 auto;
     text-align:center;
 }
@@ -125,7 +125,7 @@
    width:70%;
    height:120px;
    margin-left:25%;
-   margin-bottom:20px;
+   margin-bottom:30px;
    border:1px dotted #dcd9d9;
 }
 .txtReply{

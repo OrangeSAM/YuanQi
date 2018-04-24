@@ -28,5 +28,9 @@ namespace BLL
         {
             return idiscussion.SelectDiscussion(discussion_id);
         }
+        public static DataTable SelectPubNum()
+        {
+            return idiscussion.SelectPubNum();
+        }
     }
 }

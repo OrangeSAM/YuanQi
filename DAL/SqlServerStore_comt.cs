@@ -44,7 +44,7 @@ namespace DAL
 
         public DataTable SelectStore_comt(int stcomt_id)
         {
-            string sql = "select store_comt.*,user_name from store_comt,users where store_comt.user_id=users.user_id and stcomt_id=@stcomt_id order by comt_time desc";
+            string sql = "select store_comt.*,user_name,user_photo from store_comt,users where store_comt.user_id=users.user_id and stcomt_id=@stcomt_id order by comt_time desc";
             SqlParameter[] sp = { new SqlParameter("@stcomt_id", stcomt_id) };
             return DBHelper.GetFillData(sql, sp);
         }

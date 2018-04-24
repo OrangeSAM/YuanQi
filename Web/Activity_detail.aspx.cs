@@ -51,11 +51,11 @@ namespace Web
             if (Session["user_name"] != null)
             {
                 Button btn = (Button)sender;
-                string sql = "select user_name from activity_sign where activity_id=@activity_id";
+                string sql = "select* from activity_sign where activity_id=@activity_id and user_name=@user_name";
                 SqlParameter[] para = new SqlParameter[]
                 {
                     new SqlParameter ("@activity_id",Int32.Parse((btn.Parent.FindControl("HiddenFieldComID") as HiddenField).Value)),
-                    
+                    new SqlParameter ("@user_name",((TextBox)btn.Parent.FindControl("txtname")).Text.Trim()),
                 };
                 SqlDataReader dr = DBHelper.GetDataReader(sql, para);
                 if (dr.Read())

@@ -15,7 +15,7 @@
                  </LayoutTemplate>
                  <ItemTemplate>
                      <div class="banner clearfix" style="margin-left:10%;margin-right:30px;">
-                            <div class="slider" id="slider">
+                            <div class="slider" id="slider" style="box-shadow:0px 0px 10px 2px;border-radius:4px;">
                                 <div class="slider-wrapper">
                                     <img src="<%#Eval("photo") %>"/> 
                                 </div>

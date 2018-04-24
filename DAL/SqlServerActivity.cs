@@ -23,16 +23,16 @@ namespace DAL
             };
             return DBHelper.GetExcuteNonQuery(sql, sp);
         }
-       public  SqlDataReader Selectusers(string user_name)//查询用户参加了什么活动
+        public DataTable Selectusers(string user_name)//查询用户参加了什么活动
         {
-            string sql = "select activity_id,act_name from user_id,activity where user.user_id=activity.user_id and user_name=@user_name";
+            string sql = "select activity_id,act_name,activity_cont from users,activity where users.user_id=activity.user_id and user_name=@user_name";
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("@user_name",user_name),
             };
-            return DBHelper.GetDataReader(sql, sp);
+            return DBHelper.GetFillData(sql, sp);
         }
-        
+
         public DataTable SelectAll()
         {
             string sql = "select * from activity order by pub_time desc";

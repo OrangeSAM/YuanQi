@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
 using Models;
 using IDAL;
 using DALFactory;
 
 namespace BLL
 {
-   public class GoodsManager
+    public class GoodsManager
     {
         private static Igoods igoods = DataAccess.Creategoods();
         public static DataTable SelectGoods(int top)
@@ -39,13 +34,17 @@ namespace BLL
         {
             return igoods.InsertGoods(goods);
         }
-        public static DataTable SelectStoreID(string ID)
+        public static DataTable SelectStoreID(int ID,int type_id)
         {
-            return igoods.SelectStoreID(ID);
+            return igoods.SelectStoreID(ID,type_id);
         }
         public static  DataTable SelectHotgoods()
         {
             return igoods.SelectHotgoods();
+        }
+        public static DataTable selectMallBike(int type_id)
+        {
+            return igoods.selectMallBike(type_id);
         }
         //public static DataTable SelectShoppingCart(string UserName)
         //{
@@ -92,5 +91,46 @@ namespace BLL
         {
             return igoods.DeleteGoods(GoodsID);
         }
-   }
+        public static DataTable SelectUserMallCart(int UserID)
+        {
+            return igoods.SelectUserMallCart(UserID);
+        }
+        public static DataTable JudgeMallYorN(int UserID, int GoodsID) //判断某用户购物车是否有某商品的方法
+        {
+            return igoods.JudgeMallYorN(UserID, GoodsID);
+        }
+        public static int UpdateShoppingCart(int UserID, int GoodsID, int Number, float TotalAmount) //购物车有商品时做更新操作
+        {
+            return igoods.UpdateShoppingCart(UserID, GoodsID, Number, TotalAmount);
+        }
+        public static int InsertShoppingCart(shoppingcart Shoppingcart)
+        {
+            return igoods.InsertShoppingCart(Shoppingcart);
+        }
+        public static DataTable JudgeShoppingCart(int UserID)
+        {
+            return igoods.JudgeShoppingCart(UserID);
+        }
+        public static DataTable SelectShoppingCart(int user_id)
+        {
+            return igoods.SelectShoppingCart(user_id);
+        }
+        public static DataTable SelectAllTotalAmount(int user_id)
+        {
+            return igoods.SelectAllTotalAmount(user_id);
+        }
+        public static  int DeleteShoppingCart(int ShoppingCartID)
+        {
+            return igoods.DeleteShoppingCart(ShoppingCartID);
+        }
+        public static  int UpdateShoppingCartNum(int CartID, int num, float total)
+        {
+            return igoods.UpdateShoppingCartNum(CartID, num, total);
+        }
+        public static int InsertIndent(int UserID, DateTime startt, DateTime endtt)
+        {
+            return igoods.InsertIndent(UserID, startt, endtt);
+        }
+
+    }
 }

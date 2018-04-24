@@ -10,41 +10,37 @@
     </asp:ContentPlaceHolder>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/nav.css" rel="stylesheet" />
-
-
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        #touxiang:hover{
+            color:#d81e06;
+        }
+    </style>
 </head>
 
-<body>
+<body style="padding-top:80px;">
     <form id="form1" runat="server">
-        <div class="header container">
-      <div class="visible-xs visible-sm col-xs-12 col-sm-12 text-center sm-logo">
-         
-      </div>
-  	</div>
-        <div class="navbar" role="navigation">
+        <div class="navbar navbar-fixed-top" role="navigation" style="box-shadow:0px 2px 3px 0px rgba(0,0,0,0.3);background-color:black;">
 			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="#"><a href="index.html">骑行租车</a></li>
-                    <li><a href="Discussion.aspx">骑行论坛</a></li>				
-					<li><a href="ContestNews.aspx">赛事新闻</a></li>
-					<li><a href="Contest.aspx">赛事预告</a></li>
-          <li class= "hidden-xs hidden-sm">
-            <a rel="home" href="Index.aspx"><img class="logo" src="img/logo.png" width="200" alt="logo"/></a>
-          </li>
-					<li><a href="TravelRecord.aspx">骑行游记</a></li>
-					<li><a href="Album.aspx">骑行相册</a></li>
-					<li><a href="Activity.aspx">骑行活动</a></li>
-                    <li>
-                        <img src="img/用户.png"  width="40" height="40"/></li>
-                    <li>
-                        <asp:Panel ID ="PanelUser" runat ="server" >
-                            <div class ="welcome" style="font-size :16px;">
-                            欢迎您，<asp:Label ID="lblUser" runat ="server" Text ="" ></asp:Label></div>
-                            <asp:LinkButton ID="loginout" runat ="server" OnClick ="loginout_click">注销</asp:LinkButton>
-                        </asp:Panel>
-                        <asp:Panel ID ="PanelLogin" runat ="server" >
-                        <a href="login1.aspx">登录|注册</a>
-                        </asp:Panel>
+                <a rel="home" href="Index.aspx" style="height:10px;"><img class="logo" src="img/logo2.png" width="200" alt="logo"/></a>
+				<ul class="nav navbar-nav" style="padding-top:17px;">
+					<li class="navli"><a href="Mall.aspx" class="font">骑行租车</a></li>
+                    <li class="navli"><a href="Discussion.aspx" class="font">骑行论坛</a></li>				
+					<li class="navli"><a href="ContestNews.aspx" class="font">赛事新闻</a></li>
+					<li class="navli"><a href="Contest.aspx" class="font">赛事预告</a></li>
+					<li class="navli"><a href="TravelRecord.aspx" class="font">骑行游记</a></li>
+					<li class="navli"><a href="Album.aspx" class="font">骑行相册</a></li>
+					<li class="navli"><a href="Activity.aspx" class="font">约伴骑行</a></li>
+                    <li class="user-profile">
+                        <a class="user-avatar"  id="TX"  runat="server" href="login1.aspx" style="position:relative;padding-top:7px">
+                            <asp:Image id="touxiang" runat="server" ImageUrl="~/img/user.png" Style="width:36px;height:36px;border-radius:50%;border:1px solid #d81e06;padding:2px;"/>
+                        </a>
+                        <div class="profile text-center" style="position:absolute;opacity:0;visibility:hidden;">
+                            <ul style="padding-left:16px;">
+                                <li><a href="usercenter.aspx" style="color:black;">主页</a></li>
+                                <li><asp:LinkButton ID="SignOutBtn" runat="server" Text="退出" style="color:black;" OnClick="loginout_click"></asp:LinkButton></li>
+                            </ul>
+                        </div>
                     </li>
 				</ul>
 			</div>
@@ -52,40 +48,39 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-              <footer id="footer"> 
-        <div class="footer-content container">
-          <div class="footer-adress text-center col-xs-12 col-sm-4 col-md-4">
-                <%--<h4>Great love for humanity</h4>
-                <ul class="footer-menus">
-                  <li>Home /</li>
-                  <li>About </li><br />
-                  <li>Service /</li>
-                  <li>Gallery /</li>
-                  <li>Contact</li>
-                </ul>--%>
+        <footer id="footer" class=""> 
+            <div class="footer-content container">
+                  <div class="social-block text-center">                  
+                      <p class="text-center footer-text"> &copy 远骑网</p>
+                      <p class="text-center footer-text">Powered & Designed by Sam&Yang</p>
+                  </div>
             </div>
-            <div class="footer-second col-xs-12 col-sm-4 col-md-4">
-              <div class="social-block text-center">
-                <div class="social-share">
-                  <i class="fa fa-2x fa-facebook"></i>
-                  <i class="fa fa-2x  fa-twitter"></i>
-                  <i class="fa fa-2x  fa-google-plus"></i>
-                  <i class="fa fa-2x  fa-instagram"></i>
-                </div>
-              </div>
-               <p class="text-center footer-text1">123 456 789</p>
-                <p class="text-center footer-text">yuanqi@163.com<br />Copyright @3522-1<br />All Rights Reserved</p></div>
-                <p class="text-center footer-text1"></p>
-                <p class="text-center footer-text"></p></div>
-                 
-            <div class="footer-third col-xs-12 col-sm-4 col-md-4">
-           
-        </div>
-        <div class="move-top-page">
-      </div>
-    </footer>
-       
-   
+        </footer>
     </form>
 </body>
 </html>
+<script>
+    //user-image
+    let showDropMenu = () => {
+        const userProfile = document.getElementsByClassName('user-profile')[0];
+
+        if (!userProfile) {
+            return;
+        }
+
+        const avatar = userProfile.getElementsByClassName('user-avatar')[0];
+        const profile = userProfile.getElementsByClassName('profile')[0];
+
+        userProfile.addEventListener('mouseover', () => {
+            profile.style.visibility = 'visible';
+            profile.style.opacity = '1';
+        }, false);
+
+        userProfile.addEventListener('mouseout', () => {
+            profile.style.opacity = '0';
+            profile.style.visibility = 'hidden';
+        }, false);
+
+    };
+    showDropMenu();
+</script>

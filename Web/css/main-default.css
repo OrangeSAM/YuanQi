@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -5232,7 +5232,7 @@ body .b-slider--thumb-visible .tp-bullets {
   color: #666666; }
 
 .b-blog-listing__infoblock {
-  padding: 0px 28px 26px 20px; }
+  padding: 20px 28px 26px 20px; }
   .b-blog-listing__infoblock .b-infoblock-with-icon__icon {
     width: 49px;
     padding: 10px 5px; }

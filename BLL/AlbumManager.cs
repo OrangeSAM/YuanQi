@@ -29,6 +29,10 @@ namespace BLL
         {
             return ialbum.SelectAlbumCover(album_id);
         }
+        public static DataTable Selectusers(int user_id)
+        {
+            return ialbum.Selectusers(user_id);
+        }
 
     }
 }

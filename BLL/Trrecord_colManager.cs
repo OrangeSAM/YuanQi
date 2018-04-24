@@ -18,5 +18,9 @@ namespace BLL
         {
             return itrrecord_col.UpdateClickNum(trcol_id);
         }
+        public static int InsertTrrecord(trrecord_col trrecord_Col)
+        {
+            return itrrecord_col.InsertTrrecord(trrecord_Col);
+        }
     }
 }

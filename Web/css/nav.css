@@ -1,6 +1,4 @@
-﻿body {
-}
-divider {
+﻿divider {
 	height: 150px;
 	width: 100%;
 	background-attachment: inherit;
@@ -12,7 +10,7 @@ divider {
 .header-text {
 	position: relative;
 	top: 29%;
-	font-size: 35px;
+	font-size:20px;
 <<<<<<< HEAD
 	text-align: center;
 	margin-bottom: 40px;
@@ -31,11 +29,9 @@ divider {
    
 }
 body {
-	background: rgba(153, 211, 213, 0.32);
+	background: rgba(184, 187, 187, 0.32);
 	margin: 0px;
 	padding: 0px;
-	font-family: 'Varela Round', sans-serif;
-	color: #354b5e;
 }
 
 .copyrights{
@@ -52,7 +48,6 @@ margin-bottom: 49px;
 
 p, li {
 	padding: 0;
-	font-family: 'Raleway',sans-serif;
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 28px;
@@ -200,24 +195,21 @@ p.text-center.sub-text {
 	background: #2494A0;
 	transition:.3s;
 }
-.fa-2x{
-	padding-right: 20px;
-}
 .navbar-toggle .icon-bar {
 	background-color: #000 !important;
 }
 
 ul.nav.navbar-nav li a{
-	color:#2494A0;
+	color:white;
 	text-transform: uppercase;
 	font-family:'Microsoft YaHei' ;
     font-weight:400;
-	font-size: 20px;
+	font-size: 18px;
 }
 .logo {
 	position: relative;
-	top: -47px;
-	left: 5px;
+	top: 3px;
+	left: -131px;
 	border-bottom: none;
 }
 @media (max-width: 768px){
@@ -237,10 +229,9 @@ ul.nav.navbar-nav li a{
 }
 footer{
 	position: relative;
-	float: left;
 	width: 100%;
 	overflow: hidden;
-	background: #395B71;
+	background-color:black;
 	color: white;
 }
 .footer-menus li{
@@ -293,7 +284,6 @@ footer{
 	-webkit-transition:all 0.3s ease-in;
 	-moz-transition:all 0.3s ease-in;
 	-o-transition:all 0.3s ease-in;
-	-ms-transition:all 0.3s ease-in;
 }
 .button-totop:hover {
 	background: #31A1AC;
@@ -309,7 +299,6 @@ footer{
 	-webkit-transition:all 0.3s ease-in;
 	-moz-transition:all 0.3s ease-in;
 	-o-transition:all 0.3s ease-in;
-	-ms-transition:all 0.3s ease-in;
 }
 .button-totop:hover .fa {
 	color:#fff;

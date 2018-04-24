@@ -136,6 +136,12 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="bin\Web.dll" />
     <Content Include="bin\Web.pdb" />
+    <Content Include="Cart.aspx" />
+    <Content Include="css\Activity.css" />
+    <Content Include="css\act_detail\Art_detail.css" />
+    <Content Include="css\act_detail\bootstrap.min.css" />
+    <Content Include="css\act_detail\font-awesome.css" />
+    <Content Include="css\act_detail\templatemo-style.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\comment.css" />
     <Content Include="css\contest.css" />
@@ -152,6 +158,14 @@
     <Content Include="css\StyleSheet2.css" />
     <Content Include="css\testimonial.css" />
     <Content Include="css\Travel.css" />
+    <Content Include="font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="img\1.png" />
+    <Content Include="img\21.jpg" />
+    <Content Include="img\22.jpg" />
+    <Content Include="img\31.jpg" />
     <Content Include="img\album\1 %281%29.jpg" />
     <Content Include="img\album\1 %2810%29.jpg" />
     <Content Include="img\album\1 %2811%29.jpg" />
@@ -169,6 +183,12 @@
     <Content Include="img\album_photo\2 %283%29.jpg" />
     <Content Include="img\album_photo\2 %284%29.jpg" />
     <Content Include="img\album_photo\2 %285%29.jpg" />
+    <Content Include="img\bikes\bik1.jpg" />
+    <Content Include="img\bikes\bik2.jpg" />
+    <Content Include="img\bikes\bik3.jpg" />
+    <Content Include="img\bikes\bik4.jpg" />
+    <Content Include="img\bikes\bik5.jpg" />
+    <Content Include="img\bikes\bik6.jpg" />
     <Content Include="img\dayphoto\1 %283%29.jpg" />
     <Content Include="img\dayphoto\1 %284%29.jpg" />
     <Content Include="img\dayphoto\1 %285%29.jpg" />
@@ -177,12 +197,66 @@
     <Content Include="img\dayphoto\1 %288%29.jpg" />
     <Content Include="img\dayphoto\1 %289%29.jpg" />
     <Content Include="img\dayphoto\1.jpg" />
-    <Content Include="img\goods\1 %281%29.jpg" />
-    <Content Include="img\goods\1 %282%29.jpg" />
-    <Content Include="img\goods\1 %283%29.jpg" />
-    <Content Include="img\goods\1 %284%29.jpg" />
-    <Content Include="img\goods\1 %285%29.jpg" />
-    <Content Include="img\logo.png" />
+    <Content Include="img\goods\1 %281%29.jpeg" />
+    <Content Include="img\goods\1 %2810%29.png" />
+    <Content Include="img\goods\1 %2811%29.png" />
+    <Content Include="img\goods\1 %2812%29.png" />
+    <Content Include="img\goods\1 %2813%29.png" />
+    <Content Include="img\goods\1 %282%29.jpeg" />
+    <Content Include="img\goods\1 %283%29.jpeg" />
+    <Content Include="img\goods\1 %284%29.jpeg" />
+    <Content Include="img\goods\1 %285%29.jpeg" />
+    <Content Include="img\goods\1 %286%29.jpeg" />
+    <Content Include="img\goods\1 %287%29.png" />
+    <Content Include="img\goods\1 %288%29.png" />
+    <Content Include="img\goods\1 %289%29.png" />
+    <Content Include="img\goods\1.png" />
+    <Content Include="img\goods\2 %281%29.png" />
+    <Content Include="img\goods\2 %282%29.png" />
+    <Content Include="img\goods\2 %283%29.png" />
+    <Content Include="img\goods\2 %284%29.png" />
+    <Content Include="img\goods\2 %285%29.png" />
+    <Content Include="img\goods\2 %286%29.png" />
+    <Content Include="img\goods\2 %287%29.png" />
+    <Content Include="img\goods\2 %288%29.png" />
+    <Content Include="img\goods\3 %281%29.jpg" />
+    <Content Include="img\goods\3 %282%29.jpg" />
+    <Content Include="img\goods\3 %283%29.jpg" />
+    <Content Include="img\goods\3 %284%29.jpg" />
+    <Content Include="img\goods\3 %285%29.jpg" />
+    <Content Include="img\goods\4 %281%29.jpg" />
+    <Content Include="img\goods\4 %2810%29.jpg" />
+    <Content Include="img\goods\4 %2811%29.jpg" />
+    <Content Include="img\goods\4 %2812%29.jpg" />
+    <Content Include="img\goods\4 %2813%29.jpg" />
+    <Content Include="img\goods\4 %2814%29.jpg" />
+    <Content Include="img\goods\4 %2815%29.jpg" />
+    <Content Include="img\goods\4 %2816%29.jpg" />
+    <Content Include="img\goods\4 %2817%29.jpg" />
+    <Content Include="img\goods\4 %2818%29.jpg" />
+    <Content Include="img\goods\4 %2819%29.jpg" />
+    <Content Include="img\goods\4 %282%29.jpg" />
+    <Content Include="img\goods\4 %2820%29.jpg" />
+    <Content Include="img\goods\4 %2821%29.jpg" />
+    <Content Include="img\goods\4 %2822%29.jpg" />
+    <Content Include="img\goods\4 %2823%29.jpg" />
+    <Content Include="img\goods\4 %283%29.jpg" />
+    <Content Include="img\goods\4 %284%29.jpg" />
+    <Content Include="img\goods\4 %285%29.jpg" />
+    <Content Include="img\goods\4 %286%29.jpg" />
+    <Content Include="img\goods\4 %287%29.jpg" />
+    <Content Include="img\goods\4 %288%29.jpg" />
+    <Content Include="img\goods\4 %289%29.jpg" />
+    <Content Include="img\logo2.png" />
+    <Content Include="img\stores\1 %281%29.jpeg" />
+    <Content Include="img\stores\1 %281%29.jpg" />
+    <Content Include="img\stores\1 %282%29.jpg" />
+    <Content Include="img\stores\1 %283%29.jpg" />
+    <Content Include="img\stores\1 %284%29.jpg" />
+    <Content Include="img\stores\1 %285%29.jpg" />
+    <Content Include="img\stores\1 %286%29.jpg" />
+    <Content Include="img\stores\1 %287%29.jpg" />
+    <Content Include="img\stores\1 %288%29.jpg" />
     <Content Include="img\travel_rent\12.png" />
     <Content Include="img\travel_rent\arrow.png" />
     <Content Include="img\travel_rent\banner.jpg" />
@@ -196,15 +270,20 @@
     <Content Include="img\trrecord_cover\3 %285%29.jpg" />
     <Content Include="img\trrecord_cover\3 %286%29.jpg" />
     <Content Include="img\trrecord_cover\3 %287%29.jpg" />
-    <Content Include="img\用户.png" />
+    <Content Include="img\user.png" />
+    <Content Include="img\userphoto\1.jpg" />
+    <Content Include="img\userphoto\2.jpg" />
+    <Content Include="img\userphoto\3.jpg" />
+    <Content Include="img\userphoto\4.jpg" />
+    <Content Include="img\userphoto\5.jpeg" />
     <Content Include="js\jquery-1.9.0.min.js" />
     <Content Include="js\jquery-2.1.1.js" />
+    <Content Include="js\jquery.flexisel.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.wmuSlider.js" />
     <Content Include="js\login.js" />
     <Content Include="js\main.js" />
     <Content Include="login1.aspx" />
-    <Content Include="music\Relient K - Can%27t Complain.mp3" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -216,6 +295,10 @@
     <Content Include="Contest.aspx" />
     <Content Include="Album_photos.aspx" />
     <Content Include="pub_article.aspx" />
+    <Content Include="scripts\date\bootstrap-datetimepicker.css" />
+    <Content Include="scripts\date\bootstrap-datetimepicker.js" />
+    <Content Include="scripts\date\bootstrap-datetimepicker.min.css" />
+    <Content Include="scripts\date\bootstrap-datetimepicker.min.js" />
     <Content Include="scripts\discussion\color-themes.js" />
     <Content Include="TravelRecord.aspx" />
     <Content Include="TravelCommentReply.aspx" />
@@ -223,10 +306,14 @@
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="Discussion.aspx" />
     <Content Include="Discussion_detail.aspx" />
-    <Content Include="TravelRent.aspx" />
+    <Content Include="Good_detail.aspx" />
+    <Content Include="stores.aspx" />
+    <Content Include="Discussion.aspx" />
+    <Content Include="Mall.aspx" />
     <None Include="bin\Web.dll.config" />
+    <Content Include="usercenter.aspx" />
+    <Content Include="usermodi.aspx" />
     <Content Include="utf8-net\net\config.json" />
     <Content Include="utf8-net\net\controller.ashx" />
     <Content Include="utf8-net\net\README.md" />
@@ -235,6 +322,41 @@
     <Content Include="utf8-net\third-party\video-js\font\vjs.eot" />
     <Content Include="utf8-net\third-party\video-js\font\vjs.ttf" />
     <Content Include="utf8-net\third-party\video-js\font\vjs.woff" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="font-awesome-4.7.0\less\animated.less" />
+    <Content Include="font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="font-awesome-4.7.0\less\core.less" />
+    <Content Include="font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="font-awesome-4.7.0\less\icons.less" />
+    <Content Include="font-awesome-4.7.0\less\larger.less" />
+    <Content Include="font-awesome-4.7.0\less\list.less" />
+    <Content Include="font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="font-awesome-4.7.0\less\path.less" />
+    <Content Include="font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="font-awesome-4.7.0\less\variables.less" />
+    <Content Include="font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Mall.master" />
+    <None Include="Properties\PublishProfiles\test.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -529,7 +651,9 @@
     <Content Include="utf8-net\ueditor.config.js" />
     <Content Include="utf8-net\ueditor.parse.js" />
     <Content Include="utf8-net\ueditor.parse.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity.aspx.cs">
@@ -547,12 +671,26 @@
       <DependentUpon>Activity_detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Biz.cs" />
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login1.aspx.cs">
       <DependentUpon>login1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login1.aspx.designer.cs">
       <DependentUpon>login1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mall.master.cs">
+      <DependentUpon>Mall.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mall.master.designer.cs">
+      <DependentUpon>Mall.master</DependentUpon>
     </Compile>
     <Compile Include="Nav.Master.cs">
       <DependentUpon>Nav.Master</DependentUpon>
@@ -618,6 +756,20 @@
     <Compile Include="TravelCommentReply.aspx.designer.cs">
       <DependentUpon>TravelCommentReply.aspx</DependentUpon>
     </Compile>
+    <Compile Include="usercenter.aspx.cs">
+      <DependentUpon>usercenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercenter.aspx.designer.cs">
+      <DependentUpon>usercenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usermodi.aspx.cs">
+      <DependentUpon>usermodi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usermodi.aspx.designer.cs">
+      <DependentUpon>usermodi.aspx</DependentUpon>
+    </Compile>
     <Compile Include="utf8-net\net\App_Code\Config.cs" />
     <Compile Include="utf8-net\net\App_Code\ConfigHandler.cs" />
     <Compile Include="utf8-net\net\App_Code\CrawlerHandler.cs" />
@@ -626,13 +778,6 @@
     <Compile Include="utf8-net\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="utf8-net\net\App_Code\PathFormater.cs" />
     <Compile Include="utf8-net\net\App_Code\UploadHandler.cs" />
-    <Compile Include="Discussion.aspx.cs">
-      <DependentUpon>Discussion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Discussion.aspx.designer.cs">
-      <DependentUpon>Discussion.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Discussion_detail.aspx.cs">
       <DependentUpon>Discussion_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -640,12 +785,33 @@
     <Compile Include="Discussion_detail.aspx.designer.cs">
       <DependentUpon>Discussion_detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TravelRent.aspx.cs">
-      <DependentUpon>TravelRent.aspx</DependentUpon>
+    <Compile Include="Good_detail.aspx.cs">
+      <DependentUpon>Good_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TravelRent.aspx.designer.cs">
-      <DependentUpon>TravelRent.aspx</DependentUpon>
+    <Compile Include="Good_detail.aspx.designer.cs">
+      <DependentUpon>Good_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="stores.aspx.cs">
+      <DependentUpon>stores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stores.aspx.designer.cs">
+      <DependentUpon>stores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Discussion.aspx.cs">
+      <DependentUpon>Discussion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Discussion.aspx.designer.cs">
+      <DependentUpon>Discussion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mall.aspx.cs">
+      <DependentUpon>Mall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mall.aspx.designer.cs">
+      <DependentUpon>Mall.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

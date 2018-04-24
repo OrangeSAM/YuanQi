@@ -22,7 +22,7 @@ namespace BLL
         {
             return itravel_record.SelectTravel_record(trreccord_id);
         }
-        public static DataTable SelectUserTravel_record(int user_id)
+        public static DataTable SelectUserTravel_record(string user_id)
         {
             return itravel_record.SelectUserTravel_record(user_id);
         }
@@ -34,7 +34,6 @@ namespace BLL
         {
             return itravel_record.SelectTop(top);
         }
-
         public static int UpdateLike(int trreccord_id)
         {
             return itravel_record.UpdateLike(trreccord_id);
@@ -42,6 +41,18 @@ namespace BLL
         public static int UpdateDislike(int trreccord_id)
         {
             return itravel_record.UpdateDislike(trreccord_id);
+        }
+        public static int UpdateCol(int trrecord_id)
+        {
+            return itravel_record.UpdateCol(trrecord_id);
+        }
+        public static int getLikecount(int trrecord_id)
+        {
+            return itravel_record.getLikecount(trrecord_id);
+        }
+        public static DataTable SelectUserrecord_col(int user_id)
+        {
+            return itravel_record.SelectUserrecord_col(user_id);
         }
     }
 }

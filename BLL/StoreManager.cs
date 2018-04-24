@@ -30,9 +30,17 @@ namespace BLL
         {
             return istore.SelectAll();
         }
-        public static DataTable SelectStoreAddr(string store_addr)
+        public static DataTable SelectStoreAddr(string keys)
         {
-            return istore.SelectStoreAddr(store_addr);
+            return istore.SelectStoreAddr(keys);
+        }
+        public static string SelectStoreIntro(string store_id)
+        {
+            return istore.SelectStoreIntro(store_id);
+        }
+        public static DataTable SelectStoreID(int storeID)
+        {
+            return istore.SelectStoreID(storeID);
         }
     }
 }

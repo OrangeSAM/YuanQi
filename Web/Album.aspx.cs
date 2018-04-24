@@ -14,8 +14,10 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) {
+            if (!IsPostBack)
+            {
             BindAlbumPhoto();
+            Biz.TargetPath = Request.RawUrl;
             }
         }
         public void BindAlbumPhoto()

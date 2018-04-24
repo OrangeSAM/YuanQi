@@ -5,11 +5,10 @@
 
 /*轮播样式*/
 #container {
-    margin-top:30px;
     float: left;
-    margin-left:30px;   
-    width: 95%;
-    height: 600px;
+    margin-left:8%;   
+    width: 45%;
+    height: 60%;
     overflow: hidden;
 }
 
@@ -68,7 +67,7 @@
         margin-bottom: 4px;
     }
 
-button.button-info {
+.button-info {
     padding: 6px;
     color: rgb(26, 104, 121);
     background: transparent;
@@ -76,9 +75,6 @@ button.button-info {
     margin-right: 11px;
     float: left;
     border: 2px solid rgb(108, 168, 209);
-}
-.blog-event {
-    margin: 40px 0 85px;
 }
 
 .featured-img {
@@ -120,26 +116,15 @@ button.button-info {
    
 }*/
 .nav-title span {
-    /*float: left;*/
-    /*padding-top: 15px;
-    padding-left: 20px;*/
-    font-size: 20px;
-    
     font-weight:700;
 }
 .nav-title a span{
     float:right;
-    padding-top:15px;
-    padding-right:5px;
 }
 
 
 
-/*.title {
-    float: left;
-    margin-top:20px;
-    padding-left:20px;
-}*/
+
 #travel {
     margin-left: 30px;
     margin-top: 30px;
@@ -153,6 +138,7 @@ button.button-info {
 #album{
     width:95%;
 }
+
 .travel_de {
     color:white;
     /*margin-top:20px;*/

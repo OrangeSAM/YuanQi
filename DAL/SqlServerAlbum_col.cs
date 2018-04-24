@@ -18,6 +18,11 @@ namespace DAL
             SqlParameter[] sp = { new SqlParameter("@album_col_id", album_col_id) };
             return DBHelper.GetExcuteNonQuery(sql, sp);
         }
-       
+        public DataTable getuser_col(string user_id)
+        {
+            string sql = "select * from album,album_col where album.album_id=album_col.album_id and creater_id =@user_id";
+            SqlParameter[] sp = { new SqlParameter("@user_id", user_id) };
+            return DBHelper.GetFillData(sql, sp);
+        }
     }
 }

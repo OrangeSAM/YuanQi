@@ -10,16 +10,16 @@
             </div>
         </LayoutTemplate>
         <GroupTemplate>
-            <div>
+            <div style=";width:735px;margin:20px auto;">
                 <asp:PlaceHolder ID="itemplaceholder" runat="server" />
             </div>
         </GroupTemplate>
         <ItemTemplate >
-            <div>
-         	    <span style="font-size:30px;"><a href="#"><%#Eval("act_name") %></a></span>
-                <time style="font-size:12px;"><%#Eval("pub_time","{0:yyyy-MM-dd}") %></time>
-                <span style="font-size:20px;"><%#Eval("activity_cont") %></span>
-                <a href="Activity_detail.aspx?id=<%#Eval("activity_id") %>" class="button big">Continue Reading</a>
+            <div style="display:inline-block;text-align:center;width:30%;">
+         	    <span style="font-size:30px;"><a href="#" style="color:black;"><%#Eval("act_name") %></a></span><br /><br />
+                <time style=""><%#Eval("pub_time","{0:yyyy-MM-dd}") %></time><br /><br />
+                <span style=""><%#Eval("activity_cont").ToString().Substring(0,8) + "..." %></span><br /><br />
+                <a href="Activity_detail.aspx?id=<%#Eval("activity_id") %>" class="button big" style="width:100%">加入</a>
             </div>
         </ItemTemplate>
     </asp:ListView>

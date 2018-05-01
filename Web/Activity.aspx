@@ -10,7 +10,7 @@
             </div>
         </LayoutTemplate>
         <GroupTemplate>
-            <div style=";width:735px;margin:20px auto;">
+            <div style="width:735px;margin:20px auto;">
                 <asp:PlaceHolder ID="itemplaceholder" runat="server" />
             </div>
         </GroupTemplate>
@@ -23,7 +23,7 @@
             </div>
         </ItemTemplate>
     </asp:ListView>
-    <div class="pager">
+<%--    <div class="pager">
       <asp:DataPager runat ="server" ID ="datapager" PageSize ="3" PagedControlID="LVActivity" OnPreRender="activitypager_PreRender">
            <Fields>
                 <asp:NextPreviousPagerField FirstPageText="首页" PreviousPageText="上一页" ButtonType="Button" ShowFirstPageButton="true" ShowNextPageButton="false"  ButtonCssClass="btn btn-primary btn-sm"/>
@@ -31,5 +31,5 @@
                 <asp:NextPreviousPagerField NextPageText="下一页" LastPageText="末页" ShowPreviousPageButton="false" ButtonType="Button" ButtonCssClass="btn btn-primary btn-sm" ShowLastPageButton="true" />
           </Fields>
       </asp:DataPager>
-    </div> 
+    </div>--%> 
 </asp:Content>

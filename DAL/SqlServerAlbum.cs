@@ -40,7 +40,7 @@ namespace DAL
         }
         public DataTable SelectAll()
         {
-            string sql = "select *,col_num from album,album_col where album.album_id=album_col.album_id order by create_time desc";
+            string sql = "select *,col_num from album,album_col where album.album_id=album_col.album_id";
             return DBHelper.GetFillData(sql);
         }
         public DataTable SelectAlbumCover(int album_id)

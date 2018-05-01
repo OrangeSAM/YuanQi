@@ -82,7 +82,7 @@
                             </GroupTemplate>
                             <ItemTemplate>
                                 <div style="display:inline-block;width:260px;padding:20px;transition:.5s ease;background-color:white;text-align:center;" class="single">
-                                    <img src='<%#Eval ("photo") %>' style="width:220px;height:220px;" /><br />
+                                    <img src='<%#Eval ("photo") %>' style="width:220px;height:165px;" /><br />
                                     <span><%#Eval ("goods_name") %></span><br />
                                     <asp:label id="gprice" runat="server" data-value='<%#Eval ("goods_price") %>'><%#Eval ("goods_price") %></asp:label><br />
                                     <asp:Button ID="rent" runat="server" Text="立即租用" class="button" onclick="rent"/>

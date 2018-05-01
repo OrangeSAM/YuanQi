@@ -28,11 +28,11 @@ namespace Web
                 LVActivity.DataBind();
             }
         }
-        protected void activitypager_PreRender(object sender, EventArgs e)
-        {
+        //protected void activitypager_PreRender(object sender, EventArgs e)
+        //{
 
-            BindActivity();
+        //    BindActivity();
 
-        }
+        //}
     }
 }

@@ -35,7 +35,7 @@ namespace DAL
 
         public DataTable SelectAll()
         {
-            string sql = "select * from activity order by pub_time desc";
+            string sql = "select * from activity";
             return DBHelper.GetFillData(sql);
         }
         public DataTable SelectActivity(int activity_id)

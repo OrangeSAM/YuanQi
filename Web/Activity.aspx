@@ -3,7 +3,7 @@
     <link href="css/contest.css" rel="stylesheet" />
     <style>
         a:hover{
-            text-decoration:none;
+            text-decoration:none !important;
         }
     </style>
 </asp:Content>

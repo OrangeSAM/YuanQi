@@ -19,7 +19,7 @@
     <link href="scripts/date/bootstrap-datetimepicker.css" rel="stylesheet" />  
     <script src="scripts/date/bootstrap-datetimepicker.js"></script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" style="min-height:566px;">
     <div class="cart-top"><h1>我的购物车</h1></div>
     <asp:Panel ID="Panel01" runat="server">
        <div id="Panel01Box">

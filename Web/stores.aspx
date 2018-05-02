@@ -104,11 +104,10 @@
                             </GroupTemplate>
                             <ItemTemplate>
                                 <div style="display:inline-block;width:260px;padding:20px;transition:.5s ease;background-color:white;text-align:center;" class="single">
-                                    <img src='<%#Eval ("photo") %>' style="width:220px;height:190px;"/>
-                                    <span><%#Eval ("goods_name") %></span>
-                                    <asp:label id="RTprice" runat="server" data-value='<%#Eval ("goods_price") %>'><%#Eval ("goods_price") %></asp:label>
-                                    <span><%#Eval ("goods_intro") %></span>
-                                    <asp:Button ID="car" runat="server" Text="加购物车" OnClick="addcar" />
+                                    <img src='<%#Eval ("photo") %>' style="width:220px;height:190px;"/><br />
+                                    <span><%#Eval ("goods_name") %></span><br />
+                                    <asp:label id="RTprice" runat="server" data-value='<%#Eval ("goods_price") %>'><%#Eval ("goods_price") %></asp:label><br />
+                                    <asp:Button ID="car" runat="server" Text="加购物车" OnClick="addcar" class="button"/>
                                 </div>
                             </ItemTemplate>
                         </asp:ListView>

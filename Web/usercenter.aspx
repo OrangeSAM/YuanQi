@@ -64,8 +64,8 @@
                             </div>
                         </LayoutTemplate>
                         <ItemTemplate>
-                            <asp:Image ID="Image2" runat="server" ImageUrl='<%#Eval("photo") %>' style="width:27%;margin-left:59px;margin-top:12px;border:3px solid #ccc;border-radius:3px;box-shadow:0px 0px 10px 0px;"/><br />
-                            <asp:Label ID="Label2" runat="server" Text="" Style="margin-left:400px;"><%#Eval("album_name") %></asp:Label>
+                            <asp:Image ID="Image2" runat="server" ImageUrl='<%#Eval("photo") %>' style="width:20%;margin-left:59px;margin-top:12px;border:3px solid #ccc;border-radius:3px;box-shadow:0px 0px 10px 0px;"/>
+                            <asp:Label ID="Label2" runat="server" Text="" Style="margin-left:10px;"><%#Eval("album_name") %></asp:Label>
                         </ItemTemplate>
                     </asp:ListView>
                 </div>
@@ -102,8 +102,8 @@
                             </div>
                         </LayoutTemplate>
                         <ItemTemplate>
-                            <asp:Image ID="cover" runat="server" ImageUrl='<%#Eval("photo") %>' style="width:27%;margin-left:59px;margin-top:12px;border:3px solid #ccc;border-radius:3px;box-shadow:0px 0px 10px 0px;"/><br />
-                            <asp:Label ID="album_title" runat="server" Text='<%#Eval("album_name") %>' Style="margin-left:400px;"></asp:Label>
+                            <asp:Image ID="cover" runat="server" ImageUrl='<%#Eval("photo") %>' style="width:20%;margin-left:59px;margin-top:12px;border:3px solid #ccc;border-radius:3px;box-shadow:0px 0px 10px 0px;"/>
+                            <asp:Label ID="album_title" runat="server" Text='<%#Eval("album_name") %>' Style="margin-left:10px;"></asp:Label>
                         </ItemTemplate>
                     </asp:ListView>
                 </div>

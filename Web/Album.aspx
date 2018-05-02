@@ -11,7 +11,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <div class="divider col-sm-12 col-xs-12 col-md-12">
-      <div class="header-text">Album<span>相册</span></div>      
+      <div class="header-text"></div>      
   </div>
     <div style="height:900px;">
     <asp:ListView ID="LVAlbum1" runat="server">
@@ -25,11 +25,12 @@
                       <div class="post item col-md-3 col-xs-10 col-sm-3 ">
                           <div class="panel">
                                   <div class="panel-header">
-                                      <a href="Album_photos.aspx?id=<%#Eval("album_id") %>"><img src="<%#Eval("photo") %>" class="img-responsive"   alt="image"/></a>
+                                      <a href="Album_photos.aspx?id=<%#Eval("album_id") %>">
+                                          <img src="<%#Eval("photo") %>" class="img-responsive"   alt="image" style="width:238px;height:158px;"/>
+                                      </a>
                                       </div>
                               <div class="panel-body">
                                    <h3 class="post-title" style="height:27px;overflow:hidden;"><a href="#" ><%#Eval("album_name") %></a></h3>
-                                         
                                         <p><%#Eval("album_intro") %></p>
                                    <div class="pull-left"><a class="btn btn-black btn-xs" href="Album_photos.aspx?id=<%#Eval("album_id") %>"><span class="read-more">Read More</span></a></div>                       
                                   </div>

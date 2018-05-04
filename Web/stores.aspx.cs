@@ -148,7 +148,7 @@ namespace Web
 
                             shoppingcart Shoppingcart = new shoppingcart();
                             Shoppingcart.user_id = Convert.ToInt32(Session["user_id"]);
-                            Shoppingcart.goods_id = 2;
+                            Shoppingcart.goods_id = 1033;
                                 Convert.ToInt32(ViewState["goods_id"]);
                             Shoppingcart.unit_price = str;
                                 //float.Parse(((Label)e.Item.FindControl("RTprice")).Text);

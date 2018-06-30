@@ -103,11 +103,9 @@
                 <li>
                 <label for="passwd2" class="input-tips2">确认密码：</label>
                     <div class="inputOuter2">
-                        
                         <asp:TextBox ID="passwd2" runat="server" CssClass ="inputstyle2 " TextMode ="Password" ></asp:TextBox>
                          <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="重复密码不能为空！" ControlToValidate ="passwd2" Display ="Dynamic"  ValidationGroup ="regGroup"></asp:RequiredFieldValidator>
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="密码不一致" ControlToCompare="passwd" ControlToValidate ="passwd2" Display ="Dynamic"  ValidationGroup ="regGroup"></asp:CompareValidator>
-
                     </div>
                     
                 </li>
@@ -115,32 +113,21 @@
                 <li>
                  <label for="email" class="input-tips2">Email：</label>
                     <div class="inputOuter2">
-                       
                         <asp:TextBox ID="email" runat="server" CssClass ="inputstyle2" ></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="邮件不能为空！" ControlToValidate ="email" Display="Dynamic"  ValidationGroup ="regGroup"></asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="邮箱格式不正确" ControlToValidate ="email" Display ="Dynamic"  ValidationExpression ="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup ="regGroup"></asp:RegularExpressionValidator>
-
                     </div>
-                   
                 </li>
                 
                 <li>
                     <div class="inputArea">
                         <asp:Button ID="reg" runat="server" Text="同意协议并注册"  style="margin-top:10px;margin-left:85px;" CssClass ="button_blue " OnClick ="reg_Click" ValidationGroup="regGroup"/> <a href="#" class="zcxy" target="_blank">注册协议</a>
                         <br />
-                      
                     </div>
-                    
                 </li>
-            </ul><%--</form>--%>
-           
-    
+            </ul>
     </div>
-   
-    
     </div>
-
-    
     </div>
     </form>
 </body>

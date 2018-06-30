@@ -363,7 +363,7 @@
     <Content Include="font-awesome-4.7.0\scss\_stacked.scss" />
     <Content Include="font-awesome-4.7.0\scss\_variables.scss" />
     <Content Include="Mall.master" />
-    <None Include="Properties\PublishProfiles\test.pubxml" />
+    <None Include="Properties\PublishProfiles\YuanQi.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

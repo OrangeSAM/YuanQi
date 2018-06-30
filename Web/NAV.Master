@@ -63,24 +63,20 @@
     //user-image
     let showDropMenu = () => {
         const userProfile = document.getElementsByClassName('user-profile')[0];
-
         if (!userProfile) {
             return;
         }
-
         const avatar = userProfile.getElementsByClassName('user-avatar')[0];
         const profile = userProfile.getElementsByClassName('profile')[0];
-
         userProfile.addEventListener('mouseover', () => {
             profile.style.visibility = 'visible';
             profile.style.opacity = '1';
         }, false);
-
         userProfile.addEventListener('mouseout', () => {
             profile.style.opacity = '0';
             profile.style.visibility = 'hidden';
         }, false);
-
     };
     showDropMenu();
+
 </script>

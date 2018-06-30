@@ -141,7 +141,6 @@
                     </div>
                 </div>
             </div>  
-
         <script src="scripts/jquery-1.10.2.min.js"></script>
         <script src="scripts/bootstrap.min.js"></script>
         <script src="scripts/script.js"></script>

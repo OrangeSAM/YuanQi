@@ -39,8 +39,6 @@ namespace Web
             }
             else
             {
-
-            
                if (IsValid)
                 {
                  try

@@ -18,7 +18,7 @@ namespace Web
           { 
             BindNews();
             BindNewsID();
-                Biz.TargetPath = Request.RawUrl;
+            Biz.TargetPath = Request.RawUrl;
             }
         }
         public void BindNews()

@@ -4,32 +4,6 @@
     <link href="css/demo.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/Home.css" rel="stylesheet" />
-    <style>
-        .hire{
-            padding:5px;
-            margin-top:15px;
-            margin-left:4px;
-            width:73%;
-        }
-        ::-webkit-datetime-edit { padding: 1px; background: url(/study/image/selection.gif); }
-        ::-webkit-datetime-edit-fields-wrapper { background-color: #eee; }
-        ::-webkit-datetime-edit-text { color: #4D90FE; padding: 0 .3em; }
-        ::-webkit-datetime-edit-year-field { color: black; }
-        ::-webkit-datetime-edit-month-field { color: black; }
-        ::-webkit-datetime-edit-day-field { color: black; }
-        ::-webkit-inner-spin-button { visibility: hidden; }
-        ::-webkit-calendar-picker-indicator {
-            border: 1px solid #ccc;
-            border-radius: 2px;
-            box-shadow: inset 0 1px #fff, 0 1px #eee;
-            background-color: #eee;
-            background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
-            color: #666;
-        }
-        .blog-event:hover{
-            box-shadow:0px 0px 20px 0px;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <%-- 轮播 --%>
@@ -108,7 +82,7 @@
                                 </asp:DataPager>
                             </LayoutTemplate>
                             <ItemTemplate>
-                                <a href="ContestNews.aspx?id=<%#Eval("news_id") %>" style="color:#000000;text-decoration:none;"><%#Eval("news_title") %></a><br></br>
+                                <a href="ContestNews.aspx?id=<%#Eval("news_id") %>" style="color:#000000;"><%#Eval("news_title") %></a><br></br>
                             </ItemTemplate>
                         </asp:ListView>
                     </div>
@@ -125,8 +99,8 @@
                             <LayoutTemplate>
                                  <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder>
                                  <table runat="server" id="itemPlaceHoder"></table>
-                                 <asp:DataPager ID="DataPager1" runat="server" PageSize="10">
-                                 </asp:DataPager>
+                                 <%--<asp:DataPager ID="DataPager1" runat="server" PageSize="10">
+                                 </asp:DataPager>--%>
                             </LayoutTemplate>
                             <ItemTemplate>
                                <div class ="contest_time" style ="float :left ;width :37%;border-right:1px solid #ccc">
@@ -143,7 +117,7 @@
             </div>  
         <script src="scripts/jquery-1.10.2.min.js"></script>
         <script src="scripts/bootstrap.min.js"></script>
-        <script src="scripts/script.js"></script>
+        <%--<script src="scripts/script.js"></script>--%>
         <script src="scripts/pageSwitch.min.js"></script>
         <script src="scripts/jquery.pwstabs-1.2.1.js"></script>
         <script src="scripts/jQuery-face-cursor.js"></script>

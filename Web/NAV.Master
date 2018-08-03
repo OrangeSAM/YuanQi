@@ -26,7 +26,7 @@
 				<ul class="nav navbar-nav" style="padding-top:17px;">
 					<li class="navli"><a href="Mall.aspx" class="font">骑行租车</a></li>
                     <li class="navli"><a href="Discussion.aspx" class="font">骑行论坛</a></li>				
-					<li class="navli"><a href="ContestNews.aspx" class="font">赛事新闻</a></li>
+					<li class="navli"><a href="ContestNews.aspx?id=1" class="font">赛事新闻</a></li>
 					<li class="navli"><a href="Contest.aspx" class="font">赛事预告</a></li>
 					<li class="navli"><a href="TravelRecord.aspx" class="font">骑行游记</a></li>
 					<li class="navli"><a href="Album.aspx" class="font">骑行相册</a></li>

@@ -1,9 +1,7 @@
 $(document).ready(function() {	
-
 	//Show Banner
 	$(".examples_image .desc").show(); //Show Banner
 	$(".examples_image .block").animate({ opacity: 0.85 }, 1 ); //Set Opacity
-	
 	//Click and Hover events for thumbnail list
 	$(".mune_thumb ul li:first").addClass('active'); 
 	$(".mune_thumb ul li").click(function(){ 

@@ -26,7 +26,7 @@
     <%--<div class="cart-top"><h1>我的购物车</h1></div>--%>
     <asp:Panel ID="Panel01" runat="server">
        <div id="Panel01Box">
-            <div class="cart" style="min-height:450px;">
+            <div class="cart" style="min-height:477px;">
                 <div class="container" style="max-width:80%;">
                      <div class="row" style="border-bottom:1px solid;">
                         <div class="col-md-1">

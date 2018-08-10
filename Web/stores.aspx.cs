@@ -145,7 +145,6 @@ namespace Web
                             Button btn = (Button)sender;
                             Label gprices = btn.Parent.FindControl("RTprice") as Label;
                             float str = float.Parse(gprices.Attributes["data-value"]);
-
                             shoppingcart Shoppingcart = new shoppingcart();
                             Shoppingcart.user_id = Convert.ToInt32(Session["user_id"]);
                             Shoppingcart.goods_id = 1033;

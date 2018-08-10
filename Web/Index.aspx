@@ -28,7 +28,7 @@
               </div>
         </div>
         <%-- 租车 --%>
-        <div style="position:absolute;top:25%;left:12%;background-color:white;width:30%;padding-left:3%;opacity:0.95;">
+        <div style="position:absolute;top:25%;left:12%;background-color:white;width:30%;padding-left:3%;opacity:0.95;border-radius:3px;">
             <div>取车城市<asp:DropDownList ID="DropDowncity1" class="hire" runat="server" style="height:34px;"></asp:DropDownList></div>
             <div>还车城市<asp:DropDownList ID="DropDowncity" class="hire" runat="server" style="height:34px;"></asp:DropDownList></div>
             <div>租车日期<input type="date" class="hire" runat="server" id="datebegin" style="padding:0;"/></div>

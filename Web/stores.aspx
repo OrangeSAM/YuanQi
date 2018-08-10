@@ -122,7 +122,6 @@
         setMapEvent();//设置地图事件
         addMapControl();//向地图添加控件
     }
-    
     //创建地图函数：
     function createMap(){
         var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
